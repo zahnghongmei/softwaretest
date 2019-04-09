@@ -1,14 +1,11 @@
-Virtual User Script started at : 2019/4/8 11:59:06
+Virtual User Script started at : 2019/4/8 11:10:03
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.0.0 for Windows 8; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Run-Time Settings file: "E:\TEST\test\\default.cfg"  	[MsgId: MMSG-27141]
-vuser_init.c(4): web_url("web_url") started  	[MsgId: MMSG-26355]
-vuser_init.c(4): web_url("web_url") was successful, 16629 body bytes, 249 header bytes, 36 chunking overhead bytes  	[MsgId: MMSG-26385]
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
-Warning -27077: The "vuser_init" section contains web function(s) when the "Simulate a new user on each iteration" Run-Time Setting is ON.  This may produce unpredictable results with multiple iterations  	[MsgId: MWAR-27077]
 Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
 Starting action Action.
 Action.c(13): Ñ§ºÅÎª£º1
@@ -28,7 +25,7 @@ Action.c(21): Found resource "http://4a.dacube.com.cn/samlidp/img/qrcode.png" in
 Action.c(21): Found resource "http://4a.dacube.com.cn/samlidp/img/close.png" in HTML "http://4a.dacube.com.cn/samlidp/login.jsp"  	[MsgId: MMSG-26659]
 Action.c(21): Found resource "http://4a.dacube.com.cn/samlidp/js/jquery-1.7.2.min.js" in HTML "http://4a.dacube.com.cn/samlidp/login.jsp"  	[MsgId: MMSG-26659]
 Action.c(21): Found resource "http://4a.dacube.com.cn/samlidp/js/script.js" in HTML "http://4a.dacube.com.cn/samlidp/login.jsp"  	[MsgId: MMSG-26659]
-Action.c(21): web_url("login.jsp") was successful, 763005 body bytes, 2643 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(21): web_url("login.jsp") was successful, 763005 body bytes, 2725 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
 Ending action Action.
 Ending iteration 1.
 Waiting 60.0000 seconds for iteration pacing.
@@ -51,11 +48,10 @@ Action.c(21): Found resource "http://4a.dacube.com.cn/samlidp/img/qrcode.png" in
 Action.c(21): Found resource "http://4a.dacube.com.cn/samlidp/img/close.png" in HTML "http://4a.dacube.com.cn/samlidp/login.jsp"  	[MsgId: MMSG-26659]
 Action.c(21): Found resource "http://4a.dacube.com.cn/samlidp/js/jquery-1.7.2.min.js" in HTML "http://4a.dacube.com.cn/samlidp/login.jsp"  	[MsgId: MMSG-26659]
 Action.c(21): Found resource "http://4a.dacube.com.cn/samlidp/js/script.js" in HTML "http://4a.dacube.com.cn/samlidp/login.jsp"  	[MsgId: MMSG-26659]
-Action.c(21): web_url("login.jsp") was successful, 763005 body bytes, 2643 header bytes, 28 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(21): web_url("login.jsp") was successful, 763005 body bytes, 2725 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
 Ending action Action.
 Ending iteration 2.
 Ending Vuser...
 Starting action vuser_end.
 Ending action vuser_end.
 Vuser Terminated.
-Vuser 0 (thread 17032), ended OK."

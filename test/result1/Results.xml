@@ -116,48 +116,82 @@
 ]
 >
 <Report ver="2.0" tmZone="中国标准时间">
-<General productName="Vugen" productVer="12" os="" host="DESKTOP-CO3PI0L"><DocLocation><![CDATA[C:\Users\章红梅\Desktop\test]]></DocLocation></General>
+<General productName="Vugen" productVer="12" os="" host="DESKTOP-CO3PI0L"><DocLocation><![CDATA[E:\TEST\test]]></DocLocation></General>
 <Doc rID="T1"   productName= "Vugen"  >
 <DName><![CDATA[test]]></DName>
 <Res><![CDATA[result1]]></Res>
 <Action rID="T2">
 <AName><![CDATA[vuser_init]]></AName>
-<Summary sTime="2019/4/2 - 16:52:11" eTime="2019/4/2 - 16:52:11" passed="0" failed="0" warnings="0" ></Summary>
-<NodeArgs eType="StartAction" icon="2" nRep="5" >
-<Disp><![CDATA[vuser_init Summary]]></Disp>
-</NodeArgs>
-</Action>
-<DIter rID="T3" iterID="1" >
-<Action rID="T4">
-<AName><![CDATA[Action]]></AName>
-<Step rID="T5">
-<Obj plainTxt="False" ><![CDATA[Url: login.jsp]]></Obj>
+<Step rID="T3">
+<Obj plainTxt="False" ><![CDATA[Url: web_url]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/4/2 - 16:52:14]]></Time>
-<NodeArgs eType="General" icon="4" nRep="9" status="Passed" >
-<Disp><![CDATA[Url: login.jsp]]></Disp>
+<Time><![CDATA[2019/4/8 - 11:59:06]]></Time>
+<NodeArgs eType="General" icon="3" nRep="6" status="Passed" >
+<Disp><![CDATA[Url: web_url]]></Disp>
 <BtmPane vType="HTMLSNSH">
 <Path><![CDATA[\Iteration1\t1.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Summary sTime="2019/4/2 - 16:52:11" eTime="2019/4/2 - 16:52:14" passed="1" failed="0" warnings="0" ></Summary>
-<NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
+<Summary sTime="2019/4/8 - 11:59:06" eTime="2019/4/8 - 11:59:06" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" status="Passed" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T4" iterID="1" >
+<Action rID="T5">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Url: login.jsp]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2019/4/8 - 11:59:09]]></Time>
+<NodeArgs eType="General" icon="3" nRep="10" status="Passed" >
+<Disp><![CDATA[Url: login.jsp]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2019/4/8 - 11:59:06" eTime="2019/4/8 - 11:59:09" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="9" status="Passed" >
 <Disp><![CDATA[Action Summary]]></Disp>
 </NodeArgs>
 </Action>
-<NodeArgs eType="StartIteration" icon="3" nRep="7" status="Passed" >
+<NodeArgs eType="StartIteration" icon="4" nRep="8" status="Passed" >
 <Disp><![CDATA[test Iteration 1 (Row 1)]]></Disp>
 </NodeArgs>
 </DIter>
-<Action rID="T6">
+<DIter rID="T7" iterID="2" >
+<Action rID="T8">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Url: login.jsp]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2019/4/8 - 12:00:11]]></Time>
+<NodeArgs eType="General" icon="3" nRep="15" status="Passed" >
+<Disp><![CDATA[Url: login.jsp]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration2\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2019/4/8 - 12:00:09" eTime="2019/4/8 - 12:00:11" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="14" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="4" nRep="13" status="Passed" >
+<Disp><![CDATA[test Iteration 2 (Row 2)]]></Disp>
+</NodeArgs>
+</DIter>
+<Action rID="T10">
 <AName><![CDATA[vuser_end]]></AName>
-<Summary sTime="2019/4/2 - 16:52:14" eTime="2019/4/2 - 16:52:14" passed="0" failed="0" warnings="0" ></Summary>
-<NodeArgs eType="StartAction" icon="2" nRep="12" >
+<Summary sTime="2019/4/8 - 12:00:11" eTime="2019/4/8 - 12:00:11" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="18" >
 <Disp><![CDATA[vuser_end Summary]]></Disp>
 </NodeArgs>
 </Action>
-<Summary sTime="2019/4/2 - 16:52:11" eTime="2019/4/2 - 16:52:14" passed="1" failed="0" warnings="0" ></Summary>
+<Summary sTime="2019/4/8 - 11:59:06" eTime="2019/4/8 - 12:00:11" passed="3" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
 <Disp><![CDATA[Test test Summary]]></Disp>
 </NodeArgs>

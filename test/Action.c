@@ -20,7 +20,6 @@ Action()
 
 	web_url("login.jsp",
 		"URL=http://4a.dacube.com.cn/samlidp/login.jsp",
-		"TargetFrame=http://4a.dacube.com.cn/samlidp/login.jsphttp://4a.dacube.com.cn/samlidp/login.jsp",
 		"Resource=0",
 		"Referer=",
 		LAST);	
