@@ -1,0 +1,11 @@
+[t28]
+FileName1=t28.html
+URL1=https://g.t.dacube.cn/MESG-ADMIN/User/getWeChatData/e729e146-f249-42e1-960d-5c1f3f60bc9a
+Total=1
+RequestHeaderFile=t28_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t28_ResponseHeader.txt
+ContentType=
+SnapshotXmlFile=snapshot_28.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

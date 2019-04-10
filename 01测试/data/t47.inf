@@ -1,0 +1,17 @@
+[t47]
+FileName1=t47.html
+URL1=http://name.ie.2345.com/query.php
+Total=4
+RequestHeaderFile=t47_RequestHeader.txt
+RequestBodyFile=t47_RequestBody.txt
+ResponseHeaderFile=t47_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_47.xml
+FileName2=t47_vendor.5b65eff0df70bbb5def3.html
+URL2=http://gtx-admin.t.dacube.cn/static/js/vendor.5b65eff0df70bbb5def3.js
+FileName3=t47_app.8cc661d86ca6fd5eb4b6.html
+URL3=http://gtx-admin.t.dacube.cn/static/js/app.8cc661d86ca6fd5eb4b6.js
+FileName4=t47_font_958271_3xseezklziv.css
+URL4=http://at.alicdn.com/t/font_958271_3xseezklziv.css
+[ProtocolInfo]
+ProtocolId=QTWeb

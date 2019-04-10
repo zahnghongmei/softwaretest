@@ -1,0 +1,13 @@
+[t31]
+FileName1=t31.json
+URL1=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/data_portal/audit_data
+Total=2
+RequestHeaderFile=t31_RequestHeader.txt
+RequestBodyFile=t31_RequestBody.txt
+ResponseHeaderFile=t31_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_31.xml
+FileName2=t31_all.json
+URL2=https://g.t.dacube.cn/UP-PAPER-4J/portal/taskDynamics/all?pageNo=1&pageSize=10
+[ProtocolInfo]
+ProtocolId=QTWeb

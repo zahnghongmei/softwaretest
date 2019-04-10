@@ -1,0 +1,13 @@
+[t49]
+FileName1=t49.html
+URL1=https://g.t.dacube.cn/APP-MANAGE-SV-4J/manager/OrgUsers/userTreePermission
+Total=2
+RequestHeaderFile=t49_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t49_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_49.xml
+FileName2=t49_userinfo.json
+URL2=https://g.t.dacube.cn/APP-MANAGE-SV-4J/manager/OrgUsers/userinfo
+[ProtocolInfo]
+ProtocolId=QTWeb

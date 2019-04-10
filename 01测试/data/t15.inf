@@ -1,0 +1,15 @@
+[t15]
+FileName1=t15.json
+URL1=https://g.t.dacube.cn/MESG-ADMIN/User/login
+Total=3
+RequestHeaderFile=t15_RequestHeader.txt
+RequestBodyFile=t15_RequestBody.txt
+ResponseHeaderFile=t15_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_15.xml
+FileName2=t15_chunk-384f.261f94f7.css
+URL2=https://center.t.dacube.cn/static/css/chunk-384f.261f94f7.css
+FileName3=t15_chunk-384f.46719686.html
+URL3=https://center.t.dacube.cn/static/js/chunk-384f.46719686.js
+[ProtocolInfo]
+ProtocolId=QTWeb

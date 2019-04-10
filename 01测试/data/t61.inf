@@ -1,0 +1,15 @@
+[t61]
+FileName1=t61.json
+URL1=https://g.t.dacube.cn/APP-MANAGE-SV-4J/manager/Channel/listUsableParentChannel
+Total=3
+RequestHeaderFile=t61_RequestHeader.txt
+RequestBodyFile=t61_RequestBody.txt
+ResponseHeaderFile=t61_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_61.xml
+FileName2=t61_moren.jpg
+URL2=http://gtx-admin.t.dacube.cn/static/img/moren.jpg
+FileName3=t61_3f54309c-21c4-4c77-abe0-1023ff98f8af.jpg
+URL3=http://pcccenter.oss-cn-qingdao.aliyuncs.com/App_Manage_Sv_4j/images/3f54309c-21c4-4c77-abe0-1023ff98f8af.jpg
+[ProtocolInfo]
+ProtocolId=QTWeb

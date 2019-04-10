@@ -1,0 +1,12 @@
+OPTIONS /UP-PAPER-4J/portal/getLatestTopic?top=10 HTTP/1.1
+Host: g.t.dacube.cn
+Connection: keep-alive
+Access-Control-Request-Method: GET
+Origin: https://center.t.dacube.cn
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.90 Safari/537.36 2345Explorer/9.6.0.18627
+Access-Control-Request-Headers: token, usetype
+Accept: */*
+Referer: https://center.t.dacube.cn/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.8
+

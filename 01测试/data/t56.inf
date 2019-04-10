@@ -1,0 +1,11 @@
+[t56]
+FileName1=t56.html
+URL1=https://g.t.dacube.cn/APP-MANAGE-SV-4J/manager/Channel/page
+Total=1
+RequestHeaderFile=t56_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t56_ResponseHeader.txt
+ContentType=
+SnapshotXmlFile=snapshot_56.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

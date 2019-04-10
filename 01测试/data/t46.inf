@@ -1,0 +1,15 @@
+[t46]
+FileName1=t46.html
+URL1=http://gtx-admin.t.dacube.cn/
+Total=3
+RequestHeaderFile=t46_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t46_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_46.xml
+FileName2=t46_app.e1c259b9ea1cc0ceeefdc6dc7d8d9792.css
+URL2=http://gtx-admin.t.dacube.cn/static/css/app.e1c259b9ea1cc0ceeefdc6dc7d8d9792.css
+FileName3=t46_manifest.2ae2e69a05c33dfc65f8.html
+URL3=http://gtx-admin.t.dacube.cn/static/js/manifest.2ae2e69a05c33dfc65f8.js
+[ProtocolInfo]
+ProtocolId=QTWeb

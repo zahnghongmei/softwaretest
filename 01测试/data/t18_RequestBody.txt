@@ -1,0 +1,7 @@
+"{\"usercode\":\"e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"username\":\"章红�\x852\",\"login_"
+"name\":null,\"userpwd\":null,\"email\":\"123@qq.com\",\"ismen\":null,\"phone\":\"18200000000\""
+",\"headimg\":\"https://oss.dacube.cn/mesg-admin/34e0a7e9-4e3a-4afc-9c93-75b24cd55660/u=3695931"
+"498,2381510501&fm=26&gp=0.jpg\",\"createdata\":1541494436000,\"updatedata\":1541494436000,\"is"
+"use\":\"1\",\"birthday\":null,\"cooVersionVo\":null,\"token\":\"b722ff2d-dfff-4aa5-8361-51af7c"
+"3ee5bc\",\"easemobname\":\"115201811061611139ftrmgurx\",\"compid\":\"1\",\"code\":null,\"summa"
+"ry\":null,\"portal\":null,\"userIsCompLinkman\":false,\"userIsGroupLinkman\":false}"

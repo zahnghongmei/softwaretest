@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\ียบ์รท\Desktop\01
+-IC:\Program Files (x86)\Hp\LoadRunner\include
+-ec:\users\ียบ์รท\desktop\01\\logfile.log
+c:\users\ียบ์รท\desktop\01\\combined_01.c
+c:\users\ียบ์รท\desktop\01\\pre_cci.c

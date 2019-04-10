@@ -1,0 +1,25 @@
+Virtual User Script started at : 2019/4/10 17:00:11
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.0.0 for Windows 8; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Run-Time Settings file: "C:\Users\ÕÂºìÃ·\Desktop\01\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(6): web_url("www.baidu.com") started  	[MsgId: MMSG-26355]
+Action.c(6): Found resource "https://www.baidu.com/img/xinshouye_46cc6be3783724af1729ba51cfcde494.png" in HTML "https://www.baidu.com/"  	[MsgId: MMSG-26659]
+Action.c(6): Found resource "https://www.baidu.com/img/baidu_jgylogo3.gif" in HTML "https://www.baidu.com/"  	[MsgId: MMSG-26659]
+Action.c(6): Found resource "https://www.baidu.com/img/baidu_resultlogo@2.png" in HTML "https://www.baidu.com/"  	[MsgId: MMSG-26659]
+Action.c(6): Found resource "https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js" in HTML "https://www.baidu.com/"  	[MsgId: MMSG-26659]
+Action.c(6): ssl_handle_status encounter error : SSL_ERROR_SSL, error message : error:14077410:SSL routines:SSL23_GET_SERVER_HELLO:sslv3 alert handshake failure  	[MsgId: MMSG-26000]
+Action.c(6): Warning -27776: SSL protocol error when attempting to connect with host "ss1.bdstatic.com"  	[MsgId: MWAR-27776]
+Action.c(6): Warning -27762: Request "https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js" failed  	[MsgId: MWAR-27762]
+Action.c(6): web_url("www.baidu.com") highest severity level was "warning", 100121 body bytes, 2025 header bytes, 72 chunking overhead bytes  	[MsgId: MMSG-26387]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

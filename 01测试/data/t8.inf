@@ -1,0 +1,15 @@
+[t8]
+FileName1=t8.html
+URL1=http://t.ie.2345.com/wangpai_realtime/index.php
+Total=3
+RequestHeaderFile=t8_RequestHeader.txt
+RequestBodyFile=t8_RequestBody.txt
+ResponseHeaderFile=t8_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_8.xml
+FileName2=t8_chunk-libs.d331153a.html
+URL2=https://center.t.dacube.cn/static/js/chunk-libs.d331153a.js
+FileName3=t8_app.a2a0d4f8.html
+URL3=https://center.t.dacube.cn/static/js/app.a2a0d4f8.js
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,13 @@
+[t34]
+FileName1=t34.html
+URL1=https://g.t.dacube.cn/MESG-ADMIN/User/getPccFabricByUserCode/e729e146-f249-42e1-960d-5c1f3f60bc9a/1
+Total=2
+RequestHeaderFile=t34_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t34_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_34.xml
+FileName2=t34_e729e146-f249-42e1-960d-5c1f3f60bc9a.json
+URL2=https://g.t.dacube.cn/MESG-ADMIN/User/getWeChatData/e729e146-f249-42e1-960d-5c1f3f60bc9a
+[ProtocolInfo]
+ProtocolId=QTWeb

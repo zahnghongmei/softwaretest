@@ -1,0 +1,6 @@
+POST /dmdt/dmdt_data.php HTTP/1.1
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Host: update.khd.2345.cc
+Content-Length: 565
+Cache-Control: no-cache
+
