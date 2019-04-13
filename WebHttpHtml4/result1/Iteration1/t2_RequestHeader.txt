@@ -1,0 +1,9 @@
+OPTIONS /MESG-ADMIN/User/getCompanyByUsercode/3ef8f327-b3b8-4614-b023-95d9bf52f8a9 HTTP/1.1
+Referer: https://center.t.dacube.cn/
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: Keep-Alive
+Host: g.t.dacube.cn
+Content-Length: 0
+

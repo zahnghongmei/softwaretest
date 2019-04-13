@@ -1,0 +1,27 @@
+Virtual User Script started at : 2019/4/13 11:20:58
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.0.0 for Windows 8; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Run-Time Settings file: "C:\Users\ÕÂºìÃ·\Documents\VuGen\Scripts\WebHttpHtml4\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(6): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(6): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(12): web_custom_request("login_2") started  	[MsgId: MMSG-26355]
+Action.c(12): web_custom_request("login_2") was successful, 632 body bytes, 176 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(25): tokenÎª£º08ced1fb-4717-4dfc-9077-d8a4867de632
+Action.c(28): web_custom_request("08ced1fb-4717-4dfc-9077-d8a4867de632") started  	[MsgId: MMSG-26355]
+Action.c(28): Error -26547: Authentication required, please use web_set_user, e.g. web_set_user("domain\\user", "password", "host:port");  	[MsgId: MERR-26547]
+Action.c(28): Error -26630: HTTP Status-Code=401 (Unauthorized) for "https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/08ced1fb-4717-4dfc-9077-d8a4867de632"  	[MsgId: MERR-26630]
+Action.c(28): web_custom_request("08ced1fb-4717-4dfc-9077-d8a4867de632") highest severity level was "ERROR", 0 body bytes, 131 header bytes  	[MsgId: MMSG-26388]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
