@@ -1,10 +1,10 @@
 [t1]
 SnapshotXmlFile=snapshot_1.xml
-ContentType=DummyContentType
-StepName=Custom Request: login_2
+ContentType=text/html
+StepName=Url: web_url
 Total=1
-FileName1=t1.UNK
+FileName1=t1.html
 RequestHeaderFile=t1_RequestHeader.txt
 ResponseHeaderFile=t1_ResponseHeader.txt
 RequestBodyFile=t1_RequestBody.txt
-URL1=https://g.t.dacube.cn/MESG-ADMIN/User/login
+URL1=https://center.t.dacube.cn/#/login/index

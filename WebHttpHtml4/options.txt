@@ -2,8 +2,8 @@
 -DCCI
 -D_IDA_XL
 -DWINNT
--IC:\Users\ียบ์รท\Documents\VuGen\Scripts\WebHttpHtml4
+-IE:\TEST\WebHttpHtml4
 -IC:\Program Files (x86)\Hp\LoadRunner\include
--ec:\users\ียบ์รท\documents\vugen\scripts\webhttphtml4\\logfile.log
-c:\users\ียบ์รท\documents\vugen\scripts\webhttphtml4\\combined_WebHttpHtml4.c
-c:\users\ียบ์รท\documents\vugen\scripts\webhttphtml4\\pre_cci.c
+-ee:\test\webhttphtml4\\logfile.log
+e:\test\webhttphtml4\\combined_WebHttpHtml4.c
+e:\test\webhttphtml4\\pre_cci.c
