@@ -26,22 +26,22 @@ Action()
 		"EncType=application/json;charset=UTF-8", 
 		"Body={\"phone\":\"{account}\",\"userpwd\":\"{pw}\"}", 
 		LAST);
-	//将字符串赋值给变量
-   strcpy(token1, lr_eval_string("{Token}"));
-   lr_output_message("token为：%s", token1);
-   web_set_user("{account}",
-		lr_decrypt("{Token}"),
-		"https://g.t.dacube.cn/MESG-ADMIN:443");
-	
-	web_custom_request(token1, 
-		"URL=https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/{Token}", 
-		"Method=OPTIONS", 
-		"Resource=0", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t16.inf", 
-		"Mode=HTML", 
-		LAST);
-    
+//	//将字符串赋值给变量
+//   strcpy(token1, lr_eval_string("{Token}"));
+//   lr_output_message("token为：%s", token1);
+//   web_set_user("{account}",
+//		lr_decrypt("{Token}"),
+//		"https://g.t.dacube.cn/MESG-ADMIN:443");
+//	
+//	web_custom_request(token1, 
+//		"URL=https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/{Token}", 
+//		"Method=OPTIONS", 
+//		"Resource=0", 
+//		"Referer=https://center.t.dacube.cn/", 
+//		"Snapshot=t16.inf", 
+//		"Mode=HTML", 
+//		LAST);
+//    
 
 	return 0;
 }

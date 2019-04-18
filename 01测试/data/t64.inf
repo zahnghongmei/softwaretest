@@ -1,0 +1,11 @@
+[t64]
+FileName1=t64.html
+URL1=http://update.ie.2345.com/wangpai/check_version.php
+Total=1
+RequestHeaderFile=t64_RequestHeader.txt
+RequestBodyFile=t64_RequestBody.txt
+ResponseHeaderFile=t64_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_64.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

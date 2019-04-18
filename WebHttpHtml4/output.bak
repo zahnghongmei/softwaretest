@@ -1,8 +1,9 @@
-Virtual User Script started at : 2019/4/14 15:46:11
+Virtual User Script started at: 2019/4/16 12:09:22
 Starting action vuser_init.
-Web Turbo Replay of LoadRunner 12.0.0 for Windows 8; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (8ÔÂ 09 2018 11:27:13)  	[MsgId: MMSG-26983]
 Run mode: HTML  	[MsgId: MMSG-26993]
-Run-Time Settings file: "E:\TEST\WebHttpHtml4\\default.cfg"  	[MsgId: MMSG-27141]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\TEST\WebHttpHtml4\\default.cfg"  	[MsgId: MMSG-27141]
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
@@ -25,15 +26,11 @@ Action.c(5): Found resource "https://center.t.dacube.cn/static/js/runtime.c0a6c5
 Action.c(5): Found resource "https://center.t.dacube.cn/static/js/chunk-elementUI.f028abeb.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
 Action.c(5): Found resource "https://center.t.dacube.cn/static/js/chunk-libs.d331153a.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
 Action.c(5): Found resource "https://center.t.dacube.cn/static/js/app.5d115900.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-Action.c(5): web_url("web_url") was successful, 3794486 body bytes, 5903 header bytes  	[MsgId: MMSG-26386]
+Action.c(5): web_url("web_url") was successful, 3859289 body bytes, 5936 header bytes, 27 chunking overhead bytes  	[MsgId: MMSG-26385]
 Action.c(12): web_reg_save_param started  	[MsgId: MMSG-26355]
 Action.c(12): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
 Action.c(18): web_custom_request("login_2") started  	[MsgId: MMSG-26355]
 Action.c(18): web_custom_request("login_2") was successful, 632 body bytes, 176 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(31): tokenÎª£º429a0d47-0b72-42fd-9453-057643aa0a1e
-Action.c(32): web_set_user started  	[MsgId: MMSG-26355]
-Action.c(32): Error -27243: Invalid port  	[MsgId: MERR-27243]
-Action.c(32): web_set_user highest severity level was "ERROR"  	[MsgId: MMSG-26391]
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...

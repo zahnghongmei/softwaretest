@@ -1,0 +1,13 @@
+POST /samlidp/login HTTP/1.1
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Referer: http://4a.dacube.com.cn/samlidp/login.jsp
+Accept-Language: zh-CN
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+Content-Type: application/x-www-form-urlencoded
+UA-CPU: AMD64
+Accept-Encoding: gzip, deflate
+Host: 4a.dacube.com.cn
+Content-Length: 34
+Connection: Keep-Alive
+Cache-Control: no-cache
+

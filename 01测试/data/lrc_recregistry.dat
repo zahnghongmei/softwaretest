@@ -7,7 +7,7 @@ Registry settings:
 		default	yes
 	AUT
 		(Default)	
-		default	E:\2345\2345Explorer\2345Explorer.exe https://center.t.dacube.cn/
+		default	C:\Program Files (x86)\Micro Focus\LoadRunner\Bin\HP.LR.ProxyRecorderStarter.exe -lrdir "C:\Program Files (x86)\Micro Focus\LoadRunner" -scriptdir "E:\TEST\01≤‚ ‘" -Port 8888 -EnableHtmlToolbar False -EnableTC2WebConversion False -selectedAppOnly "True" -autWorkDir "C:\Program Files (x86)\Micro Focus\LoadRunner\Bin" -autPath "C:\Program Files\Internet Explorer\iexplore.exe" -autParam "http://4a.dacube.com.cn/samlidp/login.jsp" -RecordLocal "True" -toolbarServerPort "8086"
 	DebugFilter
 		(Default)	
 		default	off
@@ -156,7 +156,7 @@ Registry settings:
 		(Default)	-1
 	RecorderDir
 		(Default)	
-		default	C:\Program Files (x86)\Hp\LoadRunner\bin\
+		default	C:\Program Files (x86)\Micro Focus\LoadRunner\bin\
 	RecordsetFormat
 		 help	place in the default value one of the following formats:
 		adPersistADTG	(default) Microsoft Advanced Data TableGram (ADTG) format
@@ -166,11 +166,12 @@ Registry settings:
 		default	false
 	TestDir
 		(Default)	
-		default	C:\Users\’¬∫Ï√∑\Desktop\01\data\
+		default	E:\TEST\01≤‚ ‘\data\
 	TrapOnClient
 		default	true
 	TrapOnMainThreadOnly
 		default	false
+	Trapped
 	VugenSettings
 		(Default)	
 		CurrentSettings
@@ -328,5 +329,5 @@ Registry settings:
 		default	off
 	WorkingDir
 		(Default)	
-		default	E:\2345\2345Explorer\
+		default	C:\Program Files (x86)\Micro Focus\LoadRunner\Bin\
 

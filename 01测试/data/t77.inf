@@ -1,0 +1,15 @@
+[t77]
+FileName1=t77_update.html
+URL1=http://extension.ie.2345.com/service/update.php?os=win&arch=x86&nacl_arch=x86-64&prod=chromiumcrx&prodchannel=&prodversion=56.0.2924.90&lang=zh-CN&x=id%3Dhoppdmcmndhiklcbncdmgagimabilbeb%26v%3D1.0.0.3%26installsource%3Dnotfromwebstore%26uc
+Total=3
+ContentType=text/html
+SnapshotXmlFile=snapshot_77.xml
+RequestHeaderFile=t77_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t77_ResponseHeader.txt
+FileName2=t77_ptui_ver.html
+URL2=https://xui.ptlogin2.qq.com/ptui_ver.js?v=0.46782969641386374&ptui_identifier=000D31BE43440F5DA5CD30FE403412F74FC5951BBF8566B5E4527C2E
+FileName3=t77_stats.html
+URL3=https://tajs.qq.com/stats?sId=52725868
+[ProtocolInfo]
+ProtocolId=QTWeb

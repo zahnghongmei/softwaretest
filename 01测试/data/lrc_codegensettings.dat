@@ -27,7 +27,7 @@
                        
     ( 3) TrafficFilterCodeGen  (name=TrafficFilterCodeGen)
           State      : ON
-          Protocols  : HTTP
+          Protocols  : HTTP,WPLUS
           Module     : traffic_filter.dll
           Initialize : TrafficFilterCodeGen_Init
           Default    : TrafficFilterCodeGen_DefaultProcess

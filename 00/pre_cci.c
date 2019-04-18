@@ -1,4 +1,4 @@
-# 1 "c:\\users\\\325\302\272\354\303\267\\desktop\\00\\\\combined_00.c"
+# 1 "e:\\test\\00\\\\combined_00.c"
 # 1 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h" 1
  
  
@@ -925,7 +925,7 @@ int lr_db_getvalue(char * pFirstArg, ...);
 
 
 
-# 1 "c:\\users\\\325\302\272\354\303\267\\desktop\\00\\\\combined_00.c" 2
+# 1 "e:\\test\\00\\\\combined_00.c" 2
 
 # 1 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/SharedParameter.h" 1
 
@@ -1075,7 +1075,7 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 2 "c:\\users\\\325\302\272\354\303\267\\desktop\\00\\\\combined_00.c" 2
+# 2 "e:\\test\\00\\\\combined_00.c" 2
 
 # 1 "globals.h" 1
 
@@ -2388,50 +2388,82 @@ void
 
 
 
-# 3 "c:\\users\\\325\302\272\354\303\267\\desktop\\00\\\\combined_00.c" 2
+# 3 "e:\\test\\00\\\\combined_00.c" 2
 
 # 1 "vuser_init.c" 1
 vuser_init()
 {
+		char token1[36];	
+	web_set_sockets_option("SSL_VERSION", "TLS1.1");
+	lr_start_transaction("login index");
+
+	web_url("web_url",
+		"URL=https://center.t.dacube.cn/#/login/index",
+		"TargetFrame=",
+		"Resource=0",
+		"Referer=",
+		"LAST");   
+  	
+	lr_end_transaction("login index", 2);
+	lr_think_time(6);		
+	web_reg_save_param("Token",
+		"LB=token",
+		"RB=",
+		"SaveOffset=3",
+		"SaveLen=36",
+		"LAST");
+	 
+	lr_start_transaction("login");
+	web_custom_request("login_2", 
+		"URL=https://g.t.dacube.cn/MESG-ADMIN/User/login", 
+		"Method=POST", 
+		"Resource=0", 
+		"RecContentType=application/json", 
+		"Referer=https://center.t.dacube.cn/", 
+		"Snapshot=t15.inf", 
+		"Mode=HTML", 
+		"EncType=application/json;charset=UTF-8", 
+		"Body={\"phone\":\"{account}\",\"userpwd\":\"{password}\"}", 
+		"LAST");
+	lr_end_transaction("login", 2);
+
+	 
+   strcpy(token1, lr_eval_string("{Token}"));
+   lr_output_message("token为：%s", token1);
+    lr_output_message("%s", "登陆成功");
 	return 0;
+	
 }
-# 4 "c:\\users\\\325\302\272\354\303\267\\desktop\\00\\\\combined_00.c" 2
+# 4 "e:\\test\\00\\\\combined_00.c" 2
 
 # 1 "Action.c" 1
 Action()
 {
-  
-	web_set_sockets_option("SSL_VERSION", "TLS1.1");
-    lr_start_transaction("请求链接");
-	web_url("center.t.dacube.cn", 
-		"URL=https://center.t.dacube.cn/", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=", 
-		"Snapshot=t3.inf", 
-		"Mode=HTML", 
+   
+
+	web_url("http://mail.126.com",
+		"URL=http://mail.126.com",
+		"TargetFrame=",
+		"Resource=1",
+		"Referer=",
+		"Mode=HTTP",
 		"LAST");
-   lr_end_transaction("请求链接", 2);
-
-
-	lr_think_time(4);
-
-	web_url("iecompatviewlist.xml", 
-		"URL=https://iecvlist.microsoft.com/IE11/1478281996/iecompatviewlist.xml", 
-		"Resource=0", 
-		"RecContentType=text/xml", 
-		"Referer=", 
-		"Snapshot=t4.inf", 
-		"Mode=HTML", 
+	
+	web_url("11",
+		"URL=http://www.xinhuanet.com/",
+		"TargetFrame=",
+		"Resource=1",
+		"Referer=",
 		"LAST");
+
 	return 0;
 }
-# 5 "c:\\users\\\325\302\272\354\303\267\\desktop\\00\\\\combined_00.c" 2
+# 5 "e:\\test\\00\\\\combined_00.c" 2
 
 # 1 "vuser_end.c" 1
 vuser_end()
 {
 	return 0;
 }
-# 6 "c:\\users\\\325\302\272\354\303\267\\desktop\\00\\\\combined_00.c" 2
+# 6 "e:\\test\\00\\\\combined_00.c" 2
 

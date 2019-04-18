@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: openresty
-Date: Wed, 10 Apr 2019 09:26:44 GMT
-Content-Type: text/html
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-Content-Encoding: gzip
-

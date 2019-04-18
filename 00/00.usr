@@ -1,7 +1,7 @@
 [General]
 Type=Multi
 DefaultCfg=default.cfg
-ParameterFile=
+ParameterFile=00.prm
 GlobalParameterFile=
 NewFunctionHeader=1
 RunType=cci
@@ -19,6 +19,9 @@ ParamRightBrace=}
 ScriptLanguage=C
 DisableRegenerate=0
 Description=
+LastCodeGenerationVer=
+Encoding=
+ScriptLocale=zh-CN
 [Actions]
 vuser_init=vuser_init.c
 Action=Action.c
@@ -32,7 +35,7 @@ Default Profile=default.cfg
 [ExtraFiles]
 globals.h=
 [Modified Actions]
-vuser_init=0
+vuser_init=1
 Action=1
 vuser_end=0
 [Recorded Actions]
@@ -48,11 +51,12 @@ vuser_init=cci
 Action=cci
 vuser_end=cci
 [TransactionsOrder]
-Order="请求链接"
+Order="login index__*delimiter*__login"
 [StateManagement]
 LastReplayStatus=1
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1
 [Transactions]
-请求链接=
+"login index"=
+login=

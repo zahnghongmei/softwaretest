@@ -1,0 +1,9 @@
+POST https://t.urs.microsoft.com/urstelemetry.asmx?MSTel-Client-Key=EMw2FejYcigh/pwVwwsLIA%3d%3d&MSTel-MAC=z8PnSETwepE%3d HTTP/1.1
+Accept: text/*
+Content-Type: text/xml; charset=utf-8
+User-Agent: VCSoapClient
+Cache-Control: no-cache
+Host: t.urs.microsoft.com
+Content-Length: 1051
+Connection: Keep-Alive
+

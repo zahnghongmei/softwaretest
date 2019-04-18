@@ -1,17 +1,7 @@
 HTTP/1.1 200 OK
-Content-Encoding: gzip
-Cache-Control: max-age=21600
-Content-MD5: oFowtR63NkTKKwM/be9IQw==
-Content-Type: text/xml
-Date: Wed, 10 Apr 2019 08:52:14 GMT
-Etag: 0x8D69C38C28E81FE
-Last-Modified: Tue, 26 Feb 2019 22:21:31 GMT
-Server: ECAcc (tka/898D)
-Vary: Accept-Encoding
-X-Cache: HIT
-x-ms-blob-type: BlockBlob
-x-ms-lease-status: unlocked
-x-ms-request-id: 76a66f59-501e-001b-3955-efc390000000
-x-ms-version: 2009-09-19
-Content-Length: 27207
+Server: nginx/1.12.2
+Date: Thu, 18 Apr 2019 09:44:09 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
 

@@ -1,5 +1,5 @@
 # 1 "e:\\test\\webhttphtml4\\\\combined_WebHttpHtml4.c"
-# 1 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h" 1
+# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h" 1
  
  
 
@@ -26,7 +26,7 @@
 
 
 
-# 103 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 103 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 
 
@@ -80,8 +80,14 @@
 
 
 
+		
 
 
+		typedef unsigned size_t;
+	
+	
+        
+	
 
 
 
@@ -181,7 +187,7 @@ int lr_generate_uuid_free(lr_uuid_t uuid);
 int lr_generate_uuid_on_buf(lr_uuid_t buf);
 
    
-# 266 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 273 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 int lr_start_distributed_transaction  (char * transaction_name, lr_uuid_t correlator, long timeout  );
 
    
@@ -335,6 +341,7 @@ static void *ci_this_context = 0;
 
 
 void lr_continue_on_error (int lr_continue);
+char *   lr_unmask (const char *EncodedString);
 char *   lr_decrypt (const char *EncodedString);
 
 
@@ -421,11 +428,11 @@ int   lr_msg (char * fmt, ...);
 int   lr_debug_message (unsigned int msg_class,
 									    char * format,
 										...);
-# 505 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 513 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 void   lr_new_prefix (int type,
                                  char * filename,
                                  int line);
-# 508 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 516 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 int   lr_log_message (char * fmt, ...);
 int   lr_message (char * fmt, ...);
 int   lr_error_message (char * fmt, ...);
@@ -439,7 +446,7 @@ int   lr_fail_trans_with_error (char * fmt, ...);
  
  
  
-# 532 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 540 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
  
  
@@ -474,7 +481,7 @@ int   lr_eval_string_ext (const char *in_str,
                                      unsigned long const options,
                                      const char *file,
 								     long const line);
-# 566 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 574 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 void   lr_eval_string_ext_free (char * * pstr);
 
  
@@ -498,7 +505,7 @@ void   lr_eval_string_ext_free (char * * pstr);
  
 int lr_param_increment (char * dst_name,
                               char * src_name);
-# 589 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 597 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 
 
@@ -523,7 +530,7 @@ int	  lr_save_var (char *              param_val,
 							  unsigned long const param_val_len,
 							  unsigned long const options,
 							  char *			  param_name);
-# 613 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 621 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 int   lr_save_string (const char * param_val, const char * param_name);
 
 
@@ -547,7 +554,7 @@ int   lr_convert_double_to_double (const char *source_param_name, const char *fo
  
  
  
-# 692 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 700 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 void   lr_save_datetime (const char *format, int offset, const char *name);
 
 
@@ -608,8 +615,8 @@ char * lr_table_get_cell_by_col_name (char * param_name, int row, const char* co
 
 int lr_table_get_column_name_by_index (char * param_name, int col, 
 											char * * const col_name,
-											int * col_name_len);
-# 753 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+											size_t * col_name_len);
+# 761 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 int lr_table_get_column_name_by_index_free (char * col_name);
 
@@ -617,7 +624,7 @@ int lr_table_get_column_name_by_index_free (char * col_name);
  
  
  
-# 768 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 776 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 int   lr_zip (const char* param1, const char* param2);
 int   lr_unzip (const char* param1, const char* param2);
 
@@ -639,15 +646,15 @@ int   lr_unzip (const char* param1, const char* param2);
 int   lr_param_substit (char * file,
                                    int const line,
                                    char * in_str,
-                                   int const in_len,
+                                   size_t const in_len,
                                    char * * const out_str,
-                                   int * const out_len);
-# 792 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+                                   size_t * const out_len);
+# 800 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 void   lr_param_substit_free (char * * pstr);
 
 
  
-# 804 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 812 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 
 
@@ -656,14 +663,14 @@ void   lr_param_substit_free (char * * pstr);
 char *   lrfnc_eval_string (char * str,
                                       char * file_name,
                                       long const line_num);
-# 812 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 820 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 
 int   lrfnc_save_string ( const char * param_val,
                                      const char * param_name,
                                      const char * file_name,
                                      long const line_num);
-# 818 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 826 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 int   lrfnc_free_parameter (const char * param_name );
 
@@ -682,15 +689,15 @@ extern const lr_timestamp_param default_timestamp_param;
 
 int   lrfnc_save_timestamp (const char * param_name, const lr_timestamp_param* time_param);
 
-int lr_save_searched_string(char *buffer, long buf_size, unsigned int occurrence,
-			    char *search_string, int offset, unsigned int param_val_len, 
-			    char *param_name);
+int lr_save_searched_string(char * buffer, long buf_size, unsigned int occurrence,
+			    char * search_string, int offset, unsigned int param_val_len, 
+			    char * param_name);
 
  
 char *   lr_string (char * str);
 
  
-# 916 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 929 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 int   lr_save_value (char * param_val,
                                 unsigned long const param_val_len,
@@ -698,7 +705,7 @@ int   lr_save_value (char * param_val,
                                 char * param_name,
                                 char * file_name,
                                 long const line_num);
-# 923 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 936 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 
  
@@ -721,7 +728,7 @@ int   lr_printf (char * fmt, ...);
  
 int   lr_set_debug_message (unsigned int msg_class,
                                        unsigned int swtch);
-# 945 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 958 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 unsigned int   lr_get_debug_message (void);
 
 
@@ -751,7 +758,7 @@ int *   lr_localtime (long offset);
 int   lr_send_port (long port);
 
 
-# 1021 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 1034 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 
 
@@ -769,10 +776,10 @@ void vuser_declaration (void);
 
 
 
-# 1050 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 1063 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 
-# 1062 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h"
+# 1075 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h"
 
 
 
@@ -825,51 +832,78 @@ int   _lr_declare_rendezvous  (char * rendezvous_name);
  
 
 
-int vtc_connect(char * servername, int portnum, int options);
-int vtc_disconnect(int pvci);
-int vtc_get_last_error(int pvci);
-int vtc_query_column(int pvci, char * columnName, int columnIndex, char * *outvalue);
-int vtc_query_row(int pvci, int rowIndex, char * **outcolumns, char * **outvalues);
-int vtc_send_message(int pvci, char * column, char * message, unsigned short *outRc);
-int vtc_send_if_unique(int pvci, char * column, char * message, unsigned short *outRc);
-int vtc_send_row1(int pvci, char * columnNames, char * messages, char * delimiter, unsigned char sendflag, unsigned short *outUpdates);
-int vtc_update_message(int pvci, char * column, int index , char * message, unsigned short *outRc);
-int vtc_update_message_ifequals(int pvci, char	*columnName, int index,	char * message, char	*ifmessage,	unsigned short 	*outRc);
-int vtc_update_row1(int pvci, char * columnNames, int index , char * messages, char * delimiter, unsigned short *outUpdates);
-int vtc_retrieve_message(int pvci, char * column, char * *outvalue);
-int vtc_retrieve_messages1(int pvci, char * columnNames, char * delimiter, char * **outvalues);
-int vtc_retrieve_row(int pvci, char * **outcolumns, char * **outvalues);
-int vtc_increment(int pvci, char * column, int index , int incrValue, int *outValue);
-int vtc_clear_message(int pvci, char * column, int index , unsigned short *outRc);
-int vtc_clear_column(int pvci, char * column, unsigned short *outRc);
-int vtc_ensure_index(int pvci, char * column, unsigned short *outRc);
-int vtc_drop_index(int pvci, char * column, unsigned short *outRc);
-int vtc_clear_row(int pvci, int rowIndex, unsigned short *outRc);
-int vtc_create_column(int pvci, char * column,unsigned short *outRc);
-int vtc_column_size(int pvci, char * column, int *size);
-void vtc_free(char * msg);
-void vtc_free_list(char * *msglist);
-int lrvtc_connect(char * servername, int portnum, int options);
-int lrvtc_disconnect();
-int lrvtc_query_column(char * columnName, int columnIndex);
-int lrvtc_query_row(int columnIndex);
-int lrvtc_send_message(char * columnName, char * message);
-int lrvtc_send_if_unique(char * columnName, char * message);
-int lrvtc_send_row1(char * columnNames, char * messages, char * delimiter, unsigned char sendflag);
-int lrvtc_update_message(char * columnName, int index , char * message);
-int lrvtc_update_message_ifequals(char * columnName, int index, char * message, char * ifmessage);
-int lrvtc_update_row1(char * columnNames, int index , char * messages, char * delimiter);
-int lrvtc_retrieve_message(char * columnName);
-int lrvtc_retrieve_messages1(char * columnNames, char * delimiter);
-int lrvtc_retrieve_row();
-int lrvtc_increment(char * columnName, int index , int incrValue);
-int lrvtc_clear_message(char * columnName, int index);
-int lrvtc_clear_column(char * columnName); 
-int lrvtc_ensure_index(char * columnName); 
-int lrvtc_drop_index(char * columnName); 
-int lrvtc_clear_row(int rowIndex);
-int lrvtc_create_column(char * columnName);
-int lrvtc_column_size(char * columnName);
+typedef int PVCI;
+
+
+
+
+
+
+typedef int VTCERR;
+
+
+
+
+
+
+
+
+
+PVCI   vtc_connect(char * servername, int portnum, int options);
+VTCERR   vtc_disconnect(PVCI pvci);
+VTCERR   vtc_get_last_error(PVCI pvci);
+VTCERR   vtc_query_column(PVCI pvci, char * columnName, int columnIndex, char * *outvalue);
+VTCERR   vtc_query_row(PVCI pvci, int rowIndex, char * **outcolumns, char * **outvalues);
+VTCERR   vtc_send_message(PVCI pvci, char * column, char * message, unsigned short *outRc);
+VTCERR   vtc_send_if_unique(PVCI pvci, char * column, char * message, unsigned short *outRc);
+VTCERR   vtc_send_row1(PVCI pvci, char * columnNames, char * messages, char * delimiter, unsigned char sendflag, unsigned short *outUpdates);
+VTCERR   vtc_update_message(PVCI pvci, char * column, int index , char * message, unsigned short *outRc);
+VTCERR   vtc_update_message_ifequals(PVCI pvci, char * columnName, int index,	char * message, char * ifmessage, unsigned short 	*outRc);
+VTCERR   vtc_update_row1(PVCI pvci, char * columnNames, int index , char * messages, char * delimiter, unsigned short *outUpdates);
+VTCERR   vtc_retrieve_message(PVCI pvci, char * column, char * *outvalue);
+VTCERR   vtc_retrieve_messages1(PVCI pvci, char * columnNames, char * delimiter, char * **outvalues);
+VTCERR   vtc_retrieve_row(PVCI pvci, char * **outcolumns, char * **outvalues);
+VTCERR   vtc_rotate_message(PVCI pvci, char * column, char * *outvalue, unsigned char sendflag);
+VTCERR   vtc_rotate_messages1(PVCI pvci, char * columnNames, char * delimiter, char * **outvalues, unsigned char sendflag);
+VTCERR   vtc_rotate_row(PVCI pvci, char * **outcolumns, char * **outvalues, unsigned char sendflag);
+VTCERR   vtc_increment(PVCI pvci, char * column, int index , int incrValue, int *outValue);
+VTCERR   vtc_clear_message(PVCI pvci, char * column, int index , unsigned short *outRc);
+VTCERR   vtc_clear_column(PVCI pvci, char * column, unsigned short *outRc);
+VTCERR   vtc_ensure_index(PVCI pvci, char * column, unsigned short *outRc);
+VTCERR   vtc_drop_index(PVCI pvci, char * column, unsigned short *outRc);
+VTCERR   vtc_clear_row(PVCI pvci, int rowIndex, unsigned short *outRc);
+VTCERR   vtc_create_column(PVCI pvci, char * column,unsigned short *outRc);
+VTCERR   vtc_column_size(PVCI pvci, char * column, int *size);
+void   vtc_free(char * msg);
+void   vtc_free_list(char * *msglist);
+
+VTCERR   lrvtc_connect(char * servername, int portnum, int options);
+VTCERR   lrvtc_connect_ex(char * vtc_first_param, ...);
+VTCERR   lrvtc_connect_ex_no_ellipsis(const char *vtc_first_param, char ** arguments, int argCount);
+VTCERR   lrvtc_disconnect();
+VTCERR   lrvtc_query_column(char * columnName, int columnIndex);
+VTCERR   lrvtc_query_row(int columnIndex);
+VTCERR   lrvtc_send_message(char * columnName, char * message);
+VTCERR   lrvtc_send_if_unique(char * columnName, char * message);
+VTCERR   lrvtc_send_row1(char * columnNames, char * messages, char * delimiter, unsigned char sendflag);
+VTCERR   lrvtc_update_message(char * columnName, int index , char * message);
+VTCERR   lrvtc_update_message_ifequals(char * columnName, int index, char * message, char * ifmessage);
+VTCERR   lrvtc_update_row1(char * columnNames, int index , char * messages, char * delimiter);
+VTCERR   lrvtc_retrieve_message(char * columnName);
+VTCERR   lrvtc_retrieve_messages1(char * columnNames, char * delimiter);
+VTCERR   lrvtc_retrieve_row();
+VTCERR   lrvtc_rotate_message(char * columnName, unsigned char sendflag);
+VTCERR   lrvtc_rotate_messages1(char * columnNames, char * delimiter, unsigned char sendflag);
+VTCERR   lrvtc_rotate_row(unsigned char sendflag);
+VTCERR   lrvtc_increment(char * columnName, int index , int incrValue);
+VTCERR   lrvtc_noop();
+VTCERR   lrvtc_clear_message(char * columnName, int index);
+VTCERR   lrvtc_clear_column(char * columnName); 
+VTCERR   lrvtc_ensure_index(char * columnName); 
+VTCERR   lrvtc_drop_index(char * columnName); 
+VTCERR   lrvtc_clear_row(int rowIndex);
+VTCERR   lrvtc_create_column(char * columnName);
+VTCERR   lrvtc_column_size(char * columnName);
 
 
 
@@ -889,7 +923,10 @@ int lr_disable_ip_spoofing();
 
 
 
-int lr_convert_string_encoding(char *sourceString, char *fromEncoding, char *toEncoding, char *paramName);
+int lr_convert_string_encoding(char * sourceString, char * fromEncoding, char * toEncoding, char * paramName);
+int lr_read_file(const char *filename, const char *outputParam, int continueOnError);
+
+int lr_get_char_count(const char * string);
 
 
  
@@ -925,9 +962,11 @@ int lr_db_getvalue(char * pFirstArg, ...);
 
 
 
+
+
 # 1 "e:\\test\\webhttphtml4\\\\combined_WebHttpHtml4.c" 2
 
-# 1 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/SharedParameter.h" 1
+# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/SharedParameter.h" 1
 
 
 
@@ -935,14 +974,22 @@ int lr_db_getvalue(char * pFirstArg, ...);
  
  
  
-# 100 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/SharedParameter.h"
+# 100 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/SharedParameter.h"
+
 
 
 
 
 
 typedef int PVCI2;
+
+
+
+
+
+
 typedef int VTCERR2;
+
 
  
  
@@ -950,33 +997,36 @@ typedef int VTCERR2;
 
  
 extern PVCI2    vtc_connect(char *servername, int portnum, int options);
-extern VTCERR2  vtc_disconnect(int pvci);
-extern VTCERR2  vtc_get_last_error(int pvci);
+extern VTCERR2  vtc_disconnect(PVCI2 pvci);
+extern VTCERR2  vtc_get_last_error(PVCI2 pvci);
 
  
-extern VTCERR2  vtc_query_column(int pvci, char *columnName, int columnIndex, char **outvalue);
-extern VTCERR2  vtc_query_row(int pvci, int columnIndex, char ***outcolumns, char ***outvalues);
-extern VTCERR2  vtc_send_message(int pvci, char *column, char *message, unsigned short *outRc);
-extern VTCERR2  vtc_send_if_unique(int pvci, char *column, char *message, unsigned short *outRc);
-extern VTCERR2  vtc_send_row1(int pvci, char *columnNames, char *messages, char *delimiter,  unsigned char sendflag, unsigned short *outUpdates);
-extern VTCERR2  vtc_update_message(int pvci, char *column, int index , char *message, unsigned short *outRc);
-extern VTCERR2  vtc_update_message_ifequals(int pvci, char	*columnName, int index,	char *message, char	*ifmessage,	unsigned short 	*outRc);
-extern VTCERR2  vtc_update_row1(int pvci, char *columnNames, int index , char *messages, char *delimiter, unsigned short *outUpdates);
-extern VTCERR2  vtc_retrieve_message(int pvci, char *column, char **outvalue);
-extern VTCERR2  vtc_retrieve_messages1(int pvci, char *columnNames, char *delimiter, char ***outvalues);
-extern VTCERR2  vtc_retrieve_row(int pvci, char ***outcolumns, char ***outvalues);
-extern VTCERR2  vtc_increment(int pvci, char *column, int index , int incrValue, int *outValue);
-extern VTCERR2  vtc_clear_message(int pvci, char *column, int index , unsigned short *outRc);
-extern VTCERR2  vtc_clear_column(int pvci, char *column, unsigned short *outRc);
+extern VTCERR2  vtc_query_column(PVCI2 pvci, char *columnName, int columnIndex, char **outvalue);
+extern VTCERR2  vtc_query_row(PVCI2 pvci, int columnIndex, char ***outcolumns, char ***outvalues);
+extern VTCERR2  vtc_send_message(PVCI2 pvci, char *column, char *message, unsigned short *outRc);
+extern VTCERR2  vtc_send_if_unique(PVCI2 pvci, char *column, char *message, unsigned short *outRc);
+extern VTCERR2  vtc_send_row1(PVCI2 pvci, char *columnNames, char *messages, char *delimiter,  unsigned char sendflag, unsigned short *outUpdates);
+extern VTCERR2  vtc_update_message(PVCI2 pvci, char *column, int index , char *message, unsigned short *outRc);
+extern VTCERR2  vtc_update_message_ifequals(PVCI2 pvci, char	*columnName, int index,	char *message, char	*ifmessage,	unsigned short 	*outRc);
+extern VTCERR2  vtc_update_row1(PVCI2 pvci, char *columnNames, int index , char *messages, char *delimiter, unsigned short *outUpdates);
+extern VTCERR2  vtc_retrieve_message(PVCI2 pvci, char *column, char **outvalue);
+extern VTCERR2  vtc_retrieve_messages1(PVCI2 pvci, char *columnNames, char *delimiter, char ***outvalues);
+extern VTCERR2  vtc_retrieve_row(PVCI2 pvci, char ***outcolumns, char ***outvalues);
+extern VTCERR2  vtc_rotate_message(PVCI2 pvci, char *column, char **outvalue, unsigned char sendflag);
+extern VTCERR2  vtc_rotate_messages1(PVCI2 pvci, char *columnNames, char *delimiter, char ***outvalues, unsigned char sendflag);
+extern VTCERR2  vtc_rotate_row(PVCI2 pvci, char ***outcolumns, char ***outvalues, unsigned char sendflag);
+extern VTCERR2	vtc_increment(PVCI2 pvci, char *column, int index , int incrValue, int *outValue);
+extern VTCERR2  vtc_clear_message(PVCI2 pvci, char *column, int index , unsigned short *outRc);
+extern VTCERR2  vtc_clear_column(PVCI2 pvci, char *column, unsigned short *outRc);
 
-extern VTCERR2  vtc_clear_row(int pvci, int rowIndex, unsigned short *outRc);
+extern VTCERR2  vtc_clear_row(PVCI2 pvci, int rowIndex, unsigned short *outRc);
 
-extern VTCERR2  vtc_create_column(int pvci, char *column,unsigned short *outRc);
-extern VTCERR2  vtc_column_size(int pvci, char *column, int *size);
-extern VTCERR2  vtc_ensure_index(int pvci, char *column, unsigned short *outRc);
-extern VTCERR2  vtc_drop_index(int pvci, char *column, unsigned short *outRc);
+extern VTCERR2  vtc_create_column(PVCI2 pvci, char *column,unsigned short *outRc);
+extern VTCERR2  vtc_column_size(PVCI2 pvci, char *column, int *size);
+extern VTCERR2  vtc_ensure_index(PVCI2 pvci, char *column, unsigned short *outRc);
+extern VTCERR2  vtc_drop_index(PVCI2 pvci, char *column, unsigned short *outRc);
 
-extern VTCERR2  vtc_noop(int pvci);
+extern VTCERR2  vtc_noop(PVCI2 pvci);
 
  
 extern void vtc_free(char *msg);
@@ -1021,6 +1071,8 @@ extern void vtc_free_list(char **msglist);
  
 
 extern VTCERR2  lrvtc_connect(char *servername, int portnum, int options);
+ 
+ 
 extern VTCERR2  lrvtc_disconnect();
 extern VTCERR2  lrvtc_query_column(char *columnName, int columnIndex);
 extern VTCERR2  lrvtc_query_row(int columnIndex);
@@ -1033,12 +1085,15 @@ extern VTCERR2  lrvtc_update_row1(char *columnNames, int index , char *messages,
 extern VTCERR2  lrvtc_retrieve_message(char *columnName);
 extern VTCERR2  lrvtc_retrieve_messages1(char *columnNames, char *delimiter);
 extern VTCERR2  lrvtc_retrieve_row();
-extern int     lrvtc_increment(char *columnName, int index , int incrValue);
+extern VTCERR2  lrvtc_rotate_message(char *columnName, unsigned char sendflag);
+extern VTCERR2  lrvtc_rotate_messages1(char *columnNames, char *delimiter, unsigned char sendflag);
+extern VTCERR2  lrvtc_rotate_row(unsigned char sendflag);
+extern VTCERR2  lrvtc_increment(char *columnName, int index , int incrValue);
 extern VTCERR2  lrvtc_clear_message(char *columnName, int index);
 extern VTCERR2  lrvtc_clear_column(char *columnName);
 extern VTCERR2  lrvtc_clear_row(int rowIndex);
 extern VTCERR2  lrvtc_create_column(char *columnName);
-extern int     lrvtc_column_size(char *columnName);
+extern VTCERR2  lrvtc_column_size(char *columnName);
 extern VTCERR2  lrvtc_ensure_index(char *columnName);
 extern VTCERR2  lrvtc_drop_index(char *columnName);
 
@@ -1084,7 +1139,7 @@ extern VTCERR2  lrvtc_noop();
  
  
 
-# 1 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/web_api.h" 1
+# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/web_api.h" 1
 
 
 
@@ -1092,7 +1147,11 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 1 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/as_web.h" 1
+# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/as_web.h" 1
+
+
+
+
 
 
 
@@ -1154,6 +1213,35 @@ extern VTCERR2  lrvtc_noop();
 
 
  
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1754,6 +1842,21 @@ extern VTCERR2  lrvtc_noop();
 										 
 										 
 										 
+
+  int
+	web_reg_save_param_json(
+		const char * mpszParamName,
+		...);							
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
 										 
 
   int
@@ -1763,6 +1866,26 @@ extern VTCERR2  lrvtc_noop();
 										 
 										 
 										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+
+  int
+	web_reg_save_param_attrib(
+		const char * mpszParamName,
+		...);
+										 
+										 
+										 
+										 
+										 
+										 
+										 		
 										 
 										 
 										 
@@ -1789,20 +1912,10 @@ extern VTCERR2  lrvtc_noop();
   int
 	web_js_reset(void);
 
-
-
-
-
-
-
-
-
-
-# 716 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/as_web.h"
-
-
-# 729 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/as_web.h"
-
+  int
+	web_convert_date_param(
+		const char * 		mpszParamName,
+		...);
 
 
 
@@ -1813,10 +1926,10 @@ extern VTCERR2  lrvtc_noop();
 
 
 
+# 789 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/as_web.h"
 
 
-
-
+# 802 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/as_web.h"
 
 
 
@@ -1829,7 +1942,22 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 767 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/as_web.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 840 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/as_web.h"
 
  
  
@@ -1876,7 +2004,7 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 835 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/as_web.h"
+# 908 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/as_web.h"
 
 
   int
@@ -1888,6 +2016,80 @@ extern VTCERR2  lrvtc_noop();
 										 
 										 
 
+  int
+web_stream_open(
+	const char *		mpszArg1,
+	...
+);
+  int
+	web_stream_wait(
+		const char *		mpszArg1,
+		...
+	);
+
+  int
+	web_stream_close(
+		const char *		mpszArg1,
+		...
+	);
+
+  int
+web_stream_play(
+	const char *		mpszArg1,
+	...
+	);
+
+  int
+web_stream_pause(
+	const char *		mpszArg1,
+	...
+	);
+
+  int
+web_stream_seek(
+	const char *		mpszArg1,
+	...
+	);
+
+  int
+web_stream_get_param_int(
+	const char*			mpszStreamID,
+	const int			miStateType
+	);
+
+  double
+web_stream_get_param_double(
+	const char*			mpszStreamID,
+	const int			miStateType
+	);
+
+  int
+web_stream_get_param_string(
+	const char*			mpszStreamID,
+	const int			miStateType,
+	const char*			mpszParameterName
+	);
+
+  int
+web_stream_set_param_int(
+	const char*			mpszStreamID,
+	const int			miStateType,
+	const int			miStateValue
+	);
+
+  int
+web_stream_set_param_double(
+	const char*			mpszStreamID,
+	const int			miStateType,
+	const double		mdfStateValue
+	);
+
+  int
+web_stream_set_custom_mpd(
+	const char*			mpszStreamID,
+	const char*			aMpdBuf
+	);
+
  
  
  
@@ -1897,7 +2099,7 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 9 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/web_api.h" 2
+# 9 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/web_api.h" 2
 
 
 
@@ -1924,6 +2126,7 @@ extern VTCERR2  lrvtc_noop();
 
 
  
+
 
 
 
@@ -2422,22 +2625,22 @@ Action()
 		"EncType=application/json;charset=UTF-8", 
 		"Body={\"phone\":\"{account}\",\"userpwd\":\"{pw}\"}", 
 		"LAST");
-	 
-   strcpy(token1, lr_eval_string("{Token}"));
-   lr_output_message("tokenÎª£º%s", token1);
-   web_set_user("{account}",
-		lr_decrypt("{Token}"),
-		"https://g.t.dacube.cn/MESG-ADMIN:443");
-	
-	web_custom_request(token1, 
-		"URL=https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/{Token}", 
-		"Method=OPTIONS", 
-		"Resource=0", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t16.inf", 
-		"Mode=HTML", 
-		"LAST");
-    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 	return 0;
 }

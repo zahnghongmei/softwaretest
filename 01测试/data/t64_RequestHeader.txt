@@ -1,0 +1,11 @@
+POST /wangpai/check_version.php HTTP/1.1
+Host: update.ie.2345.com
+Connection: keep-alive
+Content-Length: 1937
+Pragma: no-cache
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.90 Safari/537.36 2345Explorer/9.6.0.18627
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+

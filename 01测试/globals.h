@@ -10,7 +10,15 @@
 #include "WebSocketBuffer.h"
 
 
+
+
+
+
 //--------------------------------------------------------------------
 // Global Variables
+
+
+
+
 
 #endif // _GLOBALS_H

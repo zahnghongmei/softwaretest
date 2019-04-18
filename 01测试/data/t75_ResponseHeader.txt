@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Date: Tue, 16 Apr 2019 06:09:32 GMT
+Content-Type: text/html; charset=GBK
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: U=29g8lyvnukn4kkgowgkws0kkc; expires=Fri, 13-Apr-2029 06:09:31 GMT; Max-Age=315360000; path=/; domain=passport.2345.com
+Set-Cookie: PHPSESSID=vvcu13esh6h6o1ltv4o5dosug5; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Encoding: gzip
+

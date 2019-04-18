@@ -1,0 +1,8 @@
+GET /config/v1/Office/16.0.11425.20204?&Clientid=%7b0108DC68-C198-40F9-B9FC-FDF624F91583%7d&Application=outlook&Platform=win32&Version=16.0.11425.20204&MsoVersion=16.0.11425.20200&Audience=Production&Build=ship&Architecture=x86&Language=zh-CN&SubscriptionLicense=false&PerpetualLicense=2016&Channel=CC&InstallType=C2R&SessionId=%7bA2DC5472-E9C3-4E0E-9528-939D80C7DE1E%7d&LabMachine=false HTTP/1.1
+Connection: Keep-Alive
+Accept-Encoding: gzip
+If-None-Match: "EQpgkNtdH+f5u/phkaVY4nPTWlNulr2eJXcOqFbzofI="
+User-Agent: Microsoft Office  2014
+DisableExperiments: false
+Host: config.edge.skype.com
+
