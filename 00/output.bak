@@ -1,50 +1,51 @@
-Virtual User Script started at : 2019/4/18 17:41:21
+Virtual User Script started at : 2019/4/18 21:52:05
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.0.0 for Windows 8; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Run-Time Settings file: "E:\TEST\00\\default.cfg"  	[MsgId: MMSG-27141]
 Warning -27070: Replay statistic collection is not supported by the WinInet Replay and is ignored  	[MsgId: MWAR-27070]
-vuser_init.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
-vuser_init.c(4): Warning -27488: web_set_sockets_option has no effect on WinInet replay  	[MsgId: MWAR-27488]
-vuser_init.c(4): web_set_sockets_option highest severity level was "warning"  	[MsgId: MMSG-26391]
-vuser_init.c(5): Notify: Transaction "login index" started.
-vuser_init.c(7): web_url("web_url") started  	[MsgId: MMSG-26355]
-vuser_init.c(7): Found resource "https://at.alicdn.com/t/font_768862_n0hetrrbii8.css" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://center.t.dacube.cn/static/element/index.css" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://at.alicdn.com/t/font_768862_n0hetrrbii8.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://center.t.dacube.cn/static/css/app.edf99ef0.css" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://cdn.jsdelivr.net/npm/sockjs-client@1.3.0/dist/sockjs.min.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://center.t.dacube.cn/static/js/stomp.min.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://center.t.dacube.cn/static/js/webim.config.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://webim.easemob.com/sdk/dist/strophe-1.2.8.min.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://webim.easemob.com/sdk/dist/websdk-1.4.13.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://center.t.dacube.cn/static/js/EMedia_x1v1.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://center.t.dacube.cn/static/js/runtime.c0a6c5aa.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://center.t.dacube.cn/static/js/chunk-elementUI.f028abeb.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://center.t.dacube.cn/static/js/chunk-libs.d331153a.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): Found resource "https://center.t.dacube.cn/static/js/app.5d115900.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-vuser_init.c(7): web_url("web_url") was successful, 3794486 body bytes, 5895 header bytes  	[MsgId: MMSG-26386]
-vuser_init.c(14): Notify: Transaction "login index" ended with a "Pass" status (Duration: 6.2469 Wasted Time: 0.3053).
-vuser_init.c(16): web_reg_save_param started  	[MsgId: MMSG-26355]
-vuser_init.c(16): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
-vuser_init.c(23): Notify: Transaction "login" started.
-vuser_init.c(24): web_custom_request("login_2") started  	[MsgId: MMSG-26355]
-vuser_init.c(24): web_custom_request("login_2") was successful, 632 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
-vuser_init.c(35): Notify: Transaction "login" ended with a "Pass" status (Duration: 0.1915 Wasted Time: 0.0151).
-vuser_init.c(39): token为：e3521b5b-94c1-462b-a8b3-0a4f26ece1c1
-vuser_init.c(40): 登陆成功
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
-Warning -27077: The "vuser_init" section contains web function(s) when the "Simulate a new user on each iteration" Run-Time Setting is ON.  This may produce unpredictable results with multiple iterations  	[MsgId: MWAR-27077]
 Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
 Starting action Action.
-Action.c(5): web_url("http://mail.126.com") started  	[MsgId: MMSG-26355]
-Action.c(5): Redirecting "http://mail.126.com" (redirection depth is 0)  	[MsgId: MMSG-26694]
-Action.c(5): To location "https://mail.126.com/"  	[MsgId: MMSG-26693]
-Action.c(5): web_url("http://mail.126.com") was successful, 4779 body bytes, 524 header bytes  	[MsgId: MMSG-26386]
-Action.c(13): web_url("11") started  	[MsgId: MMSG-26355]
-Action.c(13): web_url("11") was successful, 39618 body bytes, 416 header bytes  	[MsgId: MMSG-26386]
+Action.c(6): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(6): Warning -27488: web_set_sockets_option has no effect on WinInet replay  	[MsgId: MWAR-27488]
+Action.c(6): web_set_sockets_option highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(7): Notify: Transaction "login index" started.
+Action.c(9): web_url("web_url") started  	[MsgId: MMSG-26355]
+Action.c(9): Found resource "https://at.alicdn.com/t/font_768862_n0hetrrbii8.css" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://center.t.dacube.cn/static/element/index.css" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://at.alicdn.com/t/font_768862_n0hetrrbii8.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://center.t.dacube.cn/static/css/app.edf99ef0.css" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://cdn.jsdelivr.net/npm/sockjs-client@1.3.0/dist/sockjs.min.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://center.t.dacube.cn/static/js/stomp.min.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://center.t.dacube.cn/static/js/webim.config.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://webim.easemob.com/sdk/dist/strophe-1.2.8.min.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://webim.easemob.com/sdk/dist/websdk-1.4.13.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://center.t.dacube.cn/static/js/EMedia_x1v1.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://center.t.dacube.cn/static/js/runtime.c0a6c5aa.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://center.t.dacube.cn/static/js/chunk-elementUI.f028abeb.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://center.t.dacube.cn/static/js/chunk-libs.d331153a.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): Found resource "https://center.t.dacube.cn/static/js/app.5d115900.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
+Action.c(9): web_url("web_url") was successful, 3859289 body bytes, 5923 header bytes  	[MsgId: MMSG-26386]
+Action.c(16): Notify: Transaction "login index" ended with a "Pass" status (Duration: 9.2904 Wasted Time: 0.2623).
+Action.c(18): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(18): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(24): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(24): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(30): Notify: Transaction "login" started.
+Action.c(31): web_custom_request("login_2") started  	[MsgId: MMSG-26355]
+Action.c(31): web_custom_request("login_2") was successful, 632 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
+Action.c(42): Notify: Transaction "login" ended with a "Pass" status (Duration: 0.7222 Wasted Time: 0.0140).
+Action.c(46): token为：0bb068ce-173a-4bac-9d74-087e7738f1ad
+Action.c(47): usercode为：e729e146-f249-42e1-960d-5c1f3f60bc9a
+Action.c(48): 登陆成功
+Action.c(50): web_add_header("token") started  	[MsgId: MMSG-26355]
+Action.c(50): web_add_header("token") was successful  	[MsgId: MMSG-26392]
+Action.c(52): web_custom_request("0bb068ce-173a-4bac-9d74-087e7738f1ad") started  	[MsgId: MMSG-26355]
+Action.c(52): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/0bb068ce-173a-4bac-9d74-087e7738f1ad?token=0bb068ce-173a-4bac-9d74-087e7738f1ad"  	[MsgId: MMSG-26548]
+Action.c(52): web_custom_request("0bb068ce-173a-4bac-9d74-087e7738f1ad") was successful, 180 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...

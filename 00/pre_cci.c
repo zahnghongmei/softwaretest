@@ -2393,7 +2393,17 @@ void
 # 1 "vuser_init.c" 1
 vuser_init()
 {
-		char token1[36];	
+	return 0;
+	
+}
+# 4 "e:\\test\\00\\\\combined_00.c" 2
+
+# 1 "Action.c" 1
+Action()
+{
+   
+
+	char token1[36];	
 	web_set_sockets_option("SSL_VERSION", "TLS1.1");
 	lr_start_transaction("login index");
 
@@ -2412,6 +2422,11 @@ vuser_init()
 		"SaveOffset=3",
 		"SaveLen=36",
 		"LAST");
+		web_reg_save_param("Usercode",
+		"LB=\"usercode\":\"",
+		"RB=\"",
+		"LAST");
+	
 	 
 	lr_start_transaction("login");
 	web_custom_request("login_2", 
@@ -2430,31 +2445,21 @@ vuser_init()
 	 
    strcpy(token1, lr_eval_string("{Token}"));
    lr_output_message("token为：%s", token1);
+   lr_output_message("usercode为：%s", lr_eval_string("{Usercode}"));
     lr_output_message("%s", "登陆成功");
-	return 0;
-	
-}
-# 4 "e:\\test\\00\\\\combined_00.c" 2
-
-# 1 "Action.c" 1
-Action()
-{
-   
-
-	web_url("http://mail.126.com",
-		"URL=http://mail.126.com",
-		"TargetFrame=",
-		"Resource=1",
-		"Referer=",
-		"Mode=HTTP",
+    
+     web_add_header("token", 
+				   "{Token}");
+	web_custom_request(token1,
+		"URL=https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/{Usercode}", 
+		"Method=GET", 
+		"Resource=0", 
+		"Referer=https://center.t.dacube.cn/", 
+		"Snapshot=t16.inf", 
+		"Mode=HTML", 
 		"LAST");
-	
-	web_url("11",
-		"URL=http://www.xinhuanet.com/",
-		"TargetFrame=",
-		"Resource=1",
-		"Referer=",
-		"LAST");
+    
+    
 
 	return 0;
 }
