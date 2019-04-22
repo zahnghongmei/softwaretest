@@ -13,21 +13,24 @@
     <FileEntry Name="default.usp" Filter="4" />
     <FileEntry Name="00.prm" Filter="2" />
     <FileEntry Name="globals.h" Filter="2" />
-    <FileEntry Name="account.dat" Filter="2" />
+    <FileEntry Name="email.dat" Filter="2" />
     <FileEntry Name="password.dat" Filter="2" />
+    <FileEntry Name="account.dat" Filter="2" />
+    <FileEntry Name="pw.dat" Filter="2" />
     <FileEntry Name="ScriptUploadMetadata.xml" Filter="2" />
     <FileEntry Name="Bookmarks.xml" Filter="2" />
     <FileEntry Name="Breakpoints.xml" Filter="2" />
     <FileEntry Name="CompilerLogMetadata.xml" Filter="2" />
     <FileEntry Name="ReplaySummaryReport.xml" Filter="2" />
     <FileEntry Name="UserTasks.xml" Filter="2" />
-    <FileEntry Name="pw.dat" Filter="2" />
+    <FileEntry Name="username.dat" Filter="2" />
     <FileEntry Name="combined_00.c" Filter="2" />
     <FileEntry Name="pre_cci.c" Filter="2" />
     <FileEntry Name="00.c.pickle" Filter="1" />
     <FileEntry Name="00.ci" Filter="1" />
     <FileEntry Name="00.prm.bak" Filter="1" />
     <FileEntry Name="00.sdf" Filter="1" />
+    <FileEntry Name="18618620844.idx" Filter="1" />
     <FileEntry Name="25287408344.idx" Filter="1" />
     <FileEntry Name="252874083440.idx" Filter="1" />
     <FileEntry Name="75841344.idx" Filter="1" />
@@ -58,6 +61,7 @@
     <FileEntry Name="75841344_z9p.615.idx" Filter="1" />
     <FileEntry Name="8446495644.idx" Filter="1" />
     <FileEntry Name="84464956440.idx" Filter="1" />
+    <FileEntry Name="8824524144.idx" Filter="1" />
     <FileEntry Name="custom_body_variables.txt" Filter="1" />
     <FileEntry Name="data.zip" Filter="1" />
     <FileEntry Name="logfile.log" Filter="1" />
