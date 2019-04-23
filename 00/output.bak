@@ -1,4 +1,4 @@
-Virtual User Script started at : 2019/4/22 22:54:05
+Virtual User Script started at : 2019/4/23 15:26:55
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.0.0 for Windows 8; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
@@ -28,8 +28,8 @@ Action.c(9): Found resource "https://center.t.dacube.cn/static/js/runtime.c0a6c5
 Action.c(9): Found resource "https://center.t.dacube.cn/static/js/chunk-elementUI.f028abeb.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
 Action.c(9): Found resource "https://center.t.dacube.cn/static/js/chunk-libs.d331153a.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
 Action.c(9): Found resource "https://center.t.dacube.cn/static/js/app.5d115900.js" in HTML "https://center.t.dacube.cn/#/login/index"  	[MsgId: MMSG-26659]
-Action.c(9): web_url("web_url") was successful, 3794486 body bytes, 5895 header bytes  	[MsgId: MMSG-26386]
-Action.c(15): Notify: Transaction "login index" ended with a "Pass" status (Duration: 5.0672 Wasted Time: 0.2677).
+Action.c(9): web_url("web_url") was successful, 3794486 body bytes, 5893 header bytes  	[MsgId: MMSG-26386]
+Action.c(15): Notify: Transaction "login index" ended with a "Pass" status (Duration: 6.3513 Wasted Time: 0.3656).
 Action.c(17): web_reg_save_param started  	[MsgId: MMSG-26355]
 Action.c(17): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
 Action.c(23): web_reg_save_param started  	[MsgId: MMSG-26355]
@@ -37,51 +37,65 @@ Action.c(23): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390
 Action.c(29): Notify: Transaction "login" started.
 Action.c(30): web_custom_request("login_2") started  	[MsgId: MMSG-26355]
 Action.c(30): web_custom_request("login_2") was successful, 632 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
-Action.c(41): Notify: Transaction "login" ended with a "Pass" status (Duration: 0.1547 Wasted Time: 0.0124).
-Action.c(45): token为：3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b
+Action.c(41): Notify: Transaction "login" ended with a "Pass" status (Duration: 0.1891 Wasted Time: 0.0149).
+Action.c(45): token为：310aef14-67e2-468c-9352-3811d1416da7
 Action.c(46): usercode为：e729e146-f249-42e1-960d-5c1f3f60bc9a
 Action.c(47): 登陆成功
 Action.c(48): web_add_auto_header("token") started  	[MsgId: MMSG-26355]
 Action.c(48): web_add_auto_header("token") was successful  	[MsgId: MMSG-26392]
-Action.c(49): web_custom_request("3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b") started  	[MsgId: MMSG-26355]
+Action.c(49): web_custom_request("310aef14-67e2-468c-9352-3811d1416da7") started  	[MsgId: MMSG-26355]
 Action.c(49): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/e729e146-f249-42e1-960d-5c1f3f60bc9a"  	[MsgId: MMSG-26548]
-Action.c(49): web_custom_request("3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b") was successful, 691 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
+Action.c(49): web_custom_request("310aef14-67e2-468c-9352-3811d1416da7") was successful, 691 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
 Action.c(58): web_custom_request("updateuser") started  	[MsgId: MMSG-26355]
 Action.c(58): web_custom_request("updateuser") was successful, 623 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
 Action.c(71): web_reg_save_param started  	[MsgId: MMSG-26355]
 Action.c(71): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
 Action.c(75): web_custom_request("loginapp") started  	[MsgId: MMSG-26355]
 Action.c(75): web_custom_request("loginapp") was successful, 125 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
-Action.c(86): mrp链接为：https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b
+Action.c(86): mrp链接为：https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7
 Action.c(87): web_url("open_mrp_web") started  	[MsgId: MMSG-26355]
-Action.c(87): Found resource "https://at.alicdn.com/t/font_714965_8kve6mx526g.css" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/toastr/toastr.min.css" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/css/element.css" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/jPlayer-2.9.1/skin/blue.monday/jplayer.blue.monday.css" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/app.66d38dcda9fb7ec09e344fa1de4e32fd.css" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/css/app.66d38dcda9fb7ec09e344fa1de4e32fd.css" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/ueditor/ueditor.config.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/ueditor/ueditor.all.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/jquery/jquery.min.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/jquery/jquery.PrintArea.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/toastr/toastr.min.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/niceScroll/jquery.nicescroll.min.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/jPlayer-2.9.1/distone/jplayer/jquery.jplayer.min.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/aliyunvideo/es6-promise.min.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/aliyunvideo/aliyun-oss-sdk-5.2.0.min.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/aliyunvideo/aliyun-upload-sdk-1.4.0.min.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/js/manifest.2ae2e69a05c33dfc65f8.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/js/vendor.a70ebb0a1e1197dcd8c5.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): Found resource "https://mrp.t.dacube.cn/static/js/app.b3a7a5b7eaef7e77092d.js" in HTML "https://mrp.t.dacube.cn/?token=3dd3cdc3-fbf5-4a49-b9c9-31d7f758019b#/"  	[MsgId: MMSG-26659]
-Action.c(87): web_url("open_mrp_web") was successful, 5560481 body bytes, 5600 header bytes  	[MsgId: MMSG-26386]
-Action.c(100): web_custom_request("createfolder") started  	[MsgId: MMSG-26355]
-Action.c(100): web_custom_request("createfolder") was successful, 561 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
-Action.c(100): web_custom_request("createfolder") started  	[MsgId: MMSG-26355]
-Action.c(100): web_custom_request("createfolder") was successful, 561 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
-Action.c(100): web_custom_request("createfolder") started  	[MsgId: MMSG-26355]
-Action.c(100): web_custom_request("createfolder") was successful, 561 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
-Action.c(114): web_custom_request("add_article") started  	[MsgId: MMSG-26355]
-Action.c(114): web_custom_request("add_article") was successful, 1411 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
+Action.c(87): Found resource "https://at.alicdn.com/t/font_714965_8kve6mx526g.css" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/toastr/toastr.min.css" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/css/element.css" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/jPlayer-2.9.1/skin/blue.monday/jplayer.blue.monday.css" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/app.66d38dcda9fb7ec09e344fa1de4e32fd.css" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/css/app.66d38dcda9fb7ec09e344fa1de4e32fd.css" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/ueditor/ueditor.config.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/ueditor/ueditor.all.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/jquery/jquery.min.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/jquery/jquery.PrintArea.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/toastr/toastr.min.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/niceScroll/jquery.nicescroll.min.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/jPlayer-2.9.1/distone/jplayer/jquery.jplayer.min.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/aliyunvideo/es6-promise.min.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/aliyunvideo/aliyun-oss-sdk-5.2.0.min.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/vendors/aliyunvideo/aliyun-upload-sdk-1.4.0.min.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/js/manifest.2ae2e69a05c33dfc65f8.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/js/vendor.a70ebb0a1e1197dcd8c5.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): Found resource "https://mrp.t.dacube.cn/static/js/app.b3a7a5b7eaef7e77092d.js" in HTML "https://mrp.t.dacube.cn/?token=310aef14-67e2-468c-9352-3811d1416da7#/"  	[MsgId: MMSG-26659]
+Action.c(87): web_url("open_mrp_web") was successful, 5560481 body bytes, 5598 header bytes  	[MsgId: MMSG-26386]
+Action.c(107): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(107): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(113): web_custom_request("createfolder") started  	[MsgId: MMSG-26355]
+Action.c(113): web_custom_request("createfolder") was successful, 558 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
+Action.c(124): folderid为：d83f61e3-6fd8-42c3-9649-6d7fc7a4ee67
+Action.c(125): folderid2为：{Folderid2}
+Action.c(101): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(101): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(113): web_custom_request("createfolder") started  	[MsgId: MMSG-26355]
+Action.c(113): web_custom_request("createfolder") was successful, 558 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
+Action.c(124): folderid为：d83f61e3-6fd8-42c3-9649-6d7fc7a4ee67
+Action.c(125): folderid2为：62e4d0d4-f657-4d08-af34-24bc4fb79ee9
+Action.c(107): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(107): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(113): web_custom_request("createfolder") started  	[MsgId: MMSG-26355]
+Action.c(113): web_custom_request("createfolder") was successful, 558 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
+Action.c(124): folderid为：2b13b936-5a2c-436a-a832-3b4e298268e8
+Action.c(125): folderid2为：62e4d0d4-f657-4d08-af34-24bc4fb79ee9
+Action.c(141): web_custom_request("createfolder") started  	[MsgId: MMSG-26355]
+Action.c(141): web_custom_request("createfolder") was successful, 476 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
+Action.c(154): web_custom_request("add_article") started  	[MsgId: MMSG-26355]
+Action.c(154): web_custom_request("add_article") was successful, 1411 body bytes, 176 header bytes  	[MsgId: MMSG-26386]
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...

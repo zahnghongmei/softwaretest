@@ -2493,12 +2493,25 @@ Action()
 		"Snapshot=t19.inf", 
 		"LAST");
 
-	
+	 
 	for(i=0;i<3;i++)
 	{
-	b=itoa(i,a,10);	
+	b=itoa(i+1,a,10);	
 	lr_save_string(a, "a1");
-   web_custom_request("createfolder", 
+	if(i==1){
+	web_reg_save_param("Folderid2",
+		"LB=\"id\":\"",
+		"RB=\"",
+		"LAST");
+	}
+	else{
+	 web_reg_save_param("Folderid",
+		"LB=\"id\":\"",
+		"RB=\"",
+		"LAST");
+	}
+	
+    web_custom_request("createfolder", 
 		"URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/add_folder", 
 		"Method=POST", 
 		"Resource=0", 
@@ -2507,10 +2520,37 @@ Action()
 		"Snapshot=t20.inf", 
 		"Mode=HTML", 
 		"EncType=application/json;charset=UTF-8", 
-		"Body={\"orgId\":\"1\",\"params\":{\"folder_detail\":\"\",\"folder_name\":\"test-{a1}\",\"id_parent\": null,\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+		"Body={\"orgId\":\"1\",\"params\":{\"folder_detail\":\"\",\"folder_name\":\"t-{a1}\",\"id_parent\": null,\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
 		"LAST");
+	lr_output_message("folderidÎª£º%s", lr_eval_string("{Folderid}"));
+	lr_output_message("folderid2Îª£º%s", lr_eval_string("{Folderid2}"));
 	}
 	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  web_custom_request("createfolder", 
+		"URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
+		"Method=POST", 
+		"Resource=0", 
+		"RecContentType=application/json", 
+		"Referer=https://center.t.dacube.cn/", 
+		"Snapshot=t22.inf", 
+		"Mode=HTML", 
+		"EncType=application/json;charset=UTF-8", 
+		"Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid2}\",\"name\":\"t-edit\",\"detail\":\"\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+		"LAST");
+		
 	 
 	web_custom_request("add_article", 
 		"URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/add_one", 
@@ -2518,7 +2558,7 @@ Action()
 		"Resource=0", 
 		"RecContentType=application/json", 
 		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t21.inf", 
+		"Snapshot=t23.inf", 
 		"Mode=HTML", 
 		"EncType=application/json;charset=UTF-8", 
 		"Body={\"orgId\":\"1\",\"params\":{\"afinal\": false,\"author\":\"123\",\"content\":\"123<div>123</div>\",\"id_folder\":\"default-repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"source\":\"11111123\",\"summary\":\"123123.\",\"time_create\":\"15026554545\",\"time_delete\":\"15026554545\",\"time_publish\":\"1555915777000\",\"time_update\":\"1502655454\",\"title\":\"456\",\"update_type\": false},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
