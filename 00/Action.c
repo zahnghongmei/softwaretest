@@ -4,6 +4,7 @@ Action()
 	int i;
 	char a[2];
 	int b;
+	char destString[1024 * 1024 * 1024];
 	web_set_sockets_option("SSL_VERSION", "TLS1.1");
 	lr_start_transaction("login index");
 	web_url("web_url",
@@ -163,11 +164,54 @@ Action()
 		"Body={\"orgId\":\"1\",\"params\":{\"afinal\": false,\"author\":\"123\",\"content\":\"123<div>123</div>\",\"id_folder\":\"default-repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"source\":\"11111123\",\"summary\":\"123123.\",\"time_create\":\"15026554545\",\"time_delete\":\"15026554545\",\"time_publish\":\"1555915777000\",\"time_update\":\"1502655454\",\"title\":\"456\",\"update_type\": false},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
 		LAST);
 	
-  
+	sprintf(
+	destString,
+        "{\"orgId\":\"1\",\"params\":{\"content\":\"参加社区活动时却让他有些失落，他告诉社区的老人们，自己参与了十次原子弹试验，总是做第一个加工铀球的示范者，结果老人们都笑了：“老兄，不要吹牛了，搞原子弹的还住在我们这么破烂的地方？’”原公浦心里很难受，他想自己现在只有一个心愿，“住什么地方都好，只要有钱吃药”。\"},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
+        lr_eval_string("{Token}"),
+        lr_eval_string("{Usercode}")
+       );
 	
- 
+	lr_save_string(destString, "str");
+    lr_output_message("destString before：%s", lr_eval_string("{str}"));
+	lr_convert_string_encoding(
+	   lr_eval_string("{str}"),
+	   NULL,
+	   "utf-8",
+	   "Body"
+	);
+	
+    
+  //生成文章的关键词
+  /*	web_custom_request("Getkeywords", 
+		"URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_keywords", 
+		"Method=POST", 
+		"Resource=0", 
+		"RecContentType=application/json", 
+		"Referer=https://center.t.dacube.cn/", 
+		"Snapshot=t24.inf", 
+		"Mode=HTML", 
+		"EncType=application/json;charset=UTF-8", 
+		"Body={\"orgId\":\"1\",\"params\":{\"content\":\"参加社区活动时却让他有些失落，他告诉社区的老人们，自己参与了十次原子弹试验，总是做第一个加工铀球的示范者，结果老人们都笑了：“老兄，不要吹牛了，搞原子弹的还住在我们这么破烂的地方？’”原公浦心里很难受，他想自己现在只有一个心愿，“住什么地方都好，只要有钱吃药”。\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+		LAST);
+ */
 
-
+lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
+ //lr_save_string(destString, "Body");
+ web_custom_request("Getkeywords", 
+		"URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_keywords", 
+		"Method=POST", 
+		"Resource=0", 
+		"RecContentType=application/json", 
+		"Referer=https://center.t.dacube.cn/", 
+		"Snapshot=t24.inf", 
+		"Mode=HTML", 
+		"EncType=application/json;charset=UTF-8", 
+		"Body={Body}",
+		LAST);
 			
    return 0;
 }
+
+
+
+
