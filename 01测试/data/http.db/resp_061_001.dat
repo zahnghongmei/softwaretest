@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Error>
-  <Code>NoSuchKey</Code>
-  <Message>The specified key does not exist.</Message>
-  <RequestId>5CADB5E77F911B7F8BF71B4A</RequestId>
-  <HostId>pcctest.oss-cn-hangzhou.aliyuncs.com</HostId>
-  <Key>media_resource_repository/1/e729e146-f249-42e1-960d-5c1f3f60bc9a/picture/editLloO8I_pic1543909981346_zyjFyaWZMa.jpg</Key>
-</Error>

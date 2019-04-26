@@ -1,2 +1,0 @@
-"{\"grant_type\":\"password\",\"username\":\"115201811061611139ftrmgurx\",\"password\":\"e729e1"
-"46-f249-42e1-960d-5c1f3f60bc9a\",\"timestamp\":1554888167811}"

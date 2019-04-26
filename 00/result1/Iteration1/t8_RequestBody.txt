@@ -1,3 +1,0 @@
-"{"orgId":"1","params":{"folder_detail":"","folder_name":"t-2","id_parent": null,"id_repo":"rep"
-"ository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a"},"seed":"seed","token":"6fabf"
-"df1-021d-462c-bfec-6f9abd465e8f","userId":"e729e146-f249-42e1-960d-5c1f3f60bc9a"}"

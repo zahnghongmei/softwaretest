@@ -1,9 +1,0 @@
--+
--DCCI
--D_IDA_XL
--DWINNT
--IE:\TEST\00
--IC:\Program Files (x86)\Hp\LoadRunner\include
--ee:\test\00\\logfile.log
-e:\test\00\\combined_00.c
-e:\test\00\\pre_cci.c

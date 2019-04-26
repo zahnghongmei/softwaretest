@@ -1,8 +1,0 @@
-HTTP/1.1 101 Switching Protocols
-Server: nginx/1.14.0
-Date: Wed, 10 Apr 2019 09:23:00 GMT
-Connection: upgrade
-Upgrade: websocket
-Sec-Websocket-Protocol: xmpp
-Sec-WebSocket-Accept: UjGPr/XMGqM6wa/KzdfH6JXIciQ=
-

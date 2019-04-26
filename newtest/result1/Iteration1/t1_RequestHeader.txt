@@ -1,0 +1,9 @@
+GET / HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Accept: */*
+Host: center.t.dacube.cn
+Connection: Keep-Alive
+Cache-Control: no-cache
+

@@ -1,7 +1,0 @@
-Virtual User Script started at: 2019/4/16 12:24:11
-Starting action vuser_init.
-Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (8ÔÂ 09 2018 11:27:13)  	[MsgId: MMSG-26983]
-Run mode: HTML  	[MsgId: MMSG-26993]
-Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
-Runtime Settings file: "E:\TEST\WebHttpHtml4\\default.cfg"  	[MsgId: MMSG-27141]
-Warning: Invalid parameter detected in function.

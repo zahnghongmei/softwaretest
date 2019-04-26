@@ -1,0 +1,10 @@
+GET /?token=c5fd1390-acd7-4575-947a-c7376f028cdf HTTP/1.1
+token: c5fd1390-acd7-4575-947a-c7376f028cdf
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Accept: */*
+Host: mrp.t.dacube.cn
+Connection: Keep-Alive
+Cache-Control: no-cache
+

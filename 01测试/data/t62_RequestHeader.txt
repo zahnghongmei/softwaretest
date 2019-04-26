@@ -1,7 +1,0 @@
-POST /upload.php HTTP/1.1
-Connection: Keep-Alive
-Content-Type: multipart/form-data; boundary=---MultipartBoundary-qGSiOA4Tkx5cSMdoFJl7hfB8p7SgADnU---
-User-Agent: Crashpad/0.8.0
-Content-Length: 445
-Host: dump.2345.com
-

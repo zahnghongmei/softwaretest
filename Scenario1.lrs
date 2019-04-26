@@ -14,17 +14,17 @@ GlobalDir=
 }
 
 {ScenarioPrivateConfig
-Path=E:\TEST\Scenario2.lrs
+Path=
 Author=ÕÂºìÃ·
-Subject=Scenario1
+Subject=
 Description=
 Hosts=1
 Scripts=1
 Groups=1
 Vusers=10
-Tranzactions=5
+Tranzactions=7
 Rendezvous=0
-Result_file=E:\TEST\00\res\res.lrr
+Result_file=C:\Users\ÕÂºìÃ·\AppData\Local\Temp\res\res.lrr
 ResCleanName=res
 ResSymName=
 DEFAULT_NFS_LESS_MODE=1
@@ -46,10 +46,10 @@ ScenarioSchedulerMode=1
 ScenarioSchedulerName=Default Schedule
 SuspendScenarioStart=0
 ScenarioStartDelay=0
-ScenarioStartAtTime=35571
+ScenarioStartAtTime=77942
 ScenarioStartAtTimeYear=2019
 ScenarioStartAtTimeMonth=4
-ScenarioStartAtTimeDay=18
+ScenarioStartAtTimeDay=25
 GIndexSortType=32244002423140
 GIndexAutoSort=0
 SoftKillMode=0
@@ -177,92 +177,94 @@ HostSettingsEnableTerminal=0
 
 {TestChief
 
-{µÇÂ½
-UiName=µÇÂ½
+{00
+UiName=00
 Type=1
 SubType=Multi+QTWeb
 ScriptType=9
 Path=E:\TEST\00\00.usr
 EmulatedLocation=
-Config=[CommandArguments]\r\n[ModemSpeed]\r\nEnableModemSpeed="0"\r\nCustomModemSpeed="1000"\r\nEnableCustomModemSpeed="0"\r\nModemSpeed="128000"\r\n[RtsConfigfuration]\r\nAUTMode="1"\r\n[WEB]\r\nCacheAlwaysCheckForNewerPages="0"\r\nAnalogMode="0"\r\nSearchForImages="1"\r\nDisableNTLM2SS="No"\r\nProxyPassword=""\r\nMaxSelfMetaRefreshCount="2"\r\nBrowserAcceptLanguage_extra_arg_1="zh-CN"\r\nEnableChecks="0"\r\nAutoTransFileLine="1"\r\nGraphHitsPerSecondHttpStatusCodes="1"\r\nPrintBufEscape0="No"\r\nNavigatorUserLanguage="zh-CN"\r\nNavigatorBrowserLanguage="zh-CN"\r\nBrowserAcceptLanguage="zh-CN,zh;q=0.8"\r\nZlibHeadersInCompressedRequestBody="Yes"\r\nLogFileWrite="0"\r\nEnableDynatrace="0"\r\nMaxRedirectionDepth="10"\r\nLoadChilEngine="No"\r\nProxyUseAutoConfigScript="0"\r\nHeavyKDCLoad="No"\r\nProxyUseSame="1"\r\nLogMaxResponseSize="100"\r\nProxyUserName=""\r\nSnapshotOnErrorActive=0\r\nJsForTransportRuntimeSize="51200"\r\nSPNAddNoneDefPort="No"\r\nScreenAvailHeight="1040"\r\nTreeViewRequestBodyLimit="2047"\r\nRecorderWinCodePage="936"\r\nProxyNoLocal="0"\r\nProxyUseProxy="0"\r\nCacheHtmlPages="1"\r\nStartRecordingIsDst="0"\r\nBrowserType="Microsoft Internet Explorer 4.0"\r\nEnableJsForTransport="No"\r\nDisableAED=0\r\nProxyHTTPSPort=1080\r\nKeepAlive="Yes"\r\nSaveSnapshotResources="0"\r\nFailNonCriticalItem="0"\r\nSPNCNameLookup="Yes"\r\nOverrideNTLMCreds="No"\r\nJsForTransportStackSize="32"\r\nKeepAliveTimeout="60"\r\nUseCustomAgent=1\r\nGraphBytesPerSecond="1"\r\nProxyHTTPPort="1080"\r\nMaxConnections="0"\r\nRetry401ThinkTime="0"\r\nNavigatorSystemLanguage="zh-CN"\r\nUseDataFormatExtensions="0"\r\nProxyHTTPSHost=127.0.0.1\r\nEnableIPCache="No"\r\nLogFileWriteTraceToFile="0"\r\nUserHomePage="https://www.2345.com/?k2129526"\r\nWebSyncRetryIntervalMs="1000"\r\nClearCacheForSimulateNewUser="1"\r\nScreenHeight="1080"\r\nIPVersionPolicy="2"\r\nProxyUseProxyServer="0"\r\nCustomUserAgent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko\r\nSupportCharset="None"\r\nSimulateCache="1"\r\nEnableSnapshotsInReplay="Yes"\r\nStartRecordingGMT="2019/04/03 09:45:07"\r\nResetContext="True"\r\nIgnoreContentCachingTypes="1"\r\nUTF8InputOutput="0"\r\nWebSocketCallBackTimerIntervalMS="500"\r\nParseHtmlContentType="TEXT"\r\nPrefetchPrerenderCallBackTimerIntervalMS="500"\r\nNetBufSize="12288"\r\nHttpErrorsAsWarnings="No"\r\nUseNativeNTLM="No"\r\nReceiveTimeout="120"\r\nDeleteCacheUnreferencedIterations="1"\r\nPageDownloadTimeout="120"\r\nLogEnableResponseLimit="0"\r\nPrintBufLineLen="99"\r\nSimulatePrefetchPrerender="0"\r\nResourcePageTimeoutIsWarning="No"\r\nAedUtf8Values="No"\r\nMaxErrorMatchesAsERRORS="10"\r\nConnectTimeout="120"\r\nScreenWidth="1920"\r\nBrowserAcceptEncoding="gzip, deflate"\r\nEnableHTTP2="1"\r\nWinInetReplay="1"\r\nPrintNTLMLog="No"\r\nIntegratedAuthentication="No"\r\nWebSyncRetryTimeoutMs="3000"\r\nProxyAutoConfigScriptURL=""\r\nSSLVersionKey="2"\r\nGraphPagesPerSecond="0"\r\nScreenAvailWidth="1920"\r\nProxyUseBrowser="0"\r\nProxyHTTPHost="127.0.0.1"\r\nHttpVer="1.1"\r\nPrintSSLLog="No"\r\nProxyBypass=""\r\nWebRecorderVersion="10"\r\nKeepNonTextMimeType="text/xml;text/plain"\r\nUseBrowserAgent=0\r\n[Iterations]\r\nRandomMax="90"\r\nRandomMin="60"\r\nIterationPace="IterationASAP"\r\nStartEvery="60"\r\nNumOfIterations="1"\r\n[General]\r\nAutomaticTransactions=1\r\nContinueOnError=0\r\nautomatic_nested_transactions="1"\r\nXlBridgeTimeout="120"\r\nUseThreads=1\r\niter_ends_val=fixed\r\nDefaultRunLogic="uspeuN.116"\r\nAutomaticTransactionsPerFunc=0\r\niter_begins_val=fixed\r\nFailTransOnErrorMsg=0\r\n[FILTERS]\r\nExcludeFiltersInList=\r\nFilterType=1\r\n[Log]\r\nMsgClassParameters=0\r\nMsgClassData=0\r\nLogOptions=LogBrief\r\nPrintTimeStamp=0\r\nMsgClassFull=0\r\nAutoLog=0\r\n[ThinkTime]\r\nOptions=RECORDED\r\nFactor=1.000000\r\nThinkTimeRandomHigh=150\r\nThinkTimeRandomLow=50\r\nLimit=1\r\nLimitFlag=0\r\n
-ConfigUsp=[RunLogicEndRoot:vuser_end]\r\nMercIniTreeSectionName="vuser_end"\r\nRunLogicObjectKind="Action"\r\nName="vuser_end"\r\nMercIniTreeFather="RunLogicEndRoot"\r\nRunLogicActionType="VuserEnd"\r\n[RunLogicInitRoot:vuser_init]\r\nMercIniTreeSectionName="vuser_init"\r\nRunLogicObjectKind="Action"\r\nName="vuser_init"\r\nMercIniTreeFather="RunLogicInitRoot"\r\nRunLogicActionType="VuserInit"\r\n[RunLogicRunRoot:Action]\r\nMercIniTreeSectionName="Action"\r\nRunLogicObjectKind="Action"\r\nName="Action"\r\nMercIniTreeFather="RunLogicRunRoot"\r\nRunLogicActionType="VuserRun"\r\n[RunLogicErrorHandlerRoot:vuser_errorhandler]\r\nMercIniTreeSectionName="vuser_errorhandler"\r\nRunLogicObjectKind="Action"\r\nName="vuser_errorhandler"\r\nMercIniTreeFather="RunLogicErrorHandlerRoot"\r\nRunLogicActionType="VuserErrorHandler"\r\n[Profile Actions]\r\nMercIniTreeSectionName="Profile Actions"\r\nProfile Actions name=vuser_init,Action,vuser_end\r\nMercIniTreeFather=""\r\n[RunLogicRunRoot]\r\nRunLogicPaceConstTime="60.000"\r\nRunLogicRandomPaceMax="90.000"\r\nRunLogicActionOrder="Action"\r\nRunLogicAfterPaceMax="90.000"\r\nMercIniTreeFather=""\r\nRunLogicPaceType="Asap"\r\nMercIniTreeSons="Action"\r\nRunLogicNumOfIterations="1"\r\nRunLogicAfterPaceMin="60.000"\r\nName="Run"\r\nRunLogicPaceConstAfterTime="60.000"\r\nRunLogicRunMode="Sequential"\r\nRunLogicObjectKind="Group"\r\nRunLogicActionType="VuserRun"\r\nRunLogicRandomPaceMin="60.000"\r\nMercIniTreeSectionName="RunLogicRunRoot"\r\n[RunLogicEndRoot]\r\nRunLogicActionOrder="vuser_end"\r\nMercIniTreeFather=""\r\nMercIniTreeSons="vuser_end"\r\nRunLogicNumOfIterations="1"\r\nName="End"\r\nRunLogicRunMode="Sequential"\r\nRunLogicObjectKind="Group"\r\nRunLogicActionType="VuserEnd"\r\nMercIniTreeSectionName="RunLogicEndRoot"\r\n[RunLogicErrorHandlerRoot]\r\nRunLogicActionOrder="vuser_errorhandler"\r\nMercIniTreeFather=""\r\nMercIniTreeSons="vuser_errorhandler"\r\nRunLogicNumOfIterations="1"\r\nName="ErrorHandler"\r\nRunLogicRunMode="Sequential"\r\nRunLogicObjectKind="Group"\r\nRunLogicActionType="VuserErrorHandler"\r\nMercIniTreeSectionName="RunLogicErrorHandlerRoot"\r\n[RunLogicInitRoot]\r\nRunLogicActionOrder="vuser_init"\r\nMercIniTreeFather=""\r\nMercIniTreeSons="vuser_init"\r\nRunLogicNumOfIterations="1"\r\nName="Init"\r\nRunLogicRunMode="Sequential"\r\nRunLogicObjectKind="Group"\r\nRunLogicActionType="VuserInit"\r\nMercIniTreeSectionName="RunLogicInitRoot"\r\n
+Config=[WEB]\r\nSearchForImages="1"\r\nAnalogMode="0"\r\nDisableNTLM2SS="No"\r\nProxyPassword=""\r\nMaxSelfMetaRefreshCount="2"\r\nBrowserAcceptLanguage_extra_arg_1="zh-CN"\r\nEnableChecks="0"\r\nAutoTransFileLine="1"\r\nGraphHitsPerSecondHttpStatusCodes="1"\r\nPrintBufEscape0="No"\r\nNavigatorUserLanguage="zh-CN"\r\nNavigatorBrowserLanguage="zh-CN"\r\nBrowserAcceptLanguage="zh-CN,zh;q=0.8"\r\nZlibHeadersInCompressedRequestBody="Yes"\r\nLogFileWrite="0"\r\nEnableDynatrace="0"\r\nMaxRedirectionDepth="10"\r\nLoadChilEngine="No"\r\nProxyUseAutoConfigScript="0"\r\nHeavyKDCLoad="No"\r\nProxyUseSame="1"\r\nLogMaxResponseSize="100"\r\nProxyUserName=""\r\nJsForTransportRuntimeSize="51200"\r\nSPNAddNoneDefPort="No"\r\nTreeViewRequestBodyLimit="2047"\r\nScreenAvailHeight="1040"\r\nRecorderWinCodePage="936"\r\nProxyNoLocal="0"\r\nProxyUseProxy="0"\r\nStartRecordingIsDst="0"\r\nBrowserType="Microsoft Internet Explorer 4.0"\r\nEnableJsForTransport="No"\r\nDisableAED="0"\r\nSaveSnapshotResources=0\r\nProxyHTTPSPort="1080"\r\nKeepAlive="Yes"\r\nFailNonCriticalItem="0"\r\nSPNCNameLookup="Yes"\r\nOverrideNTLMCreds="No"\r\nJsForTransportStackSize="32"\r\nKeepAliveTimeout="60"\r\nUseCustomAgent="1"\r\nGraphBytesPerSecond="1"\r\nProxyHTTPPort="1080"\r\nMaxConnections="0"\r\nRetry401ThinkTime="0"\r\nNavigatorSystemLanguage="zh-CN"\r\nUseDataFormatExtensions="0"\r\nProxyHTTPSHost="127.0.0.1"\r\nEnableIPCache="No"\r\nLogFileWriteTraceToFile="0"\r\nUserHomePage="https://www.2345.com/?k2129526"\r\nWebSyncRetryIntervalMs="1000"\r\nScreenHeight="1080"\r\nIPVersionPolicy="2"\r\nProxyUseProxyServer="0"\r\nCustomUserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko"\r\nSupportCharset="None"\r\nStartRecordingGMT="2019/04/03 09:45:07"\r\nResetContext="1"\r\nEnableSnapshotsInReplay="Yes"\r\nUTF8InputOutput="Yes"\r\nWebSocketCallBackTimerIntervalMS="500"\r\nParseHtmlContentType="TEXT"\r\nPrefetchPrerenderCallBackTimerIntervalMS="500"\r\nNetBufSize="12288"\r\nHttpErrorsAsWarnings="No"\r\nUseNativeNTLM="No"\r\nReceiveTimeout="120"\r\nDeleteCacheUnreferencedIterations="1"\r\nPageDownloadTimeout="120"\r\nLogEnableResponseLimit="0"\r\nPrintBufLineLen="99"\r\nResourcePageTimeoutIsWarning="No"\r\nAedUtf8Values="No"\r\nMaxErrorMatchesAsERRORS="10"\r\nConnectTimeout="120"\r\nScreenWidth="1920"\r\nBrowserAcceptEncoding="gzip, deflate"\r\nEnableHTTP2="1"\r\nWinInetReplay="1"\r\nPrintNTLMLog="No"\r\nIntegratedAuthentication="No"\r\nWebSyncRetryTimeoutMs="3000"\r\nProxyAutoConfigScriptURL=""\r\nSSLVersionKey="2"\r\nGraphPagesPerSecond="0"\r\nScreenAvailWidth="1920"\r\nProxyUseBrowser="0"\r\nProxyHTTPHost="127.0.0.1"\r\nHttpVer="1.1"\r\nPrintSSLLog="No"\r\nProxyBypass=""\r\nWebRecorderVersion="10"\r\n[Log]\r\nMsgClassParameters="0"\r\nAutoLogBufferSize="1"\r\nLogOptions="LogBrief"\r\nPrintTimeStamp="0"\r\nMsgClassFull="0"\r\nAutoLog=1\r\nMsgClassData="0"\r\nLogDetail="0"\r\n[General]\r\nXlBridgeTimeout="120"\r\nDefaultRunLogic="uspJnV.747"\r\nAutomaticTransactions="1"\r\nautomatic_nested_transactions="1"\r\n[Iterations]\r\nRandomMax="90"\r\nRandomMin="60"\r\nIterationPace="IterationASAP"\r\nStartEvery="60"\r\nNumOfIterations="1"\r\n[ThinkTime]\r\nOptions=RECORDED\r\nFactor="1"\r\nThinkTimeRandomHigh="150"\r\nThinkTimeRandomLow="50"\r\nLimit="1"\r\nLimitFlag="0"\r\n
+ConfigUsp=[RunLogicEndRoot:vuser_end]\r\nMercIniTreeSectionName="vuser_end"\r\nRunLogicObjectKind="Action"\r\nName="vuser_end"\r\nMercIniTreeFather="RunLogicEndRoot"\r\nRunLogicActionType="VuserEnd"\r\n[RunLogicInitRoot:vuser_init]\r\nMercIniTreeSectionName="vuser_init"\r\nRunLogicObjectKind="Action"\r\nName="vuser_init"\r\nMercIniTreeFather="RunLogicInitRoot"\r\nRunLogicActionType="VuserInit"\r\n[RunLogicRunRoot:Action]\r\nMercIniTreeSectionName="Action"\r\nRunLogicObjectKind="Action"\r\nName="Action"\r\nMercIniTreeFather="RunLogicRunRoot"\r\nRunLogicActionType="VuserRun"\r\n[RunLogicErrorHandlerRoot:vuser_errorhandler]\r\nMercIniTreeSectionName="vuser_errorhandler"\r\nRunLogicObjectKind="Action"\r\nName="vuser_errorhandler"\r\nMercIniTreeFather="RunLogicErrorHandlerRoot"\r\nRunLogicActionType="VuserErrorHandler"\r\n[Profile Actions]\r\nMercIniTreeSectionName="Profile Actions"\r\nProfile Actions name=vuser_init,Action,vuser_end\r\nMercIniTreeFather=""\r\n[RunLogicRunRoot]\r\nRunLogicPaceConstTime="60"\r\nRunLogicRandomPaceMax="90"\r\nRunLogicActionOrder="Action"\r\nRunLogicAfterPaceMax="90"\r\nMercIniTreeFather=""\r\nRunLogicPaceType="Asap"\r\nMercIniTreeSons="Action"\r\nRunLogicNumOfIterations="1"\r\nRunLogicAfterPaceMin="60"\r\nName="Run"\r\nRunLogicPaceConstAfterTime="60"\r\nRunLogicRunMode="Sequential"\r\nRunLogicObjectKind="Group"\r\nRunLogicActionType="VuserRun"\r\nRunLogicRandomPaceMin="60"\r\nMercIniTreeSectionName="RunLogicRunRoot"\r\n[RunLogicEndRoot]\r\nRunLogicActionOrder="vuser_end"\r\nMercIniTreeFather=""\r\nMercIniTreeSons="vuser_end"\r\nRunLogicNumOfIterations="1"\r\nName="End"\r\nRunLogicRunMode="Sequential"\r\nRunLogicObjectKind="Group"\r\nRunLogicActionType="VuserEnd"\r\nMercIniTreeSectionName="RunLogicEndRoot"\r\n[RunLogicErrorHandlerRoot]\r\nRunLogicActionOrder="vuser_errorhandler"\r\nMercIniTreeFather=""\r\nMercIniTreeSons="vuser_errorhandler"\r\nRunLogicNumOfIterations="1"\r\nName="ErrorHandler"\r\nRunLogicRunMode="Sequential"\r\nRunLogicObjectKind="Group"\r\nRunLogicActionType="VuserErrorHandler"\r\nMercIniTreeSectionName="RunLogicErrorHandlerRoot"\r\n[RunLogicInitRoot]\r\nRunLogicActionOrder="vuser_init"\r\nMercIniTreeFather=""\r\nMercIniTreeSons="vuser_init"\r\nRunLogicNumOfIterations="1"\r\nName="Init"\r\nRunLogicRunMode="Sequential"\r\nRunLogicObjectKind="Group"\r\nRunLogicActionType="VuserInit"\r\nMercIniTreeSectionName="RunLogicInitRoot"\r\n
 Param=
 TDPath=
 TDServer=
 TDDatabase=
 Platform=All
 AstraSubType=0
+Trans=loginapp
 Trans=login index
 Trans=login
+Trans=updateuserinfo
 }
 }
 
 {GroupChief
 
-{µÇÂ½
+{00
 
-{100
-5=µÇÂ½
+{4
+5=00
 9=localhost
 SEED_NUM=0
 }
 
-{68
-5=µÇÂ½
+{3
+5=00
 9=localhost
 SEED_NUM=0
 }
 
-{56
-5=µÇÂ½
+{2
+5=00
+9=localhost
+SEED_NUM=0
+}
+
+{1
+5=00
+9=localhost
+SEED_NUM=0
+}
+
+{10
+5=00
+9=localhost
+SEED_NUM=0
+}
+
+{9
+5=00
+9=localhost
+SEED_NUM=0
+}
+
+{8
+5=00
+9=localhost
+SEED_NUM=0
+}
+
+{7
+5=00
 9=localhost
 SEED_NUM=0
 }
 
 {6
-5=µÇÂ½
-9=localhost
-SEED_NUM=0
-}
-
-{86
-5=µÇÂ½
-9=localhost
-SEED_NUM=0
-}
-
-{70
-5=µÇÂ½
-9=localhost
-SEED_NUM=0
-}
-
-{57
-5=µÇÂ½
-9=localhost
-SEED_NUM=0
-}
-
-{29
-5=µÇÂ½
-9=localhost
-SEED_NUM=0
-}
-
-{18
-5=µÇÂ½
+5=00
 9=localhost
 SEED_NUM=0
 }
 
 {5
-5=µÇÂ½
+5=00
 9=localhost
 SEED_NUM=0
 }
 
 {ChiefSettings
-5=µÇÂ½
+5=00
 9=localhost
 GroupParam=
 Enabled=1
@@ -368,9 +370,10 @@ AnySubPathAtStart=-1
 OpenChildGraph=0
 KeepLegendSort=0
 LegendSortDirection=1
-LegendUserMovedColumn=-1
+LegendSortByColumn=Scale
+LegendUserMovedColumn=0
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=1
+Is_On_Panel=4
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -423,9 +426,9 @@ AnySubPathAtStart=-1
 OpenChildGraph=0
 KeepLegendSort=0
 LegendSortDirection=1
-LegendUserMovedColumn=-1
+LegendUserMovedColumn=0
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=5
+Is_On_Panel=8
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -462,9 +465,9 @@ AnySubPathAtStart=-1
 OpenChildGraph=0
 KeepLegendSort=0
 LegendSortDirection=1
-LegendUserMovedColumn=-1
+LegendUserMovedColumn=0
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=8
+Is_On_Panel=9
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -501,9 +504,9 @@ AnySubPathAtStart=-1
 OpenChildGraph=0
 KeepLegendSort=0
 LegendSortDirection=1
-LegendUserMovedColumn=-1
+LegendUserMovedColumn=0
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=-1
+Is_On_Panel=11
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -540,9 +543,9 @@ AnySubPathAtStart=-1
 OpenChildGraph=0
 KeepLegendSort=0
 LegendSortDirection=1
-LegendUserMovedColumn=-1
+LegendUserMovedColumn=0
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=2
+Is_On_Panel=10
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -557,17 +560,21 @@ OverlayGraph=0
 Auto_Y_Scale=1
 DefaultMsrAutoScale=0
 Granularities=-1
-MeasurementCount=5
-Measurement_0=|||5|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
-MeasurementFullPath_0=vuser_init_Transaction
-Measurement_1=|||14|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
-MeasurementFullPath_1=Action_Transaction
-Measurement_2=|||17|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
-MeasurementFullPath_2=vuser_end_Transaction
-Measurement_3=|||19|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
-MeasurementFullPath_3="login index"
-Measurement_4=|||23|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
-MeasurementFullPath_4=login
+MeasurementCount=7
+Measurement_0=|||0|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
+MeasurementFullPath_0=updateuserinfo
+Measurement_1=|||5|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
+MeasurementFullPath_1=vuser_init_Transaction
+Measurement_2=|||25|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
+MeasurementFullPath_2=Action_Transaction
+Measurement_3=|||30|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
+MeasurementFullPath_3=vuser_end_Transaction
+Measurement_4=|||14|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
+MeasurementFullPath_4="login index"
+Measurement_5=|||18|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
+MeasurementFullPath_5=login
+Measurement_6=|||21|||0|||1|||Not_In_Use|||0|||-1|||es_tr_response_time
+MeasurementFullPath_6=loginapp
 Description=Displays the average time taken to perform transactions during each second of the load test. This graph helps you determine whether the performance of the server is within acceptable minimum and maximum transaction performance time ranges defined for your system.
 [6]
 MeasurementsDelimiter=|||
@@ -589,9 +596,9 @@ AnySubPathAtStart=-1
 OpenChildGraph=0
 KeepLegendSort=0
 LegendSortDirection=1
-LegendUserMovedColumn=-1
+LegendUserMovedColumn=0
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=-1
+Is_On_Panel=3
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -606,17 +613,21 @@ OverlayGraph=0
 Auto_Y_Scale=1
 DefaultMsrAutoScale=0
 Granularities=-1
-MeasurementCount=5
-Measurement_0=|||20|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
+MeasurementCount=7
+Measurement_0=|||11|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
 MeasurementFullPath_0="login index"
 Measurement_1=|||1|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
 MeasurementFullPath_1=vuser_init_Transaction
-Measurement_2=|||11|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
+Measurement_2=|||23|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
 MeasurementFullPath_2=Action_Transaction
-Measurement_3=|||21|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
+Measurement_3=|||22|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
 MeasurementFullPath_3=login
-Measurement_4=|||15|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
+Measurement_4=|||28|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
 MeasurementFullPath_4=vuser_end_Transaction
+Measurement_5=|||19|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
+MeasurementFullPath_5=loginapp
+Measurement_6=|||33|||0|||1|||Not_In_Use|||0|||-1|||es_tr_tprange_pass
+MeasurementFullPath_6=updateuserinfo
 Description=Displays the number of successful transactions  performed during each second of a load test. This graph helps you determine the actual transaction load on your system at any given moment.
 [7]
 MeasurementsDelimiter=|||
@@ -719,9 +730,9 @@ AnySubPathAtStart=-1
 OpenChildGraph=0
 KeepLegendSort=0
 LegendSortDirection=1
-LegendUserMovedColumn=0
+LegendUserMovedColumn=-1
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=3
+Is_On_Panel=6
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -778,17 +789,21 @@ OverlayGraph=0
 Auto_Y_Scale=1
 DefaultMsrAutoScale=0
 Granularities=-1
-MeasurementCount=5
-Measurement_0=|||16|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
-MeasurementFullPath_0=vuser_end_Transaction
-Measurement_1=|||12|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
-MeasurementFullPath_1=Action_Transaction
-Measurement_2=|||22|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
-MeasurementFullPath_2=login
-Measurement_3=|||18|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
-MeasurementFullPath_3="login index"
-Measurement_4=|||2|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
-MeasurementFullPath_4=vuser_init_Transaction
+MeasurementCount=7
+Measurement_0=|||34|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
+MeasurementFullPath_0=updateuserinfo
+Measurement_1=|||29|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
+MeasurementFullPath_1=vuser_end_Transaction
+Measurement_2=|||20|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
+MeasurementFullPath_2=loginapp
+Measurement_3=|||24|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
+MeasurementFullPath_3=Action_Transaction
+Measurement_4=|||17|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
+MeasurementFullPath_4=login
+Measurement_5=|||12|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
+MeasurementFullPath_5="login index"
+Measurement_6=|||2|||0|||1|||Not_In_Use|||0|||-1|||es_tr_trpass
+MeasurementFullPath_6=vuser_init_Transaction
 Description=Total Pass transaction graph
 [11]
 MeasurementsDelimiter=|||
@@ -893,7 +908,7 @@ KeepLegendSort=0
 LegendSortDirection=1
 LegendUserMovedColumn=0
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=6
+Is_On_Panel=2
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -976,9 +991,9 @@ AnySubPathAtStart=-1
 OpenChildGraph=0
 KeepLegendSort=0
 LegendSortDirection=1
-LegendUserMovedColumn=0
+LegendUserMovedColumn=-1
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=4
+Is_On_Panel=7
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -1017,9 +1032,10 @@ AnySubPathAtStart=-1
 OpenChildGraph=0
 KeepLegendSort=0
 LegendSortDirection=1
+LegendSortByColumn=Max
 LegendUserMovedColumn=0
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=7
+Is_On_Panel=1
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -1672,7 +1688,7 @@ Measurement_6=|||7|||0|||6.7922199444244E78|||Not_In_Use|||0|||-1|||
 MeasurementFullPath_6="Total number of recovered packets"
 Measurement_7=|||6|||0|||2.09055758114682E-115|||Not_In_Use|||0|||-1|||
 MeasurementFullPath_7="Number of Packets"
-Measurement_8=|||3|||0|||2.43073214821421E-294|||Not_In_Use|||0|||-1|||
+Measurement_8=|||3|||0|||2.9471590272722E-297|||Not_In_Use|||0|||-1|||
 MeasurementFullPath_8="Player Bandwidth(Kbits/sec)"
 Description=Displays the y-axis against the x-axis for the MediaPlayer client data points.
 [32]
@@ -1741,7 +1757,7 @@ KeepLegendSort=0
 LegendSortDirection=1
 LegendUserMovedColumn=0
 XAxisLabelsStyle=RelativeTime
-Is_On_Panel=9
+Is_On_Panel=5
 SampleRate=5
 MaxDispMeasurments=20
 ColumnCaption_0=Color
@@ -4156,7 +4172,7 @@ ItemsNumber=IntV1|0
 }
 
 {ScenarioDiagnostics
-XMLData=<Mediators distribution = "1" enabled= "1" ><Mediator type= "SARM" enabled= "0" ><Machine name = "" type = "Win2000" ><Connection><Firewall enabled="0" listener=""/></Connection></Machine><TOPOLOGY></TOPOLOGY></Mediator><Mediator type= "OracleDB" enabled= "0" ><Machine name = "" type = "Win2000" ><Connection><Firewall enabled="0" listener=""/></Connection></Machine><TOPOLOGY></TOPOLOGY></Mediator><Mediator type= "WebPage" enabled= "1" ></Mediator><Mediator type= "J2EE" enabled= "0" ></Mediator><Mediator type= "SiebelDB" enabled= "0" ><Machine name = "" type = "Win2000" ><Connection><Firewall enabled="0" listener=""/></Connection></Machine><TOPOLOGY></TOPOLOGY></Mediator><Mediator type="SAP" enabled="0"><Machine name="" type="Win2000"><Connection><Firewall enabled="0" listener=""/></Connection></Machine><TOPOLOGY><SERVER host="" instance="" RouterString=""><LOGIN username="" password="5cb82d1be" client_num=""/></SERVER></TOPOLOGY></Mediator></Mediators>
+XMLData=<Mediators distribution = "1" enabled= "1" ><Mediator type= "SARM" enabled= "0" ><Machine name = "" type = "Win2000" ><Connection><Firewall enabled="0" listener=""/></Connection></Machine><TOPOLOGY></TOPOLOGY></Mediator><Mediator type= "OracleDB" enabled= "0" ><Machine name = "" type = "Win2000" ><Connection><Firewall enabled="0" listener=""/></Connection></Machine><TOPOLOGY></TOPOLOGY></Mediator><Mediator type= "WebPage" enabled= "1" ></Mediator><Mediator type= "J2EE" enabled= "0" ></Mediator><Mediator type= "SiebelDB" enabled= "0" ><Machine name = "" type = "Win2000" ><Connection><Firewall enabled="0" listener=""/></Connection></Machine><TOPOLOGY></TOPOLOGY></Mediator><Mediator type="SAP" enabled="0"><Machine name="" type="Win2000"><Connection><Firewall enabled="0" listener=""/></Connection></Machine><TOPOLOGY><SERVER host="" instance="" RouterString=""><LOGIN username="" password="5cc1c49ee" client_num=""/></SERVER></TOPOLOGY></Mediator></Mediators>
 }
 
 {ScenarioAlertsConfig
@@ -4173,7 +4189,7 @@ XMLData=<Mediators distribution = "1" enabled= "1" ><Mediator type= "SARM" enabl
       <StartModes>
         <Immediately />
         <DelayAfterLTStart>0</DelayAfterLTStart>
-        <StartAt>2019-04-18T09:52:50.8179671+08:00</StartAt>
+        <StartAt>2019-04-25T21:39:02.2653617+08:00</StartAt>
       </StartModes>
     </StartMode>
     <Scheduler ID="1">
@@ -4183,24 +4199,35 @@ XMLData=<Mediators distribution = "1" enabled= "1" ><Mediator type= "SARM" enabl
         <Global>
           <Scheduling>
             <IsDefaultScheduler>true</IsDefaultScheduler>
-            <RunUntilComplete>
+            <DynamicScheduling>
               <RampUp>
                 <StartCondition>
                   <PrevAction />
                 </StartCondition>
                 <Batch>
-                  <Count>2</Count>
+                  <Count>5</Count>
                   <Interval>15</Interval>
                 </Batch>
                 <TotalVusersNumber>10</TotalVusersNumber>
               </RampUp>
-            </RunUntilComplete>
+              <Duration>
+                <StartCondition>
+                  <PrevAction />
+                </StartCondition>
+                <RunFor>120</RunFor>
+              </Duration>
+              <StopAll>
+                <StartCondition>
+                  <PrevAction />
+                </StartCondition>
+              </StopAll>
+            </DynamicScheduling>
           </Scheduling>
         </Global>
         <Groups>
           <InitAllBeforeStart>false</InitAllBeforeStart>
           <GroupScheduler>
-            <GroupName>µÇÂ½</GroupName>
+            <GroupName>00</GroupName>
             <StartupMode>
               <StartAtScenarioBegining />
             </StartupMode>
@@ -4243,7 +4270,7 @@ XMLData=<Mediators distribution = "1" enabled= "1" ><Mediator type= "SARM" enabl
 }
 
 {ScenarioSLAConfig
-<?xml version="1.0" encoding="UTF-8"?><SLA Version="1.0"><TxList><Tx>vuser_end_Transaction</Tx><Tx>login index</Tx><Tx>login</Tx><Tx>vuser_init_Transaction</Tx><Tx>Action_Transaction</Tx></TxList><SLARules><TrackingPeriodType>Default</TrackingPeriodType><TrackingPeriodValue></TrackingPeriodValue><TrackingPeriodTimeScale></TrackingPeriodTimeScale></SLARules></SLA>
+<?xml version="1.0" encoding="UTF-8"?><SLA Version="1.0"><TxList><Tx>vuser_end_Transaction</Tx><Tx>loginapp</Tx><Tx>login index</Tx><Tx>login</Tx><Tx>vuser_init_Transaction</Tx><Tx>updateuserinfo</Tx><Tx>Action_Transaction</Tx></TxList><SLARules><TrackingPeriodType>Default</TrackingPeriodType><TrackingPeriodValue></TrackingPeriodValue><TrackingPeriodTimeScale></TrackingPeriodTimeScale></SLARules></SLA>
 }
 
 {ScenarioSEVConfig

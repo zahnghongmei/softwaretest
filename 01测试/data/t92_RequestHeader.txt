@@ -1,9 +1,0 @@
-POST https://urs.microsoft.com/urs.asmx?MSURS-Client-Key=sUDUyOYMCmGs64OSQ2WD9A%3d%3d&MSURS-MAC=lQsuHclCGnM%3d HTTP/1.1
-Accept: text/*
-Content-Type: text/xml; charset=utf-8
-User-Agent: VCSoapClient
-Cache-Control: no-cache
-Host: urs.microsoft.com
-Content-Length: 570
-Connection: Keep-Alive
-

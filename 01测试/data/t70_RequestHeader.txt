@@ -1,6 +1,0 @@
-POST /check_new_version.php HTTP/1.1
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-Host: update.ie.2345.com
-Content-Length: 1277
-Cache-Control: no-cache
-

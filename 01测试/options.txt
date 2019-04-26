@@ -1,9 +1,0 @@
--+
--DCCI
--D_IDA_XL
--DWINNT
--IE:\TEST\01≤‚ ‘
--IC:\Program Files (x86)\Micro Focus\LoadRunner\include
--ee:\test\01≤‚ ‘\\logfile.log
-e:\test\01≤‚ ‘\\combined_01.c
-e:\test\01≤‚ ‘\\pre_cci.c
