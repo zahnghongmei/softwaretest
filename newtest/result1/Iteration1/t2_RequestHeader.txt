@@ -1,12 +1,11 @@
-POST /MESG-ADMIN/User/login HTTP/1.1
-Content-Type: application/json;charset=UTF-8
+GET /MESG-ADMIN/User/getCompanyByUsercode/e729e146-f249-42e1-960d-5c1f3f60bc9a HTTP/1.1
 Referer: https://center.t.dacube.cn/
+token: c092334f-34a5-4d85-a54e-a34c96e697c0
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.8
 Accept: */*
 Host: g.t.dacube.cn
-Content-Length: 43
 Connection: Keep-Alive
 Cache-Control: no-cache
 

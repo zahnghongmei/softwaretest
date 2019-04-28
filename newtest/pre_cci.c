@@ -1,4 +1,4 @@
-# 1 "e:\\newtest\\\\combined_00.c"
+# 1 "e:\\test\\newtest\\\\combined_00.c"
 # 1 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/lrun.h" 1
  
  
@@ -925,7 +925,7 @@ int lr_db_getvalue(char * pFirstArg, ...);
 
 
 
-# 1 "e:\\newtest\\\\combined_00.c" 2
+# 1 "e:\\test\\newtest\\\\combined_00.c" 2
 
 # 1 "C:\\Program Files (x86)\\Hp\\LoadRunner\\include/SharedParameter.h" 1
 
@@ -1075,7 +1075,7 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 2 "e:\\newtest\\\\combined_00.c" 2
+# 2 "e:\\test\\newtest\\\\combined_00.c" 2
 
 # 1 "globals.h" 1
 
@@ -2388,251 +2388,332 @@ void
 
 
 
-# 3 "e:\\newtest\\\\combined_00.c" 2
+# 3 "e:\\test\\newtest\\\\combined_00.c" 2
 
 # 1 "vuser_init.c" 1
+long file;
+char t_result[1024];
 vuser_init()
 {
-	return 0;
-	
+	 
+	lr_save_datetime("%Y%m%d%H%M",0,"now_date");
+	strcpy(t_result,"E://TEST/result/mrp_test");
+	strcat(t_result,lr_eval_string("_{now_date}"));
+	 
+	strcat(t_result,".html");
+	 
+	file=fopen(t_result,"at+");
+	 
+	strcpy(t_result,"<html><table border='0.5'><tr><td>描述</td><td>预期结果</td></td><td>实际结果</td></td><td>Y/N</td></tr>");
+	fputs(t_result,file);
+	return 0;	
 }
-# 4 "e:\\newtest\\\\combined_00.c" 2
+# 4 "e:\\test\\newtest\\\\combined_00.c" 2
 
 # 1 "Action.c" 1
 Action()
 {
-	char token1[36];
-	int i;
-	char a[2];
-	int b;
-	char destString[1024];
-	char dest1String[1024];
-	char keywods[100];
-	web_set_sockets_option("SSL_VERSION", "TLS1.1");
-	lr_start_transaction("login index");
-	web_url("web_url",
-		"URL=https://center.t.dacube.cn/#/login/index",
-		"TargetFrame=",
-		"Resource=0",
-		"Referer=",
-		"LAST");   
-	lr_end_transaction("login index", 2);
-	lr_think_time(6);		
-	web_reg_save_param("Token",
-		"LB=token",
-		"RB=",
-		"SaveOffset=3",
-		"SaveLen=36",
-		"LAST");
-		web_reg_save_param("Usercode",
-		"LB=\"usercode\":\"",
-		"RB=\"",
-		"LAST");
-	web_reg_find("Text/DIG/ALNUMIC=usercode",
-	"LAST");	 
-	 
-	lr_start_transaction("login");
-	web_custom_request("login_2", 
-		"URL=https://g.t.dacube.cn/MESG-ADMIN/User/login", 
-		"Method=POST", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t15.inf", 
-		"Mode=HTML", 
-		"EncType=application/json;charset=UTF-8", 
-		"Body={\"phone\":\"{account}\",\"userpwd\":\"{password}\"}", 
-		"LAST");
-	lr_end_transaction("login", 2);
+        char token1[36];
+        int i;
+       char a[2];
+       int b;
+       char destString[1024];
+       char dest1String[1024];
+       char keywods[100];
+        
+char V_testres[1024];
+ 
+int result;
+ 
+char *info=lr_eval_string ("{username}");
+ 
+web_set_max_html_param_len("20000");
+ 
+web_reg_save_param("filecontent",
+"LB=",
+"RB=",
+"Search=Body",
+"LAST");
+web_set_sockets_option("SSL_VERSION", "TLS1.1");
+lr_think_time(6);              
+web_reg_save_param("Token",
+"LB=token",
+"RB=",
+"SaveOffset=3",
+"SaveLen=36",
+              "LAST");
+              web_reg_save_param("Usercode",
+              "LB=\"usercode\":\"",
+              "RB=\"",
+              "LAST");
+       web_reg_find("Text/DIG/ALNUMIC=usercode",
+       "LAST");        
+        
+       lr_start_transaction("login");
+                                  web_custom_request("login_2", 
+              "URL=https://g.t.dacube.cn/MESG-ADMIN/User/login", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t15.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"phone\":\"{account}\",\"userpwd\":\"{password}\"}", 
+              "LAST");
+       lr_end_transaction("login", 2);
+       
+       result=strcmp(lr_eval_string("{filecontent}"),lr_eval_string("{account}"));
 
-	 
+    if ( result>0 )
+
+    {
+
+    strcpy(V_testres,"通过");
+
+    }
+
+    else
+
+    {
+
+    strcpy(V_testres,"失败");
+
+    }
+
+    strcpy(t_result,"<tr><td>");
+
+     
+
+    strcat(t_result,info);
+
+    strcat(t_result,"</td>");
+
+    strcat(t_result,"<td id='yq'>");
+
+     
+
+    strcat(t_result,lr_eval_string("{account}"));
+
+    strcat(t_result,"</td>");
+
+    strcat(t_result,"<td id='sj'>");
+
+     
+      lr_convert_string_encoding(
+          lr_eval_string("{filecontent}"),
+          "utf-8",
+          "GBK",     
+          "test"
+       );
+    strcat(t_result,lr_eval_string("{test}"));
+
+    strcat(t_result,"</td>");
+
+    strcat(t_result,"<td>");
+
+     
+
+    strcat(t_result, V_testres);
+
+    strcat(t_result,"</td></tr>");
+
+    fputs(t_result,file);
+
+        
     strcpy(token1, lr_eval_string("{Token}"));
     lr_output_message("token为：%s", token1);
     lr_output_message("usercode为：%s", lr_eval_string("{Usercode}"));
     lr_output_message("%s", "登陆成功");
     web_add_auto_header("token",  "{Token}");
-	web_custom_request(token1,
-		"URL=https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/{Usercode}", 
-		"Method=GET", 
-		"Resource=0", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t16.inf", 
-		"Mode=HTML", 
-		"LAST");
+       web_custom_request(token1,
+              "URL=https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/{Usercode}", 
+              "Method=GET", 
+              "Resource=0", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t16.inf", 
+              "Mode=HTML", 
+              "LAST");
     lr_start_transaction("updateuserinfo");
      
     web_custom_request("updateuser",
-		"URL= https://g.t.dacube.cn/MESG-ADMIN/User/updateUser ", 
-		"Method=POST", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t17.inf", 
-		"Mode=HTML", 
-		"EncType=application/json;charset=UTF-8", 
-		"Body={\"compid\":\"{comid}\",\"createdata\":\"1541494436000\",\"easemobname\":\"115201811061611139ftrmgurx\",\"email\":\"{email}\",\"headimg\":\"https://oss.dacube.cn/mesg-admin/34e0a7e9-4e3a-4afc-9c93-75b24cd55660/u=3695931498,2381510501&fm=26&gp=0.jpg\",\"isuse\":\"1\",\"phone\":\"{account}\",\"token\":\"{Token}\",\"updatedata\":\"1541494436000\",\"usercode\":\"{Usercode}\"}",
-		"LAST");
+              "URL= https://g.t.dacube.cn/MESG-ADMIN/User/updateUser ", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t17.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"compid\":\"{comid}\",\"createdata\":\"1541494436000\",\"easemobname\":\"115201811061611139ftrmgurx\",\"email\":\"{email}\",\"headimg\":\"https://oss.dacube.cn/mesg-admin/34e0a7e9-4e3a-4afc-9c93-75b24cd55660/u=3695931498,2381510501&fm=26&gp=0.jpg\",\"isuse\":\"1\",\"phone\":\"{account}\",\"token\":\"{Token}\",\"updatedata\":\"1541494436000\",\"usercode\":\"{Usercode}\"}",
+              "LAST");
   lr_end_transaction("updateuserinfo", 2);
 
  
    lr_start_transaction("loginapp");
    web_reg_save_param("Mrp_link",
-		"LB=\"redirect:",
-		"RB=\"",
-		"LAST");
+              "LB=\"redirect:",
+              "RB=\"",
+              "LAST");
    web_custom_request("loginapp", 
-		"URL= https://g.t.dacube.cn/MESG-ADMIN/Application/user/appLogin", 
-		"Method=POST", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t18.inf", 
-		"Mode=HTML", 
-		"EncType=application/json;charset=UTF-8", 
-		"Body={\"appid\":\"1002\",\"compid\":\"{comid}\",\"loginType\":\"pc\",\"styleType\":\"\",\"usercode\":\"{Usercode}\"}",
-		"LAST");
+              "URL= https://g.t.dacube.cn/MESG-ADMIN/Application/user/appLogin", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t18.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"appid\":\"1002\",\"compid\":\"{comid}\",\"loginType\":\"pc\",\"styleType\":\"\",\"usercode\":\"{Usercode}\"}",
+              "LAST");
     lr_end_transaction("loginapp", 2);
 
-	lr_output_message("mrp链接为：%s", lr_eval_string("{Mrp_link}"));
-	web_url("open_mrp_web",
-		"URL=https://mrp.t.dacube.cn/?token={Token}#/",
-		"TargetFrame=",
-		"Resource=0",
-		"Referer=",
-		"Snapshot=t19.inf", 
-		"LAST");
+       lr_output_message("mrp链接为：%s", lr_eval_string("{Mrp_link}"));
+       web_url("open_mrp_web",
+              "URL=https://mrp.t.dacube.cn/?token={Token}#/",
+              "TargetFrame=",
+              "Resource=0",
+              "Referer=",
+              "Snapshot=t19.inf", 
+              "LAST");
 
-	 
-	for(i=0;i<3;i++)
-	{
-	b=itoa(i+1,a,10);	
-	lr_save_string(a, "a1");
-	if(i==1){
-	web_reg_save_param("Folderid2",
-		"LB=\"id\":\"",
-		"RB=\"",
-		"LAST");
-	}
-	else{
-	 web_reg_save_param("Folderid",
-		"LB=\"id\":\"",
-		"RB=\"",
-		"LAST");
-	}
-	
+        
+       for(i=0;i<3;i++)
+       {
+       b=itoa(i+1,a,10);       
+       lr_save_string(a, "a1");
+       if(i==1){
+       web_reg_save_param("Folderid2",
+              "LB=\"id\":\"",
+              "RB=\"",
+              "LAST");
+       }
+       else{
+        web_reg_save_param("Folderid",
+              "LB=\"id\":\"",
+              "RB=\"",
+              "LAST");
+       }
+       
     web_custom_request("createfolder", 
-		"URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/add_folder", 
-		"Method=POST", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t20.inf", 
-		"Mode=HTML", 
-		"EncType=application/json;charset=UTF-8", 
-		"Body={\"orgId\":\"1\",\"params\":{\"folder_detail\":\"\",\"folder_name\":\"t-{a1}\",\"id_parent\": null,\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-		"LAST");
-	lr_output_message("folderid为：%s", lr_eval_string("{Folderid}"));
-	lr_output_message("folderid2为：%s", lr_eval_string("{Folderid2}"));
-	}
-	
-	 
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/add_folder", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t20.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"orgId\":\"1\",\"params\":{\"folder_detail\":\"\",\"folder_name\":\"t-{a1}\",\"id_parent\": null,\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+              "LAST");
+       lr_output_message("folderid为：%s", lr_eval_string("{Folderid}"));
+       lr_output_message("folderid2为：%s", lr_eval_string("{Folderid2}"));
+       }
+       
+        
   web_custom_request("createfolder", 
-		"URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
-		"Method=POST", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t21.inf", 
-		"Mode=HTML", 
-		"EncType=application/json;charset=UTF-8", 
-		"Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-		"LAST");	
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t21.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+              "LAST");       
  
   web_custom_request("createfolder", 
-		"URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
-		"Method=POST", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t22.inf", 
-		"Mode=HTML", 
-		"EncType=application/json;charset=UTF-8", 
-		"Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid2}\",\"name\":\"t-edit\",\"detail\":\"\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-		"LAST");	
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t22.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid2}\",\"name\":\"t-edit\",\"detail\":\"\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+              "LAST");       
  
-	sprintf(
-	destString,
+       sprintf(
+       destString,
         "{\"orgId\":\"1\",\"params\":{\"content\":\"%s\"},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
         lr_eval_string("{articlecontent}"),
         lr_eval_string("{Token}"),
         lr_eval_string("{Usercode}")
-       );	
-	lr_save_string(destString, "str_article_content");
+       );       
+       lr_save_string(destString, "str_article_content");
     lr_output_message("destString before：%s", lr_eval_string("{str_article_content}"));
-	lr_convert_string_encoding(
-	   lr_eval_string("{str_article_content}"),
-	   0,
-	   "utf-8",
-	   "Body"
-	);
-	   
+       lr_convert_string_encoding(
+          lr_eval_string("{str_article_content}"),
+          0,
+          "utf-8",
+          "Body"
+       );
+          
    
    
-# 191 "Action.c"
+# 254 "Action.c"
 
 lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
   
  web_custom_request("Getkeywords", 
-		"URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_keywords", 
-		"Method=POST", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t23.inf", 
-		"Mode=HTML", 
-		"EncType=application/json;charset=UTF-8", 
-		"Body={Body}",
-		"LAST");
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_keywords", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t23.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={Body}",
+              "LAST");
   
  web_set_max_html_param_len("20");
-	sprintf(
-	dest1String,
-		"{\"orgId\":\"1\",\"params\":{\"afinal\": false,\"author\":\"小张\",\"content\":\"参加社区活动时却让他有些失落，他告诉社区的老人们，自己参与了十次原子弹试验，总是做第一个加工铀球的示范者，结果老人们都笑了：“老兄，不要吹牛了，搞原子弹的还住在我们这么破烂的地方。\",\"id_folder\":\"default-repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"source\":\"11111123\",\"summary\":\"参加社区活动时却让他有些失落，他告诉社区的老人们，自己参与了十次原子弹试验，总是做第一个加工铀球的示范者，结果老人们都笑了：“老兄，不要吹牛了，搞原子弹的还住在我们这么破烂的地方。\",\"title\":\"原公浦的现状\",\"update_type\": false},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
+       sprintf(
+       dest1String,
+              "{\"orgId\":\"1\",\"params\":{\"afinal\": false,\"author\":\"小张\",\"content\":\"参加社区活动时却让他有些失落，他告诉社区的老人们，自己参与了十次原子弹试验，总是做第一个加工铀球的示范者，结果老人们都笑了：“老兄，不要吹牛了，搞原子弹的还住在我们这么破烂的地方。\",\"id_folder\":\"default-repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"source\":\"11111123\",\"summary\":\"参加社区活动时却让他有些失落，他告诉社区的老人们，自己参与了十次原子弹试验，总是做第一个加工铀球的示范者，结果老人们都笑了：“老兄，不要吹牛了，搞原子弹的还住在我们这么破烂的地方。\",\"title\":\"原公浦的现状\",\"update_type\": false},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
         lr_eval_string("{Token}"),
         lr_eval_string("{Usercode}")
-       );	
-	lr_save_string(dest1String, "str_article_content1");
+       );       
+       lr_save_string(dest1String, "str_article_content1");
     lr_output_message("destString before：%s", lr_eval_string("{str_article_content1}"));
-	lr_convert_string_encoding(
-	   lr_eval_string("{str_article_content1}"),
-	   0,
-	   "utf-8",     
-	   "Body1"
-	);
+       lr_convert_string_encoding(
+          lr_eval_string("{str_article_content1}"),
+          0,
+          "utf-8",     
+          "Body1"
+       );
   
-	web_custom_request("add_article", 
-		"URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/add_one", 
-		"Method=POST", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=https://center.t.dacube.cn/", 
-		"Snapshot=t24.inf", 
-		"Mode=HTML", 
-		"EncType=application/json;charset=UTF-8", 
+       web_custom_request("add_article", 
+              "URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/add_one", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t24.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
         "Body={Body1}",
-		"LAST");			
+              "LAST");                     
    return 0;
 }
 
 
 
 
-# 5 "e:\\newtest\\\\combined_00.c" 2
+# 5 "e:\\test\\newtest\\\\combined_00.c" 2
 
 # 1 "vuser_end.c" 1
 vuser_end()
 {
+strcpy(t_result,"</table></html>");
+
+fputs(t_result,file);
+
+fclose(file);
+
 	return 0;
 }
-# 6 "e:\\newtest\\\\combined_00.c" 2
+# 6 "e:\\test\\newtest\\\\combined_00.c" 2
 

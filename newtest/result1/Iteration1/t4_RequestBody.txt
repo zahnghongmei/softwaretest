@@ -1,5 +1,2 @@
-"{"compid":"1","createdata":"1541494436000","easemobname":"115201811061611139ftrmgurx","email":"
-""123@qq.com","headimg":"https://oss.dacube.cn/mesg-admin/34e0a7e9-4e3a-4afc-9c93-75b24cd55660/"
-"u=3695931498,2381510501&fm=26&gp=0.jpg","isuse":"1","phone":"18200000000","token":"c5fd1390-ac"
-"d7-4575-947a-c7376f028cdf","updatedata":"1541494436000","usercode":"e729e146-f249-42e1-960d-5c"
-"1f3f60bc9a"}"
+"{"appid":"1002","compid":"1","loginType":"pc","styleType":"","usercode":"e729e146-f249-42e1-96"
+"0d-5c1f3f60bc9a"}"
