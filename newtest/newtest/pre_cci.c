@@ -2648,11 +2648,16 @@ Action()
        strcpy(real,"code:");
        code=lr_eval_string("{companycode}");
        strcat(real,lr_eval_string("{companycode}"));
-       strcpy(content,"code:200 compname:耕云科技、一级子公司");
+       strcpy(content,"code:200 compname:耕云科技");
         
        if(atoi(code)==200)
        {
-       	result=0;
+       	if(strcmp(lr_eval_string("{compname}"),"耕云科技")){
+       		result=0;
+       	}
+       	else{
+       	result=1;
+       	}
         strcat(real," compname:");
         lr_convert_string_encoding(
               lr_eval_string("{compname}"),
@@ -2666,12 +2671,15 @@ Action()
        
        
        
-       
-       
-       
-       
-       
-       
+      web_reg_save_param("compid",
+        "LB=\"compid\":\"",
+		"RB=\"",
+		"Ord=1",
+		"LAST");
+        web_reg_save_param("updatecode",
+        "LB=\"code\":",
+		"RB=\,\"result\"",
+		"LAST");  
     lr_start_transaction("updateuserinfo");
      
     web_custom_request("updateuser",
@@ -2686,6 +2694,29 @@ Action()
               "Body={\"compid\":\"{comid}\",\"createdata\":\"1541494436000\",\"easemobname\":\"115201811061611139ftrmgurx\",\"email\":\"{email}\",\"headimg\":\"https://oss.dacube.cn/mesg-admin/34e0a7e9-4e3a-4afc-9c93-75b24cd55660/u=3695931498,2381510501&fm=26&gp=0.jpg\",\"isuse\":\"1\",\"phone\":\"{account}\",\"token\":\"{Token}\",\"updatedata\":\"1541494436000\",\"usercode\":\"{Usercode}\"}",
               "LAST");
   lr_end_transaction("updateuserinfo", 2);
+       strcpy(real,"code:");
+       code=lr_eval_string("{updatecode}");
+       strcat(real,code);
+       strcpy(content,"code:200 comid:1");
+        
+       if(atoi(code)==200)
+       {
+       		result=0;
+       }
+       	else{
+       	result=1;
+       	}
+        strcat(real," comid:");
+        lr_convert_string_encoding(
+              lr_eval_string("{comid}"),
+              "utf-8",
+              "GBK",     
+              "encomid"
+              );
+       strcat(real,lr_eval_string("{encomid}"));
+       
+       write(result,V_testres,"获取企业信息接口验证",content,real);
+       
 
  
    lr_start_transaction("loginapp");
@@ -2791,7 +2822,7 @@ Action()
           
    
    
-# 392 "Action.c"
+# 423 "Action.c"
 
 lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
   
