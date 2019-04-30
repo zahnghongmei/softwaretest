@@ -1,10 +1,10 @@
 [t4]
 SnapshotXmlFile=snapshot_4.xml
 ContentType=DummyContentType
-StepName=Custom Request: updateuser
+StepName=Custom Request: 3bbd6e99-d747-4e1c-aeef-487e5b670f85
 Total=1
 FileName1=t4.UNK
 RequestHeaderFile=t4_RequestHeader.txt
 ResponseHeaderFile=t4_ResponseHeader.txt
 RequestBodyFile=t4_RequestBody.txt
-URL1=https://g.t.dacube.cn/MESG-ADMIN/User/updateUser
+URL1=file:

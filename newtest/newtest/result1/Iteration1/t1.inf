@@ -1,7 +1,7 @@
 [t1]
 SnapshotXmlFile=snapshot_1.xml
 ContentType=DummyContentType
-StepName=Custom Request: login_2
+StepName=Custom Request: login_1
 Total=1
 FileName1=t1.UNK
 RequestHeaderFile=t1_RequestHeader.txt

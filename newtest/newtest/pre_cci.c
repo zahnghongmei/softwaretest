@@ -2508,7 +2508,7 @@ Action()
 	
         
        lr_start_transaction("login");
-       web_custom_request("login_2", 
+       web_custom_request("login_1", 
               "URL=https://g.t.dacube.cn/MESG-ADMIN/User/login", 
               "Method=POST", 
               "Resource=0", 
@@ -2551,7 +2551,8 @@ Action()
         "LB=\"msg\":\"",
 		"RB=\"",
 		"LAST");
-    web_custom_request("login_3", 
+     
+    web_custom_request("login_2", 
               "URL=https://g.t.dacube.cn/MESG-ADMIN/User/login", 
               "Method=POST", 
               "Resource=0", 
@@ -2581,7 +2582,59 @@ Action()
        strcat(real,lr_eval_string("{enmsg}"));
        }
        write(result,V_testres,"登陆用户名错误接口验证",content,real);
+        
+	  web_reg_save_param("code2",
+        "LB=\"code\":",
+		"RB=\,\"result\"",
+		"LAST");
+     web_reg_save_param("msg2",
+        "LB=\"msg\":\"",
+		"RB=\"",
+		"LAST");
     
+         
+    web_custom_request("login_3", 
+              "URL=https://g.t.dacube.cn/MESG-ADMIN/User/login", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t152.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"phone\":\"18200000000\",\"userpwd\":\"12345\"}", 
+              "LAST");
+       
+       strcpy(real,"code:");
+       code=lr_eval_string("{code2}");
+       strcat(real,lr_eval_string("{code2}"));
+       strcpy(content,"code:不为200 msg:登录名与密码不匹配   ");
+        
+       if(atoi(code)!=200)
+       {
+       	result=0;
+        strcat(real," msg:");
+        lr_convert_string_encoding(
+              lr_eval_string("{msg2}"),
+              "utf-8",
+              "GBK",     
+              "enmsg2"
+              );
+       strcat(real,lr_eval_string("{enmsg2}"));
+       }
+       write(result,V_testres,"登陆用户名错误接口验证",content,real);
+       
+       	       
+	  web_reg_save_param("compname",
+        "LB=\"compname\":\"",
+		"RB=\"",
+		"Ord=1",
+		"LAST");
+        web_reg_save_param("companycode",
+        "LB=\"code\":",
+		"RB=\,\"result\"",
+		"LAST");
+     
        web_add_auto_header("token","{Token}");
        web_custom_request(token1,
               "URL=https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/{Usercode}", 
@@ -2591,6 +2644,34 @@ Action()
               "Snapshot=t16.inf", 
               "Mode=HTML", 
               "LAST");
+       lr_output_message("compname：%s", lr_eval_string("{compname}"));
+       strcpy(real,"code:");
+       code=lr_eval_string("{companycode}");
+       strcat(real,lr_eval_string("{companycode}"));
+       strcpy(content,"code:200 compname:耕云科技、一级子公司");
+        
+       if(atoi(code)==200)
+       {
+       	result=0;
+        strcat(real," compname:");
+        lr_convert_string_encoding(
+              lr_eval_string("{compname}"),
+              "utf-8",
+              "GBK",     
+              "encompname"
+              );
+       strcat(real,lr_eval_string("{encompname}"));
+       }
+       write(result,V_testres,"获取企业信息接口验证",content,real);
+       
+       
+       
+       
+       
+       
+       
+       
+       
     lr_start_transaction("updateuserinfo");
      
     web_custom_request("updateuser",
@@ -2710,7 +2791,7 @@ Action()
           
    
    
-# 311 "Action.c"
+# 392 "Action.c"
 
 lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
   
