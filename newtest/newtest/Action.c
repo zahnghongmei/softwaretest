@@ -1,8 +1,9 @@
 //info表示描述信息,content表示预期结果,real 表示服务器返回的真实结果 
 int result;
-int write(char V_testres[1024],char *info,char content[200],char real[200])
+char *code;
+int write(int result,char V_testres[1024],char *info,char content[200],char real[200])
 {
- result=strcmp(real,content);
+
  if ( result==0 ) {
            strcpy(V_testres,"通过");
          }
@@ -111,7 +112,15 @@ Action()
        strcat(real," phone:");
        strcat(real,lr_eval_string("{phone}"));
        strcpy(content,"code:200 phone:18200000000");
-       write(V_testres,info,content,real);
+       code=lr_eval_string("{code}");
+       if(atoi(code)!=200)
+       {
+       result=1;
+       }
+       else{
+       result=strcmp(real,content);
+       }
+    write(result,V_testres,"用户名密码均正确接口验证",content,real);
     temp=lr_eval_string("{code}");
     lr_output_message("code为：%s", temp);
     lr_output_message("phone为：%s",lr_eval_string("{phone}"));
@@ -120,7 +129,47 @@ Action()
     lr_output_message("token为：%s", token1);
     lr_output_message("usercode为：%s", lr_eval_string("{Usercode}"));
     lr_output_message("%s", "登陆成功");
-    web_add_auto_header("token",  "{Token}");
+    
+	  web_reg_save_param("code1",
+        "LB=\"code\":",
+		"RB=\,\"result\"",
+		LAST);
+     web_reg_save_param("msg",
+        "LB=\"msg\":\"",
+		"RB=\"",
+		LAST);
+    web_custom_request("login_3", 
+              "URL=https://g.t.dacube.cn/MESG-ADMIN/User/login", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t152.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"phone\":\"18200000001\",\"userpwd\":\"{password}\"}", 
+              LAST);
+       
+       strcpy(real,"code:");
+       code=lr_eval_string("{code1}");
+       strcat(real,lr_eval_string("{code1}"));
+       strcpy(content,"code:不为200 msg:登录名不存在");
+       //如果code不等于200，就打印msg。
+       if(atoi(code)!=200)
+       {
+       	result=0;
+        strcat(real," msg:");
+        lr_convert_string_encoding(
+              lr_eval_string("{msg}"),
+              "utf-8",
+              "GBK",     
+              "enmsg"
+              );
+       strcat(real,lr_eval_string("{enmsg}"));
+       }
+       write(result,V_testres,"登陆用户名错误接口验证",content,real);
+    
+       web_add_auto_header("token","{Token}");
        web_custom_request(token1,
               "URL=https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/{Usercode}", 
               "Method=GET", 

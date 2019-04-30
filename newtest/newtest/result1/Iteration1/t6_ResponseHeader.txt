@@ -1,7 +1,10 @@
 HTTP/1.1 200 OK
 Server: nginx/1.12.2
-Date: Tue, 30 Apr 2019 03:13:35 GMT
-Content-Type: application/json;charset=UTF-8
-Transfer-Encoding: chunked
+Date: Tue, 30 Apr 2019 04:52:10 GMT
+Content-Type: text/html
+Content-Length: 1816
 Connection: keep-alive
+Last-Modified: Thu, 25 Apr 2019 03:45:36 GMT
+ETag: "5cc12d60-718"
+Accept-Ranges: bytes
 
