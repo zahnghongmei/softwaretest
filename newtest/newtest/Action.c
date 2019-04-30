@@ -108,7 +108,7 @@ Action()
        lr_end_transaction("login", LR_AUTO);
        strcpy(real,"code:");
        strcat(real,lr_eval_string("{code}"));
-       strcpy(real,"phone:");
+       strcat(real," phone:");
        strcat(real,lr_eval_string("{phone}"));
        strcpy(content,"code:200 phone:18200000000");
        write(V_testres,info,content,real);
