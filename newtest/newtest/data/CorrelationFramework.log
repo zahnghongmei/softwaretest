@@ -1,0 +1,4 @@
+[2019/4/29 20:41:05] Full Trace: CorrelationFramework has initialized log functionality successfully.
+[2019/4/29 20:41:06] Full Trace: WebCorrelationScanner initialized
+[2019/4/29 20:41:06] Full Trace: CorrelationFramework has initialized Snapshot Scanners successfully.
+[2019/4/29 20:41:07] Full Trace: CorrelationFramework has initialized Post Filters Manager successfully.

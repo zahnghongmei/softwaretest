@@ -1,2 +1,0 @@
-[Hosts]
-localhost=E:\TEST\00\res\localhost_1.eve

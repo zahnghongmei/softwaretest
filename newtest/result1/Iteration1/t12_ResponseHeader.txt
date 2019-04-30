@@ -1,7 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx/1.12.2
-Date: Sun, 28 Apr 2019 03:36:23 GMT
-Content-Type: application/json;charset=UTF-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-

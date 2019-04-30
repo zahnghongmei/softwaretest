@@ -1,0 +1,64 @@
+[Web Request      ( d80: cb0)] "GET /cacert/gsorganizationvalsha2g2r1.crt"   
+[Network Analyzer ( d80: cb0)]   (Sid: 12) Client -> Server @ : 158 bytes (Service=HTTP)
+[Network Analyzer ( d80:328c)]   (Sid: 35) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-GCM-SHA256)
+[Network Analyzer ( d80: cb0)]   (Sid: 12) Server -> Client : 1642 bytes  (Service=HTTP)
+[Network Analyzer ( d80:23dc)] Address lookup for DESKTOP-CO3PI0L = 118.118.118.147
+[Network Analyzer ( d80:23dc)] Request Connection: Remote Server @ 163.177.92.115:443   (Service=)  (Sid= 39)  PROXIED!
+[Network Analyzer ( d80: e4c)]   (Sid: 37) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Web Request      ( d80: cb0)] "GET /cgi-bin/r.cgi?flag1=7808&flag2=5&flag3=5&5=0&6=0&7=0&8=0&9=0&10=0&11=21&12=22&13=25&14=28&15=28&16=28&20=13735"   
+[Network Analyzer ( d80: cb0)]   (Sid: 34) Client -> Server @ : 813 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( d80: e4c)]   (Sid: 37) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-GCM-SHA256)
+[Web Request      ( d80: cb0)] "GET /DigiCertSHA2SecureServerCA.crt"   
+[Network Analyzer ( d80: cb0)]   (Sid: 31) Client -> Server @ : 151 bytes (Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 34) Server -> Client : 149 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 34) Connection Terminated (by Server)
+[Network Analyzer ( d80: 9a0)]   (Sid: 38) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( d80: 9a0)]   (Sid: 38) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-GCM-SHA256)
+[Network Analyzer ( d80:1ca4)]   (Sid: 39) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( d80:1ca4)]   (Sid: 39) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-GCM-SHA256)
+[Web Request      ( d80: cb0)] "GET /stats?sId=52725868"   
+[Network Analyzer ( d80: cb0)]   (Sid: 39) Client -> Server @ : 554 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 39) Server -> Client : 3340 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 39) Connection Terminated (by Server)
+[Network Analyzer ( d80:23dc)] Address lookup for DESKTOP-CO3PI0L = 118.118.118.147
+[Network Analyzer ( d80:23dc)] Request Connection: Remote Server @ 58.250.137.86:443   (Service=)  (Sid= 40)  PROXIED!
+[Network Analyzer ( d80: cb0)]   (Sid: 31) Server -> Client : 1665 bytes  (Service=HTTP)
+[Network Analyzer ( d80:358c)]   (Sid: 40) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( d80:358c)]   (Sid: 40) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-GCM-SHA256)
+[Network Analyzer ( d80: cb0)]   (Sid: 35) Connection Terminated (by Client)
+[Web Request      ( d80: cb0)] "GET /SecureSiteCA.crt"   
+[Network Analyzer ( d80: cb0)]   (Sid:  9) Client -> Server @ : 140 bytes (Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid:  9) Server -> Client : 1479 bytes  (Service=HTTP)
+[Web Request      ( d80: cb0)] "GET /webview/pingd?dm=xui.ptlogin2.qq.com&pvi=219167744&si=s7601076224&url=/cgi-bin/xlogin&arg=appid%3D716027609%26daid%3D383%26style%3D33%26login_text%3D%25E6%258E%2588%25E6%259D%2583%25E5%25B9%25B6%25E7%2599%25BB%25E5%25BD%2595%26hide_title_bar%3D1%26hide_border%3D1%26target%3Dself%26s_url%3Dhttps%253A%252F%252Fgraph.qq.com%252Foauth2.0%252Flogin_jump%26pt_3rd_aid%3D100258531%26pt_feedback_link%3Dhttp%253A%252F%252Fsupport.qq.com%252Fwrite.shtml%253Ffid%253D780%2526SSTAG%253Dlogin.2345.com.appid100258531&ty=&rdm=graph.qq.com&rurl=/oauth2.0/show&rarg=which%3DLogin%26display%3Dpc%26client_id%3D100258531%26redirect_uri%3Dhttps%253A%252F%252Flogin.2345.com%252Fclientapi%252Fqq%252Fcallback%253Fmid%253Dpcbs%26response_type%3Dcode%26state%3D5e0cc0e4b6a8e1a066d0248f5075dabf%26forcelogin%3Dtrue&adt=&r2=61651582&r3=-1&r4=1&fl=27.0&scr=1920x1080&scl=24-bit&lg=zh-cn&jv=&tz=-8&ct=&ext=adid=&pf=&random=1555505789705"   
+[Network Analyzer ( d80: cb0)]   (Sid: 38) Client -> Server @ : 1608 bytes (SSL)(Service=HTTP)
+[Web Request      ( d80: cb0)] "GET /webview/pingd?dm=graph.qq.com&pvi=836150272&si=s3362094080&url=/oauth2.0/show&arg=which%3DLogin%26display%3Dpc%26client_id%3D100258531%26redirect_uri%3Dhttps%253A%252F%252Flogin.2345.com%252Fclientapi%252Fqq%252Fcallback%253Fmid%253Dpcbs%26response_type%3Dcode%26state%3D5e0cc0e4b6a8e1a066d0248f5075dabf%26forcelogin%3Dtrue&ty=&rdm=&rurl=&rarg=&adt=&r2=52725868&r3=-1&r4=1&fl=27.0&scr=1920x1080&scl=24-bit&lg=zh-cn&jv=&tz=-8&ct=&ext=adid=&pf=&random=1555505799082"   
+[Network Analyzer ( d80: cb0)]   (Sid: 40) Client -> Server @ : 1027 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 38) Server -> Client : 234 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 38) Server -> Client : 5 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 40) Server -> Client : 234 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 40) Server -> Client : 5 bytes (SSL) (Service=HTTP)
+[Web Request      ( d80: cb0)] "GET /2/tcaptcha-frame.b46b256e.js"   
+[Network Analyzer ( d80: cb0)]   (Sid: 37) Client -> Server @ : 751 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 37) Server -> Client : 363 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( d80:23dc)] Address lookup for DESKTOP-CO3PI0L = 118.118.118.147
+[Network Analyzer ( d80:23dc)] Request Connection: Remote Server @ 112.90.77.170:443   (Service=)  (Sid= 41)  PROXIED!
+[Network Analyzer ( d80:23dc)] Address lookup for DESKTOP-CO3PI0L = 118.118.118.147
+[Network Analyzer ( d80:23dc)] Request Connection: Remote Server @ 112.90.77.170:443   (Service=)  (Sid= 42)  PROXIED!
+[Web Request      ( d80: cb0)] "GET /ptqrlogin?u1=https%3A%2F%2Fgraph.qq.com%2Foauth2.0%2Flogin_jump&ptqrtoken=0&ptredirect=0&h=1&t=1&g=1&from_ui=1&ptlang=2052&action=0-0-1555505801797&js_ver=19041216&js_type=1&login_sig=&pt_uistyle=40&aid=716027609&daid=383&pt_3rd_aid=100258531&"   
+[Network Analyzer ( d80: cb0)]   (Sid: 32) Client -> Server @ : 918 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 32) Server -> Client : 225 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( d80:2314)]   (Sid: 41) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer ( d80:2314)]   (Sid: 41) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-GCM-SHA256)
+[Network Analyzer ( d80:2154)]   (Sid: 42) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer ( d80:2154)]   (Sid: 42) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-GCM-SHA256)
+[Web Request      ( d80: cb0)] "GET /cgi-bin/r.cgi?flag1=7721&flag2=166&flag3=6&5=10435&6=10435&7=10435&8=10435&9=10435&10=10463&11=10531&12=10532&13=10537&14=47911&17=48479&18=48479&19=48480&t=1555505789715"   
+[Network Analyzer ( d80: cb0)]   (Sid: 41) Client -> Server @ : 742 bytes (SSL)(Service=HTTP)
+[Web Request      ( d80: cb0)] "GET /cgi-bin/r.cgi?flag1=7721&flag2=166&flag3=9&1=7&2=23431&3=23434&4=33368&t=1555505789716"   
+[Network Analyzer ( d80: cb0)]   (Sid: 42) Client -> Server @ : 658 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 42) Server -> Client : 149 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 41) Server -> Client : 149 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 42) Connection Terminated (by Server)
+[Network Analyzer ( d80: cb0)]   (Sid: 41) Connection Terminated (by Server)
+[Web Request      ( d80: cb0)] "GET /ptqrlogin?u1=https%3A%2F%2Fgraph.qq.com%2Foauth2.0%2Flogin_jump&ptqrtoken=0&ptredirect=0&h=1&t=1&g=1&from_ui=1&ptlang=2052&action=0-0-1555505804797&js_ver=19041216&js_type=1&login_sig=&pt_uistyle=40&aid=716027609&daid=383&pt_3rd_aid=100258531&"   
+[Network Analyzer ( d80: cb0)]   (Sid: 32) Client -> Server @ : 918 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( d80: cb0)]   (Sid: 32) Server -> Client : 225 bytes (SSL) (Service=HTTP)
