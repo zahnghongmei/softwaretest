@@ -2418,6 +2418,13 @@ char *code;
 char *str;
 int textfind;
 int msg;
+char *error;
+
+     char content[200];
+       char real[200];
+       char *temp;
+        
+       char V_testres[1024];
  
 int write(int result,char V_testres[1024],char *info,char content[200],char real[200])
 {
@@ -2457,7 +2464,43 @@ int write(int result,char V_testres[1024],char *info,char content[200],char real
     fputs(t_result,file);
     return 0;
 }
-   
+int reg_fun(char *code)
+{
+ web_reg_save_param(code,
+        "LB=\"code\":",
+		"RB=\,",
+		"LAST"); 
+ msg=web_reg_save_param("error",
+		"LB=\"message\":\"",
+		"RB=\"",
+		"LAST"); 	
+return 0;
+}
+int logic(char *code,char *contentinfo,char *realinfo,char *errorinfo)
+{
+	 strcpy(real,"code:");
+       strcat(real,code);
+       strcpy(content,contentinfo);
+       if(atoi(code)==200){
+       	 if(textfind==0){
+	      lr_output_message("文本检查件成功");
+	       strcat(real,realinfo);
+	      result=0;
+	     }
+	     else{
+		  lr_output_message("文本检查点失败");
+	      result=1;
+	      strcat(real,"message:");
+	      strcat(real,errorinfo);
+	     }	
+       }
+       	else{
+       	result=1;         	
+       	}
+       write(result,V_testres,"新建一篇稿件接口验证",content,real);       
+	
+return 0;
+}
 Action()
 {
        char token1[36];
@@ -2467,10 +2510,6 @@ Action()
        char destString[1024];
        char dest1String[1024];
        char keywods[100];
- 
-       char V_testres[1024];
- 
-       int result;
  
        char *info=lr_eval_string ("{username}");
        char content[200];
@@ -2970,7 +3009,7 @@ msg=web_reg_save_param("error",
        	else{
        	result=1;         	
        	}
-       write(result,V_testres,"修改文件夹文件夹接口验证",content,real);  
+       write(result,V_testres,"获取关键词接口验证",content,real);  
   
  web_set_max_html_param_len("20");
        sprintf(
@@ -2988,6 +3027,21 @@ msg=web_reg_save_param("error",
           "Body1"
        );
   
+ 
+ 
+ 
+ 
+
+	textfind=web_reg_find("Text/BIN/DIG/ALNUMIC=content",
+		"LAST");
+
+	
+                      
+ msg=web_reg_save_param("error",
+		"LB=\"message\":\"",
+		"RB=\"",
+		"LAST"); 
+      reg_fun("add_one");
        web_custom_request("add_article", 
               "URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/add_one", 
               "Method=POST", 
@@ -2998,8 +3052,31 @@ msg=web_reg_save_param("error",
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
         "Body={Body1}",
-              "LAST");                     
-                              return 0;
+              "LAST");   
+       
+       code=lr_eval_string("{add_one}");
+       
+       
+        
+       
+        
+	    
+	      
+	      
+ 
+ 
+ 
+ 
+ 
+	      error=lr_eval_string("{error}");
+	      logic(code,"code:200","新建稿件成功",error);
+ 
+ 
+ 
+ 
+ 
+ 
+ return 0;
 }
 
 
