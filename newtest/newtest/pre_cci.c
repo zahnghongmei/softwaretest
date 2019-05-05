@@ -2414,6 +2414,7 @@ vuser_init()
  
 int result;
 char *code;
+char *str;
 int write(int result,char V_testres[1024],char *info,char content[200],char real[200])
 {
 
@@ -2667,10 +2668,7 @@ Action()
               );
        strcat(real,lr_eval_string("{encompname}"));
        }
-       write(result,V_testres,"获取企业信息接口验证",content,real);
-       
-       
-       
+       write(result,V_testres,"获取企业信息接口验证",content,real);    
       web_reg_save_param("compid",
         "LB=\"compid\":\"",
 		"RB=\"",
@@ -2715,10 +2713,14 @@ Action()
               );
        strcat(real,lr_eval_string("{encomid}"));
        
-       write(result,V_testres,"获取企业信息接口验证",content,real);
+       write(result,V_testres,"企业登陆后更新用户信息接口验证",content,real);
        
 
  
+        web_reg_save_param("linkcode",
+        "LB=\"code\":",
+		"RB=\,",
+		"LAST"); 
    lr_start_transaction("loginapp");
    web_reg_save_param("Mrp_link",
               "LB=\"redirect:",
@@ -2737,7 +2739,24 @@ Action()
               "LAST");
     lr_end_transaction("loginapp", 2);
 
-       lr_output_message("mrp链接为：%s", lr_eval_string("{Mrp_link}"));
+    lr_output_message("mrp链接为：%s", lr_eval_string("{Mrp_link}"));
+     strcpy(real,"code:");
+     code=lr_eval_string("{linkcode}");
+       strcat(real,code);
+       strcpy(content,"code:200 ");
+        
+       if(atoi(code)==200)
+       {
+       		result=0;
+       }
+       	else{
+       	result=1;
+       	}
+        strcat(real," mrplink:");
+       strcat(real,lr_eval_string("{Mrp_link}"));
+       
+       write(result,V_testres,"登陆获取应用链接接口验证",content,real);    
+        
        web_url("open_mrp_web",
               "URL=https://mrp.t.dacube.cn/?token={Token}#/",
               "TargetFrame=",
@@ -2763,7 +2782,18 @@ Action()
               "RB=\"",
               "LAST");
        }
-       
+     
+    if(i==0)
+    {
+       web_reg_save_param("createfoldercode",
+        "LB=\"code\":",
+		"RB=\,",
+		"LAST"); 
+    	 web_reg_save_param("id_creator",
+        "LB=\"id_creator\":\"",
+		"RB=\"",
+		"LAST"); 
+    }
     web_custom_request("createfolder", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/add_folder", 
               "Method=POST", 
@@ -2777,10 +2807,44 @@ Action()
               "LAST");
        lr_output_message("folderid为：%s", lr_eval_string("{Folderid}"));
        lr_output_message("folderid2为：%s", lr_eval_string("{Folderid2}"));
+       lr_output_message("id_creater为：%s", lr_eval_string("{id_creator}"));
+       if(i==0)
+       {
+       strcpy(real,"code:");
+       code=lr_eval_string("{createfoldercode}");
+       strcat(real,code);
+       strcpy(content,"code:200 ");
+       strcat(content," id_creater:");
+       strcat(content,lr_eval_string("{Usercode}"));
+        
+       if(atoi(code)==200)
+       {
+       		result=0;
+       }
+       	else{
+       	result=1;
+       	}
+       strcat(real," id_creater:");
+       strcat(real,lr_eval_string("{id_creator}"));
+       
+       write(result,V_testres,"创建文件夹接口验证",content,real); 
+       }       
        }
        
-        
-  web_custom_request("createfolder", 
+    
+   web_reg_save_param("deletefoldercode",
+        "LB=\"code\":",
+		"RB=\,",
+		"LAST"); 
+    	 web_reg_save_param("flag_delete",
+        "LB=\"flag_delete\":",
+		"RB=\,",
+		"LAST"); 
+    web_reg_save_param("id_creator",
+        "LB=\"id_creator\":\"",
+		"RB=\"",
+		"LAST"); 
+  web_custom_request("deletefolder", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
               "Method=POST", 
               "Resource=0", 
@@ -2790,7 +2854,27 @@ Action()
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-              "LAST");       
+              "LAST");
+       strcpy(real,"code:");
+       code=lr_eval_string("{deletefoldercode}");
+       strcat(real,code);
+       strcpy(content,"code:200  flag_delete:true");
+       strcat(content," id_creater:");
+       strcat(content,lr_eval_string("{Usercode}"));
+        
+       if(atoi(code)==200)
+       {
+       		result=0;
+       }
+       	else{
+       	result=1;
+       	}
+       strcat(real," id_creater:");
+       strcat(real,lr_eval_string("{id_creator}"));
+       strcat(real," flag_delete:");
+       strcat(real,lr_eval_string("{flag_delete}"));
+       write(result,V_testres,"删除文件夹文件夹接口验证",content,real);    
+   
  
   web_custom_request("createfolder", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
@@ -2822,7 +2906,7 @@ Action()
           
    
    
-# 423 "Action.c"
+# 507 "Action.c"
 
 lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
   
@@ -2865,7 +2949,7 @@ lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
               "EncType=application/json;charset=UTF-8", 
         "Body={Body1}",
               "LAST");                     
-   return 0;
+                              return 0;
 }
 
 
