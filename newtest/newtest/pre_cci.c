@@ -2412,9 +2412,13 @@ vuser_init()
 
 # 1 "Action.c" 1
  
+
 int result;
 char *code;
 char *str;
+int textfind;
+int msg;
+ 
 int write(int result,char V_testres[1024],char *info,char content[200],char real[200])
 {
 
@@ -2876,8 +2880,13 @@ Action()
        write(result,V_testres,"删除文件夹文件夹接口验证",content,real);    
    
  
+ web_reg_save_param("updatefoldercode",
+        "LB=\"code\":",
+		"RB=\,",
+		"LAST"); 
+
   web_custom_request("createfolder", 
-              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/update_folder_name", 
               "Method=POST", 
               "Resource=0", 
               "RecContentType=application/json", 
@@ -2886,8 +2895,24 @@ Action()
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid2}\",\"name\":\"t-edit\",\"detail\":\"\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-              "LAST");       
- 
+              "LAST");
+               
+        strcpy(real,"code:");
+       code=lr_eval_string("{updatefoldercode}");
+       strcat(real,code);
+       strcpy(content,"code:200  flag_update:true");
+       strcat(content," id_creater:");
+       strcat(content,lr_eval_string("{Usercode}"));
+        
+       if(atoi(code)==200)
+       {
+       		result=0;
+       }
+       	else{
+       	result=1;   	
+       	}
+       write(result,V_testres,"修改文件夹文件夹接口验证",content,real);   
+        
        sprintf(
        destString,
         "{\"orgId\":\"1\",\"params\":{\"content\":\"%s\"},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
@@ -2903,13 +2928,16 @@ Action()
           "utf-8",
           "Body"
        );
-          
-   
-   
-# 507 "Action.c"
-
 lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
-  
+ web_reg_save_param("keywordscode",
+        "LB=\"code\":",
+		"RB=\,",
+		"LAST"); 
+ textfind=web_reg_find("Text=keywords", "LAST");	
+msg=web_reg_save_param("error",
+		"LB=\"message\":\"",
+		"RB=\"",
+		"LAST"); 
  web_custom_request("Getkeywords", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_keywords", 
               "Method=POST", 
@@ -2920,7 +2948,29 @@ lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={Body}",
-              "LAST");
+              "LAST");	
+	   strcpy(real,"code:");
+       code=lr_eval_string("{keywordscode}");
+       strcat(real,code);
+       strcpy(content,"code:200  检测到关键词");
+        
+       if(atoi(code)==200){
+       	 if(textfind==0){
+	      lr_output_message("文本检查件成功");
+	       strcat(real," 检查到相应的关键词");
+	      result=0;
+	     }
+	     else{
+		  lr_output_message("文本检查点失败");
+	      result=1;
+	      strcat(real,"message:");
+	      strcat(real,lr_eval_string("{error}"));
+	     }	
+       }
+       	else{
+       	result=1;         	
+       	}
+       write(result,V_testres,"修改文件夹文件夹接口验证",content,real);  
   
  web_set_max_html_param_len("20");
        sprintf(

@@ -1,7 +1,11 @@
-//info表示描述信息,content表示预期结果,real 表示服务器返回的真实结果 
+/*result表示是否通过的结果变量,code表示服务器端返回的状态码,str表示一个临时字符串，textfind表示文本检查点 msg表示服务端返回的message*/
+
 int result;
 char *code;
 char *str;
+int textfind;
+int msg;
+/*info表示描述信息,content表示预期结果,real 表示服务器返回的真实结果 */
 int write(int result,char V_testres[1024],char *info,char content[200],char real[200])
 {
 
@@ -462,9 +466,14 @@ Action()
        strcat(real,lr_eval_string("{flag_delete}"));
        write(result,V_testres,"删除文件夹文件夹接口验证",content,real);    
    
-//测试修改文件夹的名字
+//测试修改文件夹的名字接口测试
+ web_reg_save_param("updatefoldercode",
+        "LB=\"code\":",
+		"RB=\,",
+		LAST); 
+
   web_custom_request("createfolder", 
-              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/update_folder_name", 
               "Method=POST", 
               "Resource=0", 
               "RecContentType=application/json", 
@@ -473,8 +482,24 @@ Action()
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid2}\",\"name\":\"t-edit\",\"detail\":\"\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-              LAST);       
-//articlecontent表示稿件的内容       
+              LAST);
+              //如果code不等于200，就打印msg。
+        strcpy(real,"code:");
+       code=lr_eval_string("{updatefoldercode}");
+       strcat(real,code);
+       strcpy(content,"code:200  flag_update:true");
+       strcat(content," id_creater:");
+       strcat(content,lr_eval_string("{Usercode}"));
+       //如果code不等于200，就打印msg。
+       if(atoi(code)==200)
+       {
+       		result=0;
+       }
+       	else{
+       	result=1;   	
+       	}
+       write(result,V_testres,"修改文件夹文件夹接口验证",content,real);   
+  /*根据文章内容获获取关键词接口测试，articlecontent表示稿件的内容*/     
        sprintf(
        destString,
         "{\"orgId\":\"1\",\"params\":{\"content\":\"%s\"},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
@@ -490,23 +515,16 @@ Action()
           "utf-8",
           "Body"
        );
-          
-  //生成文章的关键词
-  /*       web_custom_request("Getkeywords", 
-              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_keywords", 
-              "Method=POST", 
-              "Resource=0", 
-              "RecContentType=application/json", 
-              "Referer=https://center.t.dacube.cn/", 
-              "Snapshot=t24.inf", 
-              "Mode=HTML", 
-              "EncType=application/json;charset=UTF-8", 
-              "Body={\"orgId\":\"1\",\"params\":{\"content\":\"参加社区活动时却让他有些失落，他告诉社区的老人们，自己参与了十次原子弹试验，总是做第一个加工铀球的示范者，结果老人们都笑了：“老兄，不要吹牛了，搞原子弹的还住在我们这么破烂的地方？’”原公浦心里很难受，他想自己现在只有一个心愿，“住什么地方都好，只要有钱吃药”。\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-              LAST);
- */
-
 lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
- //lr_save_string(destString, "Body");
+ web_reg_save_param("keywordscode",
+        "LB=\"code\":",
+		"RB=\,",
+		LAST); 
+ textfind=web_reg_find("Text=keywords", LAST);	
+msg=web_reg_save_param("error",
+		"LB=\"message\":\"",
+		"RB=\"",
+		LAST); 
  web_custom_request("Getkeywords", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_keywords", 
               "Method=POST", 
@@ -517,7 +535,29 @@ lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={Body}",
-              LAST);
+              LAST);	
+	   strcpy(real,"code:");
+       code=lr_eval_string("{keywordscode}");
+       strcat(real,code);
+       strcpy(content,"code:200  检测到关键词");
+       //如果code不等于200，就打印msg。
+       if(atoi(code)==200){
+       	 if(textfind==0){
+	      lr_output_message("文本检查件成功");
+	       strcat(real," 检查到相应的关键词");
+	      result=0;
+	     }
+	     else{
+		  lr_output_message("文本检查点失败");
+	      result=1;
+	      strcat(real,"message:");
+	      strcat(real,lr_eval_string("{error}"));
+	     }	
+       }
+       	else{
+       	result=1;         	
+       	}
+       write(result,V_testres,"获取关键词接口验证",content,real);  
  //articlecontent表示稿件的内容       
  web_set_max_html_param_len("20");
        sprintf(

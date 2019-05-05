@@ -25,7 +25,7 @@ ScriptLanguage=C
 DisableRegenerate=0
 Description=
 [TransactionsOrder]
-Order="login__*delimiter*__updateuserinfo__*delimiter*__loginapp"
+Order="updateuserinfo__*delimiter*__loginapp__*delimiter*__login"
 [Actions]
 vuser_init=vuser_init.c
 Action=Action.c
@@ -51,9 +51,9 @@ CurrentState=8
 VuserStateHistory=0 65536 65552
 LastReplayStatus=1
 [Transactions]
-login=
 updateuserinfo=
 loginapp=
+login=
 [ExtraFiles]
 globals.h=
 [Recorded Actions]
