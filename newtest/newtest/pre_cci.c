@@ -2950,7 +2950,8 @@ Action()
        	else{
        	result=1;   	
        	}
-       write(result,V_testres,"修改文件夹文件夹接口验证",content,real);   
+       write(result,V_testres,"修改文件夹文件夹接口验证",content,real);  
+
         
        sprintf(
        destString,
@@ -3027,17 +3028,9 @@ msg=web_reg_save_param("error",
           "Body1"
        );
   
- 
- 
- 
- 
-
 	textfind=web_reg_find("Text/BIN/DIG/ALNUMIC=content",
-		"LAST");
-
-	
-                      
- msg=web_reg_save_param("error",
+		"LAST");                   
+      web_reg_save_param("error",
 		"LB=\"message\":\"",
 		"RB=\"",
 		"LAST"); 
@@ -3051,31 +3044,21 @@ msg=web_reg_save_param("error",
               "Snapshot=t24.inf", 
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
-        "Body={Body1}",
+               "Body={Body1}",
               "LAST");   
-       
-       code=lr_eval_string("{add_one}");
-       
-       
-        
-       
-        
-	    
-	      
-	      
- 
- 
- 
- 
- 
+          code=lr_eval_string("{add_one}");
 	      error=lr_eval_string("{error}");
-	      logic(code,"code:200","新建稿件成功",error);
- 
- 
- 
- 
- 
- 
+	      logic(code,"code:200 新建稿件成功","新建稿件成功",error);
+   
+  
+   
+  
+   
+  
+   
+  
+   
+      
  return 0;
 }
 

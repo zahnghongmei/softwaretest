@@ -1,5 +1,5 @@
-GET /?token=972b1fcb-8660-4153-ad11-f71554b0c657 HTTP/1.1
-token: 972b1fcb-8660-4153-ad11-f71554b0c657
+GET /?token=e6efd48d-f5db-4af1-a558-e6b340ca5085 HTTP/1.1
+token: e6efd48d-f5db-4af1-a558-e6b340ca5085
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.8

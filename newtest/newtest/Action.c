@@ -537,7 +537,8 @@ Action()
        	else{
        	result=1;   	
        	}
-       write(result,V_testres,"修改文件夹文件夹接口验证",content,real);   
+       write(result,V_testres,"修改文件夹文件夹接口验证",content,real);  
+
   /*根据文章内容获获取关键词接口测试，articlecontent表示稿件的内容*/     
        sprintf(
        destString,
@@ -614,17 +615,9 @@ msg=web_reg_save_param("error",
           "Body1"
        );
  //在个人库默认文件夹新增一篇稿件
-// web_reg_save_param("keywordscode",
-//        "LB=\"code\":",
-//		"RB=\,",
-//		LAST); 
-
 	textfind=web_reg_find("Text/BIN/DIG/ALNUMIC=content",
-		LAST);
-
-	
-                      
- msg=web_reg_save_param("error",
+		LAST);                   
+      web_reg_save_param("error",
 		"LB=\"message\":\"",
 		"RB=\"",
 		LAST); 
@@ -638,31 +631,21 @@ msg=web_reg_save_param("error",
               "Snapshot=t24.inf", 
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
-        "Body={Body1}",
+               "Body={Body1}",
               LAST);   
-      // strcpy(real,"code:");
-       code=lr_eval_string("{add_one}");
-      // strcat(real,code);
-      // strcpy(content,"code:200  新增一篇文章");
-       //如果code不等于200，就打印msg。
-      // if(atoi(code)==200){
-       //	 if(textfind==0){
-	   //  lr_output_message("文本检查件成功");
-	     //  strcat(real," 新建稿件成功");
-	     // result=0;
-//	     }
-//	     else{
-//		  lr_output_message("文本检查点失败");
-//	      result=1;
-//	      strcat(real,"message:");
+          code=lr_eval_string("{add_one}");
 	      error=lr_eval_string("{error}");
-	      logic(code,"code:200","新建稿件成功",error);
-//	     }	
-//       }
-//       	else{
-//       	result=1;         	
-//       	}
-//       write(result,V_testres,"获取关键词接口验证",content,real);        
+	      logic(code,"code:200 新建稿件成功","新建稿件成功",error);
+  //更新稿件
+  
+  //删除稿件
+  
+  //收藏文章
+  
+  //取消收藏
+  
+  //
+      
  return 0;
 }
 
