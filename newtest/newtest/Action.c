@@ -6,12 +6,11 @@ char *str;
 int textfind;
 int msg;
 char *error;
-
-     char content[200];
-       char real[200];
-       char *temp;
-       //测试结果文本
-       char V_testres[1024];
+char content[200];
+char real[200];
+char *temp;
+//测试结果文本
+char V_testres[1024];
 /*info表示描述信息,content表示预期结果,real 表示服务器返回的真实结果 */
 int write(int result,char V_testres[1024],char *info,char content[200],char real[200])
 {
