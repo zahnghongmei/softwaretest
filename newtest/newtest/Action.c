@@ -22,7 +22,7 @@ int write(int result,char V_testres[1024],char *info,char content[200],char real
        strcpy(V_testres,"失败");
          }
 		 
-	strcpy(t_result,"<tr><td>");
+	strcpy(t_result,"<tr bgcolor='#ffffff'><td bgcolor='##e2fbfe'>");
     //写入测试参数
     strcat(t_result,info);
 
@@ -59,10 +59,11 @@ int reg_fun(char *code)
  msg=web_reg_save_param("error",
 		"LB=\"message\":\"",
 		"RB=\"",
+		//"ORD=1",
 		LAST); 	
 return 0;
 }
-int logic(char *code,char *contentinfo,char *realinfo,char *errorinfo)
+int logic(char *code,char *info,char *contentinfo,char *realinfo,char *errorinfo)
 {
 	 strcpy(real,"code:");
        strcat(real,code);
@@ -83,7 +84,7 @@ int logic(char *code,char *contentinfo,char *realinfo,char *errorinfo)
        	else{
        	result=1;         	
        	}
-       write(result,V_testres,"新建一篇稿件接口验证",content,real);       
+       write(result,V_testres,info,content,real);       
 	
 return 0;
 }
@@ -103,12 +104,6 @@ Action()
        char *temp;
 //设置页面接收最大的字节数，该设置应大于服务器返回内容的大小
        web_set_max_html_param_len("20000");
-//取得服务器返回内容
-       web_reg_save_param("filecontent",
-              "LB=",
-              "RB=",
-              "Search=Body",
-                  LAST);
        web_set_sockets_option("SSL_VERSION", "TLS1.1");
        lr_think_time(6);              
        web_reg_save_param("Token",
@@ -229,7 +224,7 @@ Action()
               "Resource=0", 
               "RecContentType=application/json", 
               "Referer=https://center.t.dacube.cn/", 
-              "Snapshot=t152.inf", 
+              "Snapshot=t153.inf", 
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={\"phone\":\"18200000000\",\"userpwd\":\"12345\"}", 
@@ -616,12 +611,16 @@ msg=web_reg_save_param("error",
  //在个人库默认文件夹新增一篇稿件
 	textfind=web_reg_find("Text/BIN/DIG/ALNUMIC=content",
 		LAST);                   
-      web_reg_save_param("error",
-		"LB=\"message\":\"",
-		"RB=\"",
-		LAST); 
-      reg_fun("add_one");
-       web_custom_request("add_article", 
+	   web_reg_save_param("articleid1",
+              "LB=\"id\"",
+              "RB=",
+             "SaveOffset=2",
+              "SaveLen=36",
+              "ORD=1",
+              LAST);
+	  reg_fun("add_one");
+	  
+      web_custom_request("add_article", 
               "URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/add_one", 
               "Method=POST", 
               "Resource=0", 
@@ -631,21 +630,44 @@ msg=web_reg_save_param("error",
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
                "Body={Body1}",
-              LAST);   
-          code=lr_eval_string("{add_one}");
-	      error=lr_eval_string("{error}");
-	      logic(code,"code:200 新建稿件成功","新建稿件成功",error);
-  //更新稿件
-  
+              LAST);  
+    lr_output_message("articleid：%s", lr_eval_string("{articleid1}"));      
+       code=lr_eval_string("{add_one}");
+       error=lr_eval_string("{error}");
+       logic(code,"新建一篇稿件接口测试","code:200 新建稿件成功","  新建稿件成功",error);
+  //查询稿件
+      reg_fun("query_article");	
+      web_custom_request("query_article", 
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/query_article", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t25.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"orgId\":\"1\",\"params\":{\"flag_audit\": \"all\",\"flag_my_create\": false,\"flag_push\": \"all\",\"flag_sys_source\": \"all\",\"flag_use\": \"all\",\"id_folder\": \"default-repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"keywords\": \"8\",\"match_field\": \"all\",\"page_size\": 10},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+              LAST);       
+       code=lr_eval_string("{query_article}");
+       error=lr_eval_string("{error}");
+	   logic(code,"查询稿件接口测试","code:200 查询稿件稿件成功","  查询稿件稿件成功",error);
   //删除稿件
-  
-  //收藏文章
-  
-  //取消收藏
-  
-  //
-      
- return 0;
+     reg_fun("delete_one");	      
+     web_custom_request("delete_article", 
+              "URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/delete_article", 
+              "Method=POST",       
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t26.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{articleid1}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+              LAST);   
+        code=lr_eval_string("{delete_one}");
+	    logic(code,"删除稿件接口测试","code:200  成功删除稿件","  成功删除稿件",error);
+	
+return 0;
 }
 
 

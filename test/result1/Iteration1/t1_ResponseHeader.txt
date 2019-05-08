@@ -1,8 +1,0 @@
-HTTP/1.1 200 
-Server: nginx/1.12.2
-Date: Mon, 08 Apr 2019 03:59:05 GMT
-Content-Type: text/html;charset=UTF-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Set-Cookie: JSESSIONID=E04DE4792F9584A8C608271C7871C393; Path=/samlidp; HttpOnly
-
