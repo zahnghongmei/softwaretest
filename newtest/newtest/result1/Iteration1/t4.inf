@@ -1,7 +1,7 @@
 [t4]
 SnapshotXmlFile=snapshot_4.xml
 ContentType=DummyContentType
-StepName=Custom Request: 2b3397d5-3cad-4b9c-866d-13364913ad7f
+StepName=Custom Request: 3270fcc3-e6a7-4cca-ac75-3f325fa68aef
 Total=1
 FileName1=t4.UNK
 RequestHeaderFile=t4_RequestHeader.txt

@@ -3044,10 +3044,27 @@ msg=web_reg_save_param("error",
               "EncType=application/json;charset=UTF-8", 
                "Body={Body1}",
               "LAST");  
-    lr_output_message("articleid：%s", lr_eval_string("{articleid1}"));      
+     lr_output_message("articleid：%s", lr_eval_string("{articleid1}"));      
        code=lr_eval_string("{add_one}");
        error=lr_eval_string("{error}");
        logic(code,"新建一篇稿件接口测试","code:200 新建稿件成功","  新建稿件成功",error);
+    
+    reg_fun("analysis");	
+      web_custom_request("analysis", 
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_verify_package", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t25.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"orgId\":\"1\",\"params\":{\"content\": \"132\",\"id\":\"\",\"title\":\"7941555\"},\"seed\": \"seed\",\"toke\": \"{Token}\",\"userId\": \"{Usercode}\"}",
+              "LAST");       
+       code=lr_eval_string("{analysis}");
+       error=lr_eval_string("{error}");
+	   logic(code,"查询稿件接口测试","code:200 查询稿件稿件成功","  查询稿件稿件成功",error);
+       
    
       reg_fun("query_article");	
       web_custom_request("query_article", 
