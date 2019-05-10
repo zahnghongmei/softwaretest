@@ -25,7 +25,7 @@ ScriptLanguage=C
 DisableRegenerate=0
 Description=
 [TransactionsOrder]
-Order="login__*delimiter*__updateuserinfo__*delimiter*__loginapp"
+Order="login__*delimiter*__getCompany__*delimiter*__updateuserinfo__*delimiter*__loginapp"
 [Actions]
 vuser_init=vuser_init.c
 Action=Action.c
@@ -52,6 +52,7 @@ VuserStateHistory=0 65536 65552
 LastReplayStatus=1
 [Transactions]
 login=
+getCompany=
 updateuserinfo=
 loginapp=
 [ExtraFiles]
@@ -75,3 +76,5 @@ vuser_end=cci
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1
+[Rendezvous]
+创建文件夹集合点=

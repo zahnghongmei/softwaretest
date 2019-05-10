@@ -22,7 +22,7 @@ int write(int result,char V_testres[1024],char *info,char content[200],char real
        strcpy(V_testres,"失败");
          }
 		 
-	strcpy(t_result,"<tr bgcolor='#ffffff'><td bgcolor='##e2fbfe'>");
+	strcpy(t_result,"<tr bgcolor='#ffffff'><td bgcolor='##e2fbfe' align='center'>" );
     //写入测试参数
     strcat(t_result,info);
 
@@ -39,8 +39,12 @@ int write(int result,char V_testres[1024],char *info,char content[200],char real
 	//写入实际结果
     strcat(t_result,real);
     strcat(t_result,"</td>");
-    strcat(t_result,"<td>");
-
+    if(strcmp(V_testres,"失败")==0){
+       strcat(t_result,"<td style='width:60px;' align='center' text-color='red'>");
+       }
+    else{
+       strcat(t_result,"<td style='width:60px;' align='center'>");
+       }
     //写入测试是否通过
 
     strcat(t_result, V_testres);
@@ -59,7 +63,7 @@ int reg_fun(char *code)
  msg=web_reg_save_param("error",
 		"LB=\"message\":\"",
 		"RB=\"",
-		//"ORD=1",
+		"ORD=1",
 		LAST); 	
 return 0;
 }
@@ -261,6 +265,7 @@ Action()
 		LAST);
     //获取企业信息接口
        web_add_auto_header("token","{Token}");
+       lr_start_transaction("getCompany");
        web_custom_request(token1,
               "URL=https://g.t.dacube.cn/MESG-ADMIN/User/getCompanyByUsercode/{Usercode}", 
               "Method=GET", 
@@ -269,6 +274,8 @@ Action()
               "Snapshot=t16.inf", 
               "Mode=HTML", 
               LAST);
+       lr_end_transaction("getCompany", LR_AUTO);
+
        lr_output_message("compname：%s", lr_eval_string("{compname}"));
        strcpy(real,"code:");
        code=lr_eval_string("{companycode}");
@@ -345,11 +352,11 @@ Action()
         "LB=\"code\":",
 		"RB=\,",
 		LAST); 
-   lr_start_transaction("loginapp");
    web_reg_save_param("Mrp_link",
               "LB=\"redirect:",
               "RB=\"",
               LAST);
+   lr_start_transaction("loginapp");
    web_custom_request("loginapp", 
               "URL= https://g.t.dacube.cn/MESG-ADMIN/Application/user/appLogin", 
               "Method=POST", 
@@ -362,7 +369,6 @@ Action()
               "Body={\"appid\":\"1002\",\"compid\":\"{comid}\",\"loginType\":\"pc\",\"styleType\":\"\",\"usercode\":\"{Usercode}\"}",
               LAST);
     lr_end_transaction("loginapp", LR_AUTO);
-
     lr_output_message("mrp链接为：%s", lr_eval_string("{Mrp_link}"));
      strcpy(real,"code:");
      code=lr_eval_string("{linkcode}");
@@ -406,6 +412,7 @@ Action()
               "RB=\"",
               LAST);
        }
+     lr_rendezvous("创建文件夹集合点");  //添加集合点
     //创建文件夹接口测试
     if(i==0)
     {
@@ -537,7 +544,7 @@ Action()
        sprintf(
        destString,
         "{\"orgId\":\"1\",\"params\":{\"content\":\"%s\"},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
-        lr_eval_string("{articlecontent}"),
+        lr_eval_string("{articlecontent}"),      
         lr_eval_string("{Token}"),
         lr_eval_string("{Usercode}")
        );       
@@ -593,7 +600,7 @@ msg=web_reg_save_param("error",
        	}
        write(result,V_testres,"获取关键词接口验证",content,real);  
  //articlecontent表示稿件的内容       
- web_set_max_html_param_len("20");
+ web_set_max_html_param_len("30");
        sprintf(
        dest1String,
               "{\"orgId\":\"1\",\"params\":{\"afinal\": false,\"author\":\"小张\",\"content\":\"参加社区活动时却让他有些失落，他告诉社区的老人们，自己参与了十次原子弹试验，总是做第一个加工铀球的示范者，结果老人们都笑了：“老兄，不要吹牛了，搞原子弹的还住在我们这么破烂的地方。\",\"id_folder\":\"default-repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"source\":\"11111123\",\"summary\":\"参加社区活动时却让他有些失落，他告诉社区的老人们，自己参与了十次原子弹试验，总是做第一个加工铀球的示范者，结果老人们都笑了：“老兄，不要吹牛了，搞原子弹的还住在我们这么破烂的地方。\",\"title\":\"原公浦的现状\",\"update_type\": false},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
@@ -650,17 +657,17 @@ msg=web_reg_save_param("error",
               LAST);       
        code=lr_eval_string("{analysis}");
        error=lr_eval_string("{error}");
-	   logic(code,"查询稿件接口测试","code:200 查询稿件稿件成功","  查询稿件稿件成功",error);
+	   logic(code,"情感分析接口测试","code:200 情感分析成功","  情感分析成功",error);
        
   //查询稿件
       reg_fun("query_article");	
-      web_custom_request("query_article", 
+          web_custom_request("query_article", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/query_article", 
               "Method=POST", 
               "Resource=0", 
               "RecContentType=application/json", 
               "Referer=https://center.t.dacube.cn/", 
-              "Snapshot=t25.inf", 
+              "Snapshot=t26.inf", 
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"flag_audit\": \"all\",\"flag_my_create\": false,\"flag_push\": \"all\",\"flag_sys_source\": \"all\",\"flag_use\": \"all\",\"id_folder\": \"default-repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"keywords\": \"8\",\"match_field\": \"all\",\"page_size\": 10},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
@@ -668,21 +675,55 @@ msg=web_reg_save_param("error",
        code=lr_eval_string("{query_article}");
        error=lr_eval_string("{error}");
 	   logic(code,"查询稿件接口测试","code:200 查询稿件稿件成功","  查询稿件稿件成功",error);
-  //删除稿件
-     reg_fun("delete_one");	      
-     web_custom_request("delete_article", 
-              "URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/delete_article", 
-              "Method=POST",       
+ 
+	   
+ //获取微信库稿件
+      reg_fun("query_article");	
+      web_custom_request("query_article", 
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/query_article", 
+              "Method=POST", 
               "Resource=0", 
               "RecContentType=application/json", 
               "Referer=https://center.t.dacube.cn/", 
-              "Snapshot=t26.inf", 
+              "Snapshot=t27.inf", 
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
-              "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{articleid1}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-              LAST);   
-        code=lr_eval_string("{delete_one}");
-	    logic(code,"删除稿件接口测试","code:200  成功删除稿件","  成功删除稿件",error);
+              "Body={\"orgId\":\"1\",\"params\":{\"flag_audit\": \"all\",\"flag_my_create\": false,\"flag_push\": \"all\",\"flag_sys_source\": \"all\",\"flag_use\": \"all\",\"id_folder\": \"795902517245378560\",\"keywords\": \"\",\"match_field\": \"all\",\"page_size\": 20},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+              LAST);       
+       code=lr_eval_string("{query_article}");
+       error=lr_eval_string("{error}");
+	   logic(code,"获取微信库稿件接口测试","code:200 获取微信库稿件成功","  获取微信库稿件成功",error);
+ //为文章添加评论
+      reg_fun("query_article");	
+      web_custom_request("query_article", 
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/log_comment/add_comment", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t27.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"orgId\":\"1\",\"params\":{\"comment\": \"this article is very good\",\"id\": \"{articleid1}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+              LAST);       
+       code=lr_eval_string("{query_article}");
+       error=lr_eval_string("{error}");
+	   logic(code,"为文章添加评论接口测试","code:200 为文章添加评论成功","  为文章添加评论成功",error);
+ // 删除稿件
+//     reg_fun("delete_one");	      
+//     web_custom_request("delete_article", 
+//              "URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/delete_article", 
+//              "Method=POST",       
+//              "Resource=0", 
+//              "RecContentType=application/json", 
+//              "Referer=https://center.t.dacube.cn/", 
+//              "Snapshot=t28.inf", 
+//              "Mode=HTML", 
+//              "EncType=application/json;charset=UTF-8", 
+//              "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{articleid1}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+//              LAST);   
+//        code=lr_eval_string("{delete_one}");
+//	    logic(code,"删除稿件接口测试","code:200  成功删除稿件","  成功删除稿件",error);
 	
 return 0;
 }
