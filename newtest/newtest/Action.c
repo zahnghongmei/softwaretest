@@ -40,10 +40,10 @@ int write(int result,char V_testres[1024],char *info,char content[200],char real
     strcat(t_result,real);
     strcat(t_result,"</td>");
     if(strcmp(V_testres,"失败")==0){
-       strcat(t_result,"<td style='width:60px;' align='center' text-color='red'>");
+       strcat(t_result,"<td style='width:60px;color:red;' align='center'>");
        }
     else{
-       strcat(t_result,"<td style='width:60px;' align='center'>");
+       strcat(t_result,"<td style='width:60px;color:blue;' align='center'>");
        }
     //写入测试是否通过
 
@@ -425,6 +425,7 @@ Action()
 		"RB=\"",
 		LAST); 
     }
+    lr_start_transaction("createfolder");
     web_custom_request("createfolder", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/add_folder", 
               "Method=POST", 
@@ -436,6 +437,7 @@ Action()
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"folder_detail\":\"\",\"folder_name\":\"t-{a1}\",\"id_parent\": null,\"id_repo\":\"repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
               LAST);
+    lr_end_transaction("createfolder", LR_AUTO);
        lr_output_message("folderid为：%s", lr_eval_string("{Folderid}"));
        lr_output_message("folderid2为：%s", lr_eval_string("{Folderid2}"));
        lr_output_message("id_creater为：%s", lr_eval_string("{id_creator}"));
@@ -475,6 +477,7 @@ Action()
         "LB=\"id_creator\":\"",
 		"RB=\"",
 		LAST); 
+   lr_start_transaction("deletefolder");
   web_custom_request("deletefolder", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/delete_folder", 
               "Method=POST", 
@@ -486,6 +489,8 @@ Action()
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
               LAST);
+   lr_end_transaction("deletefolder", LR_AUTO);
+
        strcpy(real,"code:");
        code=lr_eval_string("{deletefoldercode}");
        strcat(real,code);
@@ -511,8 +516,8 @@ Action()
         "LB=\"code\":",
 		"RB=\,",
 		LAST); 
-
-  web_custom_request("createfolder", 
+lr_start_transaction("updatefolder");
+  web_custom_request("updatefolder", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/folder/update_folder_name", 
               "Method=POST", 
               "Resource=0", 
@@ -523,6 +528,8 @@ Action()
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{Folderid2}\",\"name\":\"t-edit\",\"detail\":\"\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
               LAST);
+   lr_end_transaction("updatefolder", LR_AUTO);
+
               //如果code不等于200，就打印msg。
         strcpy(real,"code:");
        code=lr_eval_string("{updatefoldercode}");
@@ -566,6 +573,7 @@ msg=web_reg_save_param("error",
 		"LB=\"message\":\"",
 		"RB=\"",
 		LAST); 
+ lr_start_transaction("Getkeywords");
  web_custom_request("Getkeywords", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_keywords", 
               "Method=POST", 
@@ -576,7 +584,9 @@ msg=web_reg_save_param("error",
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={Body}",
-              LAST);	
+              LAST);
+ lr_end_transaction("Getkeywords", LR_AUTO);
+
 	   strcpy(real,"code:");
        code=lr_eval_string("{keywordscode}");
        strcat(real,code);
@@ -626,7 +636,8 @@ msg=web_reg_save_param("error",
               "ORD=1",
               LAST);
 	  reg_fun("add_one");
-	  
+	 lr_start_transaction("add_article");
+ 
       web_custom_request("add_article", 
               "URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/add_one", 
               "Method=POST", 
@@ -638,12 +649,15 @@ msg=web_reg_save_param("error",
               "EncType=application/json;charset=UTF-8", 
                "Body={Body1}",
               LAST);  
+	 lr_end_transaction("add_article", LR_AUTO);
      lr_output_message("articleid：%s", lr_eval_string("{articleid1}"));      
        code=lr_eval_string("{add_one}");
        error=lr_eval_string("{error}");
        logic(code,"新建一篇稿件接口测试","code:200 新建稿件成功","  新建稿件成功",error);
    //情感分析
-    reg_fun("analysis");	
+    reg_fun("analysis");
+    lr_start_transaction("analysis");
+  
       web_custom_request("analysis", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/third_party/ai_checker/get_verify_package", 
               "Method=POST", 
@@ -654,12 +668,16 @@ msg=web_reg_save_param("error",
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"content\": \"132\",\"id\":\"\",\"title\":\"7941555\"},\"seed\": \"seed\",\"toke\": \"{Token}\",\"userId\": \"{Usercode}\"}",
-              LAST);       
+              LAST); 
+    lr_end_transaction("analysis", LR_AUTO);
+
        code=lr_eval_string("{analysis}");
        error=lr_eval_string("{error}");
 	   logic(code,"情感分析接口测试","code:200 情感分析成功","  情感分析成功",error);
        
   //查询稿件
+  lr_start_transaction("query_article");
+
       reg_fun("query_article");	
           web_custom_request("query_article", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/query_article", 
@@ -671,13 +689,17 @@ msg=web_reg_save_param("error",
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"flag_audit\": \"all\",\"flag_my_create\": false,\"flag_push\": \"all\",\"flag_sys_source\": \"all\",\"flag_use\": \"all\",\"id_folder\": \"default-repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"keywords\": \"8\",\"match_field\": \"all\",\"page_size\": 10},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-              LAST);       
+              LAST); 
+      lr_end_transaction("query_article", LR_AUTO);
+
        code=lr_eval_string("{query_article}");
        error=lr_eval_string("{error}");
 	   logic(code,"查询稿件接口测试","code:200 查询稿件稿件成功","  查询稿件稿件成功",error);
  
 	   
  //获取微信库稿件
+ lr_start_transaction("query_article");
+
       reg_fun("query_article");	
       web_custom_request("query_article", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/query_article", 
@@ -689,13 +711,17 @@ msg=web_reg_save_param("error",
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"flag_audit\": \"all\",\"flag_my_create\": false,\"flag_push\": \"all\",\"flag_sys_source\": \"all\",\"flag_use\": \"all\",\"id_folder\": \"795902517245378560\",\"keywords\": \"\",\"match_field\": \"all\",\"page_size\": 20},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-              LAST);       
+              LAST);  
+  lr_end_transaction("query_article", LR_AUTO);
+    
        code=lr_eval_string("{query_article}");
        error=lr_eval_string("{error}");
 	   logic(code,"获取微信库稿件接口测试","code:200 获取微信库稿件成功","  获取微信库稿件成功",error);
  //为文章添加评论
-      reg_fun("query_article");	
-      web_custom_request("query_article", 
+      reg_fun("add_comment");
+  lr_start_transaction("add_comment");
+     
+      web_custom_request("add_comment", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/log_comment/add_comment", 
               "Method=POST", 
               "Resource=0", 
@@ -705,8 +731,10 @@ msg=web_reg_save_param("error",
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"comment\": \"this article is very good\",\"id\": \"{articleid1}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-              LAST);       
-       code=lr_eval_string("{query_article}");
+              LAST); 
+  lr_end_transaction("add_comment", LR_AUTO);
+
+       code=lr_eval_string("{add_comment}");
        error=lr_eval_string("{error}");
 	   logic(code,"为文章添加评论接口测试","code:200 为文章添加评论成功","  为文章添加评论成功",error);
  // 删除稿件
