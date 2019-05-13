@@ -25,7 +25,7 @@ ScriptLanguage=C
 DisableRegenerate=0
 Description=
 [TransactionsOrder]
-Order="login__*delimiter*__getCompany__*delimiter*__updateuserinfo__*delimiter*__loginapp__*delimiter*__createfolder__*delimiter*__deletefolder__*delimiter*__updatefolder__*delimiter*__Getkeywords__*delimiter*__add_article__*delimiter*__analysis__*delimiter*__query_article__*delimiter*__query_article__*delimiter*__add_comment"
+Order="login__*delimiter*__getCompany__*delimiter*__updateuserinfo__*delimiter*__loginapp__*delimiter*__createfolder__*delimiter*__deletefolder__*delimiter*__updatefolder__*delimiter*__Getkeywords__*delimiter*__add_article__*delimiter*__analysis__*delimiter*__SearchArticleBykeywords__*delimiter*__query_article__*delimiter*__update_article__*delimiter*__add_comment"
 [Actions]
 vuser_init=vuser_init.c
 Action=Action.c
@@ -61,7 +61,9 @@ updatefolder=
 Getkeywords=
 add_article=
 analysis=
+SearchArticleBykeywords=
 query_article=
+update_article=
 add_comment=
 [ExtraFiles]
 globals.h=
@@ -86,3 +88,4 @@ LastReplayedRunName=result1
 ActiveRunName=result1
 [Rendezvous]
 创建文件夹集合点=
+情感分析集合点=

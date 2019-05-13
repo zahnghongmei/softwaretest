@@ -2404,7 +2404,7 @@ vuser_init()
 	 
 	file=fopen(t_result,"at+");
 	 
-	strcpy(t_result,"<html><table width='80%' height='1000px' cellspacing='1' cellpadding='4' bgcolor='#cccccc' border='0' align='center' style='font-size:20px;font-family:serif;'> <caption>全媒体资源库测试结果报告</caption> <tr bgcolor='#e9faff'><td align='center'>描述</td><td align='center'>预期结果</td></td><td align='center'>实际结果</td></td><td align='center'>Y/N</td></tr>");
+	strcpy(t_result,"<html><table width='80%' height='1200px' cellspacing='1' cellpadding='7' bgcolor='#cccccc' border='0' align='center' style='font-size:22px;font-family:serif;'> <caption>全媒体资源库测试结果报告</caption> <tr bgcolor='#e9faff'><td align='center'>描述</td><td align='center'>预期结果</td></td><td align='center'>实际结果</td></td><td align='center'>Y/N</td></tr>");
 	fputs(t_result,file);
 	return 0;	
 }
@@ -2435,7 +2435,7 @@ int write(int result,char V_testres[1024],char *info,char content[200],char real
        strcpy(V_testres,"失败");
          }
 		 
-	strcpy(t_result,"<tr bgcolor='#ffffff'><td bgcolor='##e2fbfe' align='center'>" );
+	strcpy(t_result,"<tr bgcolor='#ffffff'><td bgcolor='#f2fbfe' align='center'>" );
      
     strcat(t_result,info);
 
@@ -3068,6 +3068,21 @@ msg=web_reg_save_param("error",
        error=lr_eval_string("{error}");
        logic(code,"新建一篇稿件接口测试","code:200 新建稿件成功","  新建稿件成功",error);
     
+    sprintf(
+       destString,
+        "{\"orgId\":\"1\",\"params\":{\"content\":\"%s\",\"id\":\"\",\"title\":\"\"},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
+        lr_eval_string("{articlecontent}"),      
+        lr_eval_string("{Token}"),
+        lr_eval_string("{Usercode}")
+       );       
+       lr_save_string(destString, "str_article_content");
+       lr_output_message("destString before：%s", lr_eval_string("{str_article_content}"));
+       lr_convert_string_encoding(
+       lr_eval_string("{str_article_content}"),
+          0,
+          "utf-8",
+          "AnalysisBody"
+       );
     reg_fun("analysis");
     lr_start_transaction("analysis");
   
@@ -3080,7 +3095,7 @@ msg=web_reg_save_param("error",
               "Snapshot=t25.inf", 
               "Mode=HTML", 
               "EncType=application/json;charset=UTF-8", 
-              "Body={\"orgId\":\"1\",\"params\":{\"content\": \"132\",\"id\":\"\",\"title\":\"7941555\"},\"seed\": \"seed\",\"toke\": \"{Token}\",\"userId\": \"{Usercode}\"}",
+              "Body={AnalysisBody}",
               "LAST"); 
     lr_end_transaction("analysis", 2);
 
@@ -3089,10 +3104,10 @@ msg=web_reg_save_param("error",
 	   logic(code,"情感分析接口测试","code:200 情感分析成功","  情感分析成功",error);
        
    
-  lr_start_transaction("query_article");
+  lr_start_transaction("SearchArticleBykeywords");
 
-      reg_fun("query_article");	
-          web_custom_request("query_article", 
+      reg_fun("SearchArticleBykeywords");	
+          web_custom_request("SearchArticleBykeywords", 
               "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/query_article", 
               "Method=POST", 
               "Resource=0", 
@@ -3103,9 +3118,9 @@ msg=web_reg_save_param("error",
               "EncType=application/json;charset=UTF-8", 
               "Body={\"orgId\":\"1\",\"params\":{\"flag_audit\": \"all\",\"flag_my_create\": false,\"flag_push\": \"all\",\"flag_sys_source\": \"all\",\"flag_use\": \"all\",\"id_folder\": \"default-repository-personal-1-article-e729e146-f249-42e1-960d-5c1f3f60bc9a\",\"keywords\": \"8\",\"match_field\": \"all\",\"page_size\": 10},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
               "LAST"); 
-      lr_end_transaction("query_article", 2);
+      lr_end_transaction("SearchArticleBykeywords", 2);
 
-       code=lr_eval_string("{query_article}");
+       code=lr_eval_string("{SearchArticleBykeywords}");
        error=lr_eval_string("{error}");
 	   logic(code,"查询稿件接口测试","code:200 查询稿件稿件成功","  查询稿件稿件成功",error);
  
@@ -3130,6 +3145,45 @@ msg=web_reg_save_param("error",
        code=lr_eval_string("{query_article}");
        error=lr_eval_string("{error}");
 	   logic(code,"获取微信库稿件接口测试","code:200 获取微信库稿件成功","  获取微信库稿件成功",error);
+  
+   sprintf(
+       destString,
+        "{\"orgId\":\"1\",\"params\":{\"content\":\"%s\",\"id\":\"%s\",\"id_creator\":\"%s\",\"id_repo\":\"%s\",\"id_folder\":\"%s\"},\"seed\":\"seed\",\"token\":\"%s\",\"userId\":\"%s\"}",
+        lr_eval_string("{updatecontent}"),  
+        lr_eval_string("{articleid1}"),
+        lr_eval_string("{Usercode}"),
+        lr_eval_string("{self_id_repo}"),
+        lr_eval_string("{self_id_folder}"),
+        lr_eval_string("{Token}"),
+        lr_eval_string("{Usercode}")
+       );       
+       lr_save_string(destString, "str_article_content");
+       lr_output_message("destString before：%s", lr_eval_string("{str_article_content}"));
+       lr_convert_string_encoding(
+       lr_eval_string("{str_article_content}"),
+          0,
+          "utf-8",
+          "update_article"
+       );
+  reg_fun("update_article");
+  lr_start_transaction("update_article");
+     
+      web_custom_request("update_article", 
+              "URL=https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/update_article", 
+              "Method=POST", 
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t29.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={update_article}",
+              "LAST"); 
+  lr_end_transaction("update_article", 2);
+
+       code=lr_eval_string("{update_article}");
+       error=lr_eval_string("{error}");
+	   logic(code,"更新文章接口测试","code:200 更新文章成功","  更新文章成功",error);
   
       reg_fun("add_comment");
   lr_start_transaction("add_comment");
@@ -3165,7 +3219,9 @@ msg=web_reg_save_param("error",
  
  
  
-	
+ 
+ 
+ 
 return 0;
 }
 

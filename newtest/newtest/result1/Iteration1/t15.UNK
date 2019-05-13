@@ -1,1 +1,1 @@
-{"code":200,"message":"操作成功","data":{"sentiment":{"negative":0.5,"positive":0.5},"spellCheck":[],"audit":"正常","docClass":"科技"}}
+{"code":200,"message":"操作成功","data":{"sentiment":{"negative":0.94,"positive":0.06},"spellCheck":[],"audit":"正常","docClass":"体育"}}
