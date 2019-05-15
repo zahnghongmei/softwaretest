@@ -1,5 +1,5 @@
 [Diagnostics]
 Status=-1
 [Collate Recovery]
-Scenario=E:\TEST\Scenario1.lrs
+Scenario=
 Completed=0

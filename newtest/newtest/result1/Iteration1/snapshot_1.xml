@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HTTPSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="1">
-  <HTTPTask id="1" hostname="g.t.dacube.cn" path="/MESG-ADMIN/User/login" url="https://g.t.dacube.cn/MESG-ADMIN/User/login" origin="Primary" startTime="489" endTime="722">
+  <HTTPTask id="1" hostname="g.t.dacube.cn" path="/MESG-ADMIN/User/login" url="https://g.t.dacube.cn/MESG-ADMIN/User/login" origin="Primary" startTime="778" endTime="997">
     <HTTPRequest method="POST">
       <HTTPHeaders>
         <HTTPHeaderEntity name="Content-Type" index="0">
@@ -114,7 +114,7 @@
         <HTTPHeaderEntity name="Date" index="1">
           <HTTPDataSet>
             <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
-              <ActualData>TW9uLCAxMyBNYXkgMjAxOSAwNTo0NzozNCBHTVQ=</ActualData>
+              <ActualData>VHVlLCAxNCBNYXkgMjAxOSAwMzoxODoyMCBHTVQ=</ActualData>
             </HTTPData>
           </HTTPDataSet>
           <IsExternalData>false</IsExternalData>
@@ -146,7 +146,7 @@
         <HTTPAllHeaders>
           <HTTPDataSet>
             <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
-              <ActualData>SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IG5naW54LzEuMTIuMg0KRGF0ZTogTW9uLCAxMyBNYXkgMjAxOSAwNTo0NzozNCBHTVQNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PVVURi04DQpUcmFuc2Zlci1FbmNvZGluZzogY2h1bmtlZA0KQ29ubmVjdGlvbjoga2VlcC1hbGl2ZQ0KDQo=</ActualData>
+              <ActualData>SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IG5naW54LzEuMTIuMg0KRGF0ZTogVHVlLCAxNCBNYXkgMjAxOSAwMzoxODoyMCBHTVQNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PVVURi04DQpUcmFuc2Zlci1FbmNvZGluZzogY2h1bmtlZA0KQ29ubmVjdGlvbjoga2VlcC1hbGl2ZQ0KDQo=</ActualData>
             </HTTPData>
           </HTTPDataSet>
           <IsExternalData>false</IsExternalData>
@@ -155,7 +155,7 @@
       <HTTPBody>
         <HTTPDataSet>
           <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="4">
-            <ActualData>eyJzdGF0dXMiOnRydWUsImNvZGUiOjIwMCwicmVzdWx0Ijp7InVzZXJjb2RlIjoiZTcyOWUxNDYtZjI0OS00MmUxLTk2MGQtNWMxZjNmNjBiYzlhIiwidXNlcm5hbWUiOiLnq6DnuqLmooUyIiwibG9naW5fbmFtZSI6bnVsbCwidXNlcnB3ZCI6bnVsbCwiZW1haWwiOiIxMjNAcXEuY29tIiwiaXNtZW4iOm51bGwsInBob25lIjoiMTgyMDAwMDAwMDAiLCJoZWFkaW1nIjoiaHR0cHM6Ly9vc3MuZGFjdWJlLmNuL21lc2ctYWRtaW4vMzRlMGE3ZTktNGUzYS00YWZjLTljOTMtNzViMjRjZDU1NjYwL3U9MzY5NTkzMTQ5OCwyMzgxNTEwNTAxJmZtPTI2JmdwPTAuanBnIiwiY3JlYXRlZGF0YSI6MTU0MTQ5NDQzNjAwMCwidXBkYXRlZGF0YSI6MTU0MTQ5NDQzNjAwMCwiaXN1c2UiOiIxIiwiYmlydGhkYXkiOm51bGwsImNvb1ZlcnNpb25WbyI6bnVsbCwidG9rZW4iOiIzZDQ2NDM2Ny1jMWQzLTQ0NjMtYjk1NC04N2Y4YzI0Yzg4YTEiLCJlYXNlbW9ibmFtZSI6IjExNTIwMTgxMTA2MTYxMTEzOWZ0cm1ndXJ4IiwiY29tcGlkIjpudWxsLCJjb2RlIjpudWxsLCJzdW1tYXJ5IjpudWxsLCJwb3J0YWwiOm51bGwsInVzZXJJc0NvbXBMaW5rbWFuIjpmYWxzZSwidXNlcklzR3JvdXBMaW5rbWFuIjpmYWxzZX0sIm1zZyI6bnVsbH0=</ActualData>
+            <ActualData>eyJzdGF0dXMiOnRydWUsImNvZGUiOjIwMCwicmVzdWx0Ijp7InVzZXJjb2RlIjoiZTcyOWUxNDYtZjI0OS00MmUxLTk2MGQtNWMxZjNmNjBiYzlhIiwidXNlcm5hbWUiOiLnq6DnuqLmooUyIiwibG9naW5fbmFtZSI6bnVsbCwidXNlcnB3ZCI6bnVsbCwiZW1haWwiOiIxMjNAcXEuY29tIiwiaXNtZW4iOm51bGwsInBob25lIjoiMTgyMDAwMDAwMDAiLCJoZWFkaW1nIjoiaHR0cHM6Ly9vc3MuZGFjdWJlLmNuL21lc2ctYWRtaW4vMzRlMGE3ZTktNGUzYS00YWZjLTljOTMtNzViMjRjZDU1NjYwL3U9MzY5NTkzMTQ5OCwyMzgxNTEwNTAxJmZtPTI2JmdwPTAuanBnIiwiY3JlYXRlZGF0YSI6MTU0MTQ5NDQzNjAwMCwidXBkYXRlZGF0YSI6MTU0MTQ5NDQzNjAwMCwiaXN1c2UiOiIxIiwiYmlydGhkYXkiOm51bGwsImNvb1ZlcnNpb25WbyI6bnVsbCwidG9rZW4iOiI2M2U0NGZmNi0wMGU1LTQ4MTMtYjRkNC05ZDE1NGJlYzcyMDEiLCJlYXNlbW9ibmFtZSI6IjExNTIwMTgxMTA2MTYxMTEzOWZ0cm1ndXJ4IiwiY29tcGlkIjpudWxsLCJjb2RlIjpudWxsLCJzdW1tYXJ5IjpudWxsLCJwb3J0YWwiOm51bGwsInVzZXJJc0NvbXBMaW5rbWFuIjpmYWxzZSwidXNlcklzR3JvdXBMaW5rbWFuIjpmYWxzZX0sIm1zZyI6bnVsbH0=</ActualData>
           </HTTPData>
         </HTTPDataSet>
         <IsExternalData>false</IsExternalData>

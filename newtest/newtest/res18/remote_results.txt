@@ -1,0 +1,2 @@
+[Hosts]
+localhost=e:\test\newtest\newtest\res18\localhost_1.eve

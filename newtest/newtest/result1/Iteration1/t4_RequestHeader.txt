@@ -1,6 +1,6 @@
 GET /MESG-ADMIN/User/getCompanyByUsercode/e729e146-f249-42e1-960d-5c1f3f60bc9a HTTP/1.1
 Referer: https://center.t.dacube.cn/
-token: 3d464367-c1d3-4463-b954-87f8c24c88a1
+token: 63e44ff6-00e5-4813-b4d4-9d154bec7201
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.8

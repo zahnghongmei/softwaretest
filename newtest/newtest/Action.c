@@ -566,7 +566,7 @@ lr_start_transaction("updatefolder");
 lr_output_message("destString after ：%s", lr_eval_string("{Body}"));
  web_reg_save_param("keywordscode",
         "LB=\"code\":",
-		"RB=\,",
+		"RB=,",
 		LAST); 
  textfind=web_reg_find("Text=keywords", LAST);	
 msg=web_reg_save_param("error",
@@ -791,24 +791,24 @@ msg=web_reg_save_param("error",
        code=lr_eval_string("{add_comment}");
        error=lr_eval_string("{error}");
 	   logic(code,"为文章添加评论接口测试","code:200 为文章添加评论成功","  为文章添加评论成功",error);
- // 删除稿件
-//     reg_fun("delete_one");	
-//    lr_start_transaction("delete_article");    
-//     web_custom_request("delete_article", 
-//              "URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/delete_article", 
-//              "Method=POST",       
-//              "Resource=0", 
-//              "RecContentType=application/json", 
-//              "Referer=https://center.t.dacube.cn/", 
-//              "Snapshot=t28.inf", 
-//              "Mode=HTML", 
-//              "EncType=application/json;charset=UTF-8", 
-//              "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{articleid1}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
-//              LAST); 
-// lr_end_transaction("delete_article", LR_AUTO);   
-//        code=lr_eval_string("{delete_one}");
-//	    logic(code,"删除稿件接口测试","code:200  成功删除稿件","  成功删除稿件",error);
-//	
+//  删除稿件
+     reg_fun("delete_one");	
+    lr_start_transaction("delete_article");    
+     web_custom_request("delete_article", 
+              "URL= https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/delete_article", 
+              "Method=POST",       
+              "Resource=0", 
+              "RecContentType=application/json", 
+              "Referer=https://center.t.dacube.cn/", 
+              "Snapshot=t28.inf", 
+              "Mode=HTML", 
+              "EncType=application/json;charset=UTF-8", 
+              "Body={\"orgId\":\"1\",\"params\":{\"id\":\"{articleid1}\"},\"seed\":\"seed\",\"token\":\"{Token}\",\"userId\":\"{Usercode}\"}",
+              LAST); 
+ lr_end_transaction("delete_article", LR_AUTO);   
+        code=lr_eval_string("{delete_one}");
+	    logic(code,"删除稿件接口测试","code:200  成功删除稿件","  成功删除稿件",error);
+	
 return 0;
 }
 

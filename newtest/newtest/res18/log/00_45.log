@@ -1,0 +1,13 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(59): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(59): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(63): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(63): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(756): Notify: Transaction "update_article" started.	[MsgId: MMSG-16999]
+Action.c(758): web_custom_request("update_article") started  	[MsgId: MMSG-26355]
+Action.c(758): Error -27492: "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="https://g.t.dacube.cn/MRP-SERVICE/mrp/v1/article/update_article"  	[MsgId: MERR-27492]
+Action.c(758): Error -26377: No match found for the requested parameter "update_article". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 30 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MERR-26377]
+Action.c(758): Error -26377: No match found for the requested parameter "error". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 30 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MERR-26377]
+Action.c(758): Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+

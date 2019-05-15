@@ -122,7 +122,7 @@
 <Res><![CDATA[result1]]></Res>
 <Action rID="T2">
 <AName><![CDATA[vuser_init]]></AName>
-<Summary sTime="2019/5/13 - 13:46:50" eTime="2019/5/13 - 13:46:50" passed="0" failed="0" warnings="0" ></Summary>
+<Summary sTime="2019/5/14 - 11:17:34" eTime="2019/5/14 - 11:17:34" passed="0" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="5" >
 <Disp><![CDATA[vuser_init Summary]]></Disp>
 </NodeArgs>
@@ -133,7 +133,7 @@
 <Step rID="T5">
 <Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>20000</FONT></STRONG> characters</CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:50]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:34]]></Time>
 <NodeArgs eType="General" icon="4" nRep="9" >
 <Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
 </NodeArgs>
@@ -141,7 +141,7 @@
 <Step rID="T6">
 <Obj plainTxt="False" ><![CDATA[Service: Set Sockets Option]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>Set socket option <STRONG><FONT COLOR=#00AF00>SSL_VERSION</FONT></STRONG> with value <STRONG><FONT COLOR=#00AF00>TLS1.1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:50]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:34]]></Time>
 <NodeArgs eType="General" icon="5" nRep="10" >
 <Disp><![CDATA[Service: Set Sockets Option]]></Disp>
 </NodeArgs>
@@ -149,7 +149,7 @@
 <Step rID="T7">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>Token</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=token</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:50]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:34]]></Time>
 <NodeArgs eType="General" icon="6" nRep="11" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -157,7 +157,7 @@
 <Step rID="T8">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>Usercode</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="usercode":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="12" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -165,7 +165,7 @@
 <Step rID="T9">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text/DIG/ALNUMIC=usercode</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="7" nRep="13" >
 <Disp><![CDATA[Service: Reg Find]]></Disp>
 </NodeArgs>
@@ -173,7 +173,7 @@
 <Step rID="T10">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>code</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,"result"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="14" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -181,7 +181,7 @@
 <Step rID="T11">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>phone</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="phone":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="15" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -189,7 +189,7 @@
 <Step rID="T12">
 <Obj plainTxt="False" ><![CDATA[Custom Request: login_1]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="8" nRep="16" status="Passed" >
 <Disp><![CDATA[Custom Request: login_1]]></Disp>
 </NodeArgs>
@@ -197,7 +197,7 @@
 <Step rID="T13">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>code1</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,"result"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="17" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -205,7 +205,7 @@
 <Step rID="T14">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>msg</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="msg":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="18" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -213,7 +213,7 @@
 <Step rID="T15">
 <Obj plainTxt="False" ><![CDATA[Custom Request: login_2]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="8" nRep="19" status="Passed" >
 <Disp><![CDATA[Custom Request: login_2]]></Disp>
 </NodeArgs>
@@ -221,7 +221,7 @@
 <Step rID="T16">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>code2</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,"result"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="20" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -229,7 +229,7 @@
 <Step rID="T17">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>msg2</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="msg":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="21" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -237,7 +237,7 @@
 <Step rID="T18">
 <Obj plainTxt="False" ><![CDATA[Custom Request: login_3]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="8" nRep="22" status="Passed" >
 <Disp><![CDATA[Custom Request: login_3]]></Disp>
 </NodeArgs>
@@ -245,7 +245,7 @@
 <Step rID="T19">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>compname</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="compname":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="23" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -253,31 +253,31 @@
 <Step rID="T20">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>companycode</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,"result"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="24" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T21">
 <Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>token: 3d464367-c1d3-4463-b954-87f8c24c88a1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>token: 63e44ff6-00e5-4813-b4d4-9d154bec7201</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="9" nRep="25" >
 <Disp><![CDATA[Service: Add Auto Header]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T22">
-<Obj plainTxt="False" ><![CDATA[Custom Request: 3d464367-c1d3-4463-b954-87f8c24c88a1]]></Obj>
+<Obj plainTxt="False" ><![CDATA[Custom Request: 63e44ff6-00e5-4813-b4d4-9d154bec7201]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="8" nRep="26" status="Passed" >
-<Disp><![CDATA[Custom Request: 3d464367-c1d3-4463-b954-87f8c24c88a1]]></Disp>
+<Disp><![CDATA[Custom Request: 63e44ff6-00e5-4813-b4d4-9d154bec7201]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T23">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>compid</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="compid":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="27" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -285,7 +285,7 @@
 <Step rID="T24">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>updatecode</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,"result"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:51]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:35]]></Time>
 <NodeArgs eType="General" icon="6" nRep="28" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -293,7 +293,7 @@
 <Step rID="T25">
 <Obj plainTxt="False" ><![CDATA[Custom Request: updateuser]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:52]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:36]]></Time>
 <NodeArgs eType="General" icon="8" nRep="29" status="Passed" >
 <Disp><![CDATA[Custom Request: updateuser]]></Disp>
 </NodeArgs>
@@ -301,7 +301,7 @@
 <Step rID="T26">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>linkcode</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:52]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:36]]></Time>
 <NodeArgs eType="General" icon="6" nRep="30" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -309,7 +309,7 @@
 <Step rID="T27">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>Mrp_link</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="redirect:</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:52]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:36]]></Time>
 <NodeArgs eType="General" icon="6" nRep="31" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -317,7 +317,7 @@
 <Step rID="T28">
 <Obj plainTxt="False" ><![CDATA[Custom Request: loginapp]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:46:52]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:36]]></Time>
 <NodeArgs eType="General" icon="8" nRep="32" status="Passed" >
 <Disp><![CDATA[Custom Request: loginapp]]></Disp>
 </NodeArgs>
@@ -325,7 +325,7 @@
 <Step rID="T29">
 <Obj plainTxt="False" ><![CDATA[Url: open_mrp_web]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="10" nRep="33" status="Passed" >
 <Disp><![CDATA[Url: open_mrp_web]]></Disp>
 <BtmPane vType="HTMLSNSH">
@@ -336,7 +336,7 @@
 <Step rID="T30">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>Folderid</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="id":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="6" nRep="34" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -344,7 +344,7 @@
 <Step rID="T31">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>createfoldercode</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="6" nRep="35" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -352,7 +352,7 @@
 <Step rID="T32">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>id_creator</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="id_creator":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="6" nRep="36" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -360,7 +360,7 @@
 <Step rID="T33">
 <Obj plainTxt="False" ><![CDATA[Custom Request: createfolder]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="8" nRep="37" status="Passed" >
 <Disp><![CDATA[Custom Request: createfolder]]></Disp>
 </NodeArgs>
@@ -368,7 +368,7 @@
 <Step rID="T34">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>Folderid2</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="id":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="6" nRep="38" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -376,7 +376,7 @@
 <Step rID="T35">
 <Obj plainTxt="False" ><![CDATA[Custom Request: createfolder]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="8" nRep="39" status="Passed" >
 <Disp><![CDATA[Custom Request: createfolder]]></Disp>
 </NodeArgs>
@@ -384,7 +384,7 @@
 <Step rID="T36">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>Folderid</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="id":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="6" nRep="40" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -392,7 +392,7 @@
 <Step rID="T37">
 <Obj plainTxt="False" ><![CDATA[Custom Request: createfolder]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="8" nRep="41" status="Passed" >
 <Disp><![CDATA[Custom Request: createfolder]]></Disp>
 </NodeArgs>
@@ -400,7 +400,7 @@
 <Step rID="T38">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>deletefoldercode</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="6" nRep="42" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -408,7 +408,7 @@
 <Step rID="T39">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>flag_delete</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="flag_delete":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="6" nRep="43" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -416,7 +416,7 @@
 <Step rID="T40">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>id_creator</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="id_creator":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:44]]></Time>
 <NodeArgs eType="General" icon="6" nRep="44" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -424,7 +424,7 @@
 <Step rID="T41">
 <Obj plainTxt="False" ><![CDATA[Custom Request: deletefolder]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="8" nRep="45" status="Passed" >
 <Disp><![CDATA[Custom Request: deletefolder]]></Disp>
 </NodeArgs>
@@ -432,7 +432,7 @@
 <Step rID="T42">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>updatefoldercode</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:07]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="6" nRep="46" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -440,7 +440,7 @@
 <Step rID="T43">
 <Obj plainTxt="False" ><![CDATA[Custom Request: updatefolder]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="8" nRep="47" status="Passed" >
 <Disp><![CDATA[Custom Request: updatefolder]]></Disp>
 </NodeArgs>
@@ -448,7 +448,7 @@
 <Step rID="T44">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>keywordscode</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="6" nRep="48" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -456,7 +456,7 @@
 <Step rID="T45">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text=keywords</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="7" nRep="49" >
 <Disp><![CDATA[Service: Reg Find]]></Disp>
 </NodeArgs>
@@ -464,7 +464,7 @@
 <Step rID="T46">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>error</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="message":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="6" nRep="50" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -472,7 +472,7 @@
 <Step rID="T47">
 <Obj plainTxt="False" ><![CDATA[Custom Request: Getkeywords]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="8" nRep="51" status="Passed" >
 <Disp><![CDATA[Custom Request: Getkeywords]]></Disp>
 </NodeArgs>
@@ -480,7 +480,7 @@
 <Step rID="T48">
 <Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>30</FONT></STRONG> characters</CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="4" nRep="52" >
 <Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
 </NodeArgs>
@@ -488,7 +488,7 @@
 <Step rID="T49">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Find]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#00AF00>Text/BIN/DIG/ALNUMIC=content</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="7" nRep="53" >
 <Disp><![CDATA[Service: Reg Find]]></Disp>
 </NodeArgs>
@@ -496,7 +496,7 @@
 <Step rID="T50">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>articleid1</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="id"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>ORD=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="6" nRep="54" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -504,7 +504,7 @@
 <Step rID="T51">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>add_one</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="6" nRep="55" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -512,7 +512,7 @@
 <Step rID="T52">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>error</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="message":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>ORD=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:45]]></Time>
 <NodeArgs eType="General" icon="6" nRep="56" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -520,7 +520,7 @@
 <Step rID="T53">
 <Obj plainTxt="False" ><![CDATA[Custom Request: add_article]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="8" nRep="57" status="Passed" >
 <Disp><![CDATA[Custom Request: add_article]]></Disp>
 </NodeArgs>
@@ -528,7 +528,7 @@
 <Step rID="T54">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>analysis</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="6" nRep="58" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -536,7 +536,7 @@
 <Step rID="T55">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>error</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="message":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>ORD=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:08]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="6" nRep="59" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -544,7 +544,7 @@
 <Step rID="T56">
 <Obj plainTxt="False" ><![CDATA[Custom Request: analysis]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:10]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="8" nRep="60" status="Passed" >
 <Disp><![CDATA[Custom Request: analysis]]></Disp>
 </NodeArgs>
@@ -552,7 +552,7 @@
 <Step rID="T57">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>SearchArticleBykeywords</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:10]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="6" nRep="61" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -560,7 +560,7 @@
 <Step rID="T58">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>error</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="message":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>ORD=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:10]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="6" nRep="62" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -568,7 +568,7 @@
 <Step rID="T59">
 <Obj plainTxt="False" ><![CDATA[Custom Request: SearchArticleBykeywords]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:10]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="8" nRep="63" status="Passed" >
 <Disp><![CDATA[Custom Request: SearchArticleBykeywords]]></Disp>
 </NodeArgs>
@@ -576,7 +576,7 @@
 <Step rID="T60">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>query_article</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:10]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="6" nRep="64" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -584,7 +584,7 @@
 <Step rID="T61">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>error</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="message":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>ORD=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:10]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="6" nRep="65" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -592,7 +592,7 @@
 <Step rID="T62">
 <Obj plainTxt="False" ><![CDATA[Custom Request: query_article]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:11]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="8" nRep="66" status="Passed" >
 <Disp><![CDATA[Custom Request: query_article]]></Disp>
 </NodeArgs>
@@ -600,7 +600,7 @@
 <Step rID="T63">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>update_article</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:11]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="6" nRep="67" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -608,7 +608,7 @@
 <Step rID="T64">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>error</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="message":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>ORD=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:11]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:46]]></Time>
 <NodeArgs eType="General" icon="6" nRep="68" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -616,7 +616,7 @@
 <Step rID="T65">
 <Obj plainTxt="False" ><![CDATA[Custom Request: update_article]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:11]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:47]]></Time>
 <NodeArgs eType="General" icon="8" nRep="69" status="Passed" >
 <Disp><![CDATA[Custom Request: update_article]]></Disp>
 </NodeArgs>
@@ -624,7 +624,7 @@
 <Step rID="T66">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>add_comment</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:11]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:47]]></Time>
 <NodeArgs eType="General" icon="6" nRep="70" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -632,7 +632,7 @@
 <Step rID="T67">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>error</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="message":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>ORD=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:11]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:47]]></Time>
 <NodeArgs eType="General" icon="6" nRep="71" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -640,12 +640,36 @@
 <Step rID="T68">
 <Obj plainTxt="False" ><![CDATA[Custom Request: add_comment]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2019/5/13 - 13:47:12]]></Time>
+<Time><![CDATA[2019/5/14 - 11:17:47]]></Time>
 <NodeArgs eType="General" icon="8" nRep="72" status="Passed" >
 <Disp><![CDATA[Custom Request: add_comment]]></Disp>
 </NodeArgs>
 </Step>
-<Summary sTime="2019/5/13 - 13:46:50" eTime="2019/5/13 - 13:47:12" passed="19" failed="0" warnings="0" ></Summary>
+<Step rID="T69">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>delete_one</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="code":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2019/5/14 - 11:17:47]]></Time>
+<NodeArgs eType="General" icon="6" nRep="73" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T70">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>error</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="message":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>ORD=1</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2019/5/14 - 11:17:47]]></Time>
+<NodeArgs eType="General" icon="6" nRep="74" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T71">
+<Obj plainTxt="False" ><![CDATA[Custom Request: delete_article]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2019/5/14 - 11:17:47]]></Time>
+<NodeArgs eType="General" icon="8" nRep="75" status="Passed" >
+<Disp><![CDATA[Custom Request: delete_article]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2019/5/14 - 11:17:34" eTime="2019/5/14 - 11:17:47" passed="20" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
 <Disp><![CDATA[Action Summary]]></Disp>
 </NodeArgs>
@@ -654,14 +678,14 @@
 <Disp><![CDATA[00 Iteration 1 (Row 1)]]></Disp>
 </NodeArgs>
 </DIter>
-<Action rID="T69">
+<Action rID="T72">
 <AName><![CDATA[vuser_end]]></AName>
-<Summary sTime="2019/5/13 - 13:47:12" eTime="2019/5/13 - 13:47:12" passed="0" failed="0" warnings="0" ></Summary>
-<NodeArgs eType="StartAction" icon="2" nRep="75" >
+<Summary sTime="2019/5/14 - 11:17:47" eTime="2019/5/14 - 11:17:47" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="78" >
 <Disp><![CDATA[vuser_end Summary]]></Disp>
 </NodeArgs>
 </Action>
-<Summary sTime="2019/5/13 - 13:46:50" eTime="2019/5/13 - 13:47:12" passed="19" failed="0" warnings="0" ></Summary>
+<Summary sTime="2019/5/14 - 11:17:34" eTime="2019/5/14 - 11:17:47" passed="20" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
 <Disp><![CDATA[Test 00 Summary]]></Disp>
 </NodeArgs>

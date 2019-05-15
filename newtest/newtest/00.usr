@@ -25,7 +25,7 @@ ScriptLanguage=C
 DisableRegenerate=0
 Description=
 [TransactionsOrder]
-Order="login__*delimiter*__getCompany__*delimiter*__updateuserinfo__*delimiter*__loginapp__*delimiter*__createfolder__*delimiter*__deletefolder__*delimiter*__updatefolder__*delimiter*__Getkeywords__*delimiter*__add_article__*delimiter*__analysis__*delimiter*__SearchArticleBykeywords__*delimiter*__query_article__*delimiter*__update_article__*delimiter*__add_comment"
+Order="login__*delimiter*__getCompany__*delimiter*__updateuserinfo__*delimiter*__loginapp__*delimiter*__createfolder__*delimiter*__deletefolder__*delimiter*__updatefolder__*delimiter*__Getkeywords__*delimiter*__add_article__*delimiter*__analysis__*delimiter*__SearchArticleBykeywords__*delimiter*__query_article__*delimiter*__update_article__*delimiter*__add_comment__*delimiter*__delete_article"
 [Actions]
 vuser_init=vuser_init.c
 Action=Action.c
@@ -65,6 +65,7 @@ SearchArticleBykeywords=
 query_article=
 update_article=
 add_comment=
+delete_article=
 [ExtraFiles]
 globals.h=
 [Recorded Actions]

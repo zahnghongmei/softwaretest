@@ -7,9 +7,9 @@ Result_file=E:\TEST\newtest\newtest\res\res.lrr
 Description=
 ResultName=res
 Time_Zone=-28800
-Start_time=1557732140
+Start_time=1557906976
 Daylight_Bias=0
-Stop_time=1557732432
+Stop_time=1557907119
 [Configuration]
 Public_local=1
 Is_mix=1
@@ -24,7 +24,7 @@ FullData=1
 Scenario Type=Manual Scenario
 Goal Profile Name=Schedule 1
 Mode=Scenario Scheduling
-Scenario Duration=Start 25 Vusers: 2 every 00:00:15 (HH:MM:SS); Run until completion
+Scenario Duration=Start 17 Vusers: 2 every 00:00:15 (HH:MM:SS); Run until completion
 Load Behavior=Initialize each Vuser just before it runs
 [Scripts]
 00=E:\TEST\newtest\newtest\00.usr
